@@ -48,8 +48,9 @@ var sticky = navbar.offsetTop;
 var featuresy = features.offsetTop;
 var markupsy = markups.offsetTop;
 var footery = footer.offsetTop;
+var ww = window.outerWidth
 function myFunction() {
-  if (window.pageYOffset >= sticky+200) {
+  if (window.pageYOffset >= sticky+200&&ww >=400) {
     navbar.classList.add("sticky")
 
   } else {

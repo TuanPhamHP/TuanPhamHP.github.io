@@ -1,5 +1,6 @@
 html{
     scroll-behavior: smooth;
+    // overflow-x: hidden;
 }
 @mixin reset {
     margin: 0px;
@@ -119,7 +120,7 @@ body{
             z-index: 3;
             opacity: 0.9;
             grid-column: 1/10;
-            top: 0;
+            top: 0px;
             padding: 0 180px;
             left: 50%;
             transform: translateX(-50%);
@@ -491,7 +492,9 @@ body{
             max-width: 1170px;
             width: 100%;
             min-height: 480px;
-            // background-color: red;
+            margin: 0px auto;
+            flex-direction: row;
+            justify-content: space-between;
             .markup{
                 flex: 1 0 0;
                 // background-color: yellow;
@@ -541,35 +544,9 @@ body{
                     font-family: 'Montserrat', serif;
                 }
             }
-            .item1{
-                grid-column: 1/5;
-                grid-row: 1/2;
+            .item1,.item2,.item3,.item4,.item5,.item6{
                 display: flex;
-            }
-            .item2{
-                grid-column: 5/9;
-                grid-row: 1/2;
-                display: flex;
-            }
-            .item3{
-                grid-column: 9/13;
-                grid-row: 1/2;
-                display: flex;
-            }
-            .item4{
-                grid-column: 1/5;
-                grid-row: 2/3;
-                display: flex;
-            }
-            .item5{
-                grid-column: 5/9;
-                grid-row: 2/3;
-                display: flex;
-            }
-            .item6{
-                grid-column: 9/13;
-                grid-row: 2/3;
-                display: flex;
+                max-width: 300px;
             }
         }
     }
@@ -672,6 +649,7 @@ body{
             justify-content: space-around;
             // overflow-y: hidden;
             .work--item{
+                max-width: 320px;
                 flex : 1 1 240px;
                 background-color: red;
                 margin: 1px;
@@ -680,6 +658,7 @@ body{
                 cursor: pointer;
                 position: relative;
                 .infor{
+                    max-width: 320px;
                     position: absolute;
                     z-index: 2;
                     background-color: #1aa298;
@@ -732,6 +711,7 @@ body{
                 }
             }
             .work--item::after{
+                max-width: 320px;
                 content: "";
                 width: 100%;
                 height: 100%;
@@ -1723,7 +1703,7 @@ body{
         .wrapper{.menu{.sticky{height: 60px!important;}#navbar{ul{li{a{padding: 0px 4px;}}}}}}
     }
     @media only screen and (max-width:500px){
-        .grid__wrapper{.img{background-size: 270%;height: 600px;.banner{.banner__text{margin: auto; h1{font-size: 35px;}.txt_wrap{font-size: 13px;}}}}}
+        .grid__wrapper{.img{background-size: cover;height: 600px;.banner{.banner__text{margin: auto; h1{font-size: 35px;}.txt_wrap{font-size: 13px;}}}}}
         .wrapper{.menu{#navbar{#nav--logo{padding: 5px 0px;}ul{grid-column: 3/13; li{a{font-size: 10px;}}}}}}
         .wrapper{.menu{
             .sticky{
@@ -1751,11 +1731,50 @@ body{
             }
     }
         .price--content{.price--item{.price{min-width: 200px; margin: 20px 5px;}}}
-        .body__content--banner{.banner--content{flex-wrap: wrap; h3{text-align: center;width: 100%;}a{margin: 0px auto;}}}
+        .body__content--banner{.banner--content{flex-wrap: wrap; h3{text-align: center;width: 100%;}a{margin: 0px auto;height: 30px; line-height: 30px;}}}
         .body__content--fact{.fact--items{.fact--item{.sub{font-size: 10px; width: 100%;}.btm__icon{padding: 0px;}}}}
     }
     @media only screen and (max-width:480px){
         h1{font-size: 20px;}
         .sticky{ul{margin-right: 10px;}}
         .wrapper{.menu{#navbar{ul{margin-right: 10px;li{a{font-size: 9px;}}}}}}
+    }
+    @media only screen and (max-width:400px){
+        h1{font-size: 20px;}
+        .wrapper{.menu{.sticky{display: none;}#navbar{img{display: none;}ul{grid-column: 1/13;margin-right: 0px;li{a{padding: 0px 2px 0px 2px;}}}}}}
+        .wrapper{
+            .body__content{
+                overflow-x: hidden;
+                .service1,.service2,.service3{
+                    h4{
+                        margin: 0px;
+                        font-size: 12px;
+                        width: 80px;
+                        margin:20px auto;
+                        height: 40px;
+                    }
+                    span{
+                        font-size: 11px;
+                    }
+                .trans{
+                    width: 80px;
+                    height: 80px;
+                    i{font-size: 40px;
+                        height: 80px;
+                        line-height: 80px;
+                    }
+                }
+            }
+            }
+        }
+        .body__content--client{.client--content{.caret-r{margin:0px;} .caret-l{margin: 0px;} .clients{margin: 0px auto;}}}
+    }
+    @media only screen and (max-width:320px){
+        h1{font-size: 17px;}
+        .grid__wrapper{.img{.banner{.banner__text{max-width: 320px;margin: auto 0px; h1{font-size: 24px;}}}}}
+        .wrapper{.menu{#navbar{ max-width: 320px; img{display: none;}ul{grid-column: 1/13;max-width: 320px; margin-right: 0px;li{a{font-size: 8px;padding: 0px 2px 0px 2px;}}}}.sticky{left: 250px;}}}
+        .body__content--fact{.fact--contact{.contact{.contact--txt{h3{font-size: 11px; font-weight: 200;}}.contact--btn{a{min-width: 140px;}}}}}
+        .body__content--features{margin-top: 50px; .features--hd{.features--icon2{width: 320px;}}}
+        .wrapper{.body__content{.service1,.service2,.service3{h4{font-size: 10px;}.transbtn{padding:4px 10px;}}}}
+        .body__content--work{.work--hd{max-width: 320px; span{width: 320px;}}.work--items{width: 320px;}.work--btn{max-width: 320px; .button{a{width:calc(100%-20px);margin: 0px auto;padding: 4px 17px;}}}}
     }
