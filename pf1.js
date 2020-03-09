@@ -35,7 +35,7 @@ function scrollto(x) {
   var a = document.getElementById(x);
   event.preventDefault();
   var b = a.offsetTop
-  window.scrollTo(0,b-140)
+  window.scrollTo(0,b-130)
 }
 window.onscroll = function() {myFunction(),this.myFunction2(),myFunction3()};
 var navbar = document.getElementById("navbar");
@@ -51,7 +51,7 @@ var footery = footer.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky+200) {
     navbar.classList.add("sticky")
-    console.log(featuresy)
+
   } else {
     navbar.classList.remove("sticky");
   }
@@ -70,6 +70,33 @@ function myFunction3() {
     featuresli7.classList.remove("active");
   }
 }
-function scrolldown(){
-    window.scrollTo(0,636);
+
+window.onresize = function(){
+
+}
+function test(){
+  var works = document.getElementById('ct--work')
+  var workslide = document.getElementById('work--slide')
+  var x = window.outerWidth
+  var y = document.getElementsByClassName('infor')[0].offsetWidth
+  var z = Math.ceil(x/y) + 1 
+  let c = 1
+  c +=1
+  event.preventDefault();
+  console.log(x)
+  console.log(y)
+  console.log(z)
+  if (x <= 700) {
+    event.preventDefault();
+    works.setAttribute('style','grid-row:2/8;');
+    workslide.setAttribute('style','grid-row:8/9;');
+    console.log('clicked');
+  }   
+  if (x <= 480) {
+    event.preventDefault();
+    works.setAttribute('style','grid-row:2/14;');
+    workslide.setAttribute('style','grid-row:14/15;');
+    console.log(c);
+  } 
+  
 }
