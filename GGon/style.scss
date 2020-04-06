@@ -23,6 +23,34 @@ body{
 .justify-content-evenly{
     justify-content: space-evenly!important;
 }
+#logo2{
+    display: none;
+}
+.sticky{
+    position: fixed;
+    top: -100px;
+    z-index: 9999999;
+    background: #fff;
+    @include font(12px, 'Poppins',600,18px, #444);
+    a{
+        text-decoration: none!important;
+        color: #444!important;
+    }
+    #dropdownMenuButton{
+        @include font(12px, 'Poppins',600,18px, #444);
+    }
+    #logo2{
+        display: block;
+    }
+    #logo1{
+        display: none;
+    }
+    animation: slidedown 1s ease-in forwards;
+    @keyframes slidedown {
+        0%{top: -100px;}
+        100%{top: 0px;}
+    }
+}
 // @include font(40px, 'Poppins',600,60px, white);
 // ---------
 
@@ -49,6 +77,12 @@ body{
 .banner{
     height: 675px;
     background: radial-gradient(50% 50% at 50% 50%, #012F41 0%, #03101B 100%);
+    #dropdownMenuButton{
+        color: #aaa8a8;
+        &:hover{
+            color: #fff;
+        }
+    }
 }
 .container-fluid--mod{
     margin-right: auto;
@@ -187,6 +221,12 @@ body{
                 background: #EBD79D;
                 h5{@include font(11px, 'Poppins',normal,16px, #000);}
                 p{@include font(10px, 'Poppins',normal,15px, #000);}
+                transition: 0.4s ease-out;
+                transform-origin: center center;
+                &:hover{
+                    transform: scale(1.1);
+                    box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+                }
             }
             .txt-block1{
                 top: -30px;
@@ -228,6 +268,10 @@ body{
         cursor: pointer;
         width: 170px;
         height: 128px;
+        transition: 0.4s ease-out;
+        &:hover{
+            box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+        }
     }
     @for $i from 1 through 18 {
         .partner#{$i}{
@@ -238,8 +282,13 @@ body{
 .blogs{
     min-height: 650px;
     .blog-block{
+        cursor: pointer;
         max-width: 270px;
         border: none;
+        transition: 0.4s ease-out;
+        &:hover{
+            box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+        }
         .text-muted{
             @include font(12px, 'Poppins',lighter,18px, #979797); 
         }
@@ -255,17 +304,35 @@ body{
         background-color: #D9C377;
         @include font(13px, 'Poppins',lighter,19px, #04111C); 
         padding: 12px 70px;
+        height: 43px;
+        border: 1px solid transparent;
+        transition: 0.4s ease-out;
+        &:hover{
+            border: 1px solid #D9C377;
+            background: transparent;
+            box-shadow: 0px 0px 15px 3px rgba(151, 150, 150, 0.582);
+        }
     }
 }
 .contact{
     background: #D9C377;
     min-height: 180px;
     button{
+        border: 1px solid #fff;
         cursor: pointer;
         border: none;
         background-color: #fff;
         @include font(13px, 'Poppins',lighter,19px, #04111C); 
         padding: 12px 70px;
+        height: 43px;
+        border: 1px solid transparent;
+        transition: 0.4s ease-in-out;
+        &:hover{
+            box-shadow: 0px 0px 15px 2px rgba(151, 150, 150, 0.582);
+            background-color: transparent;
+            border: 1px solid rgba(243, 228, 177, 0.829);
+            color: #fff;
+        }
     }
 }
 
@@ -285,6 +352,11 @@ body{
                     background-color: rgb(50, 139, 223);
                     line-height: 35px;
                     font-size: 22px;
+                    transform-origin: center center;
+                    transition: 0.4s ease-out;
+                    &:hover{
+                        transform: scale(1.25);
+                    }
                 }
             }
         }

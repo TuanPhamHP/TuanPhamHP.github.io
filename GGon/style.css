@@ -8,6 +8,63 @@ body {
           justify-content: space-evenly !important;
 }
 
+#logo2 {
+  display: none;
+}
+
+.sticky {
+  position: fixed;
+  top: -100px;
+  z-index: 9999999;
+  background: #fff;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 18px;
+  color: #444;
+  -webkit-animation: slidedown 1s ease-in forwards;
+          animation: slidedown 1s ease-in forwards;
+}
+
+.sticky a {
+  text-decoration: none !important;
+  color: #444 !important;
+}
+
+.sticky #dropdownMenuButton {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 18px;
+  color: #444;
+}
+
+.sticky #logo2 {
+  display: block;
+}
+
+.sticky #logo1 {
+  display: none;
+}
+
+@-webkit-keyframes slidedown {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes slidedown {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
 .nav-bar-tab {
   z-index: 3;
 }
@@ -65,6 +122,14 @@ body {
 .banner {
   height: 675px;
   background: radial-gradient(50% 50% at 50% 50%, #012F41 0%, #03101B 100%);
+}
+
+.banner #dropdownMenuButton {
+  color: #aaa8a8;
+}
+
+.banner #dropdownMenuButton:hover {
+  color: #fff;
 }
 
 .container-fluid--mod {
@@ -282,6 +347,10 @@ body {
 .token .bg-eco--mod .token-content--right .text-block {
   position: absolute;
   background: #EBD79D;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
 }
 
 .token .bg-eco--mod .token-content--right .text-block h5 {
@@ -298,6 +367,13 @@ body {
   font-weight: normal;
   line-height: 15px;
   color: #000;
+}
+
+.token .bg-eco--mod .token-content--right .text-block:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+          box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
 }
 
 .token .bg-eco--mod .token-content--right .txt-block1 {
@@ -344,6 +420,13 @@ body {
   cursor: pointer;
   width: 170px;
   height: 128px;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.partner .partner-img:hover {
+  -webkit-box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+          box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
 }
 
 .partner .partner1 {
@@ -477,8 +560,16 @@ body {
 }
 
 .blogs .blog-block {
+  cursor: pointer;
   max-width: 270px;
   border: none;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.blogs .blog-block:hover {
+  -webkit-box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+          box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
 }
 
 .blogs .blog-block .text-muted {
@@ -506,6 +597,17 @@ body {
   line-height: 19px;
   color: #04111C;
   padding: 12px 70px;
+  height: 43px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.blogs button:hover {
+  border: 1px solid #D9C377;
+  background: transparent;
+  -webkit-box-shadow: 0px 0px 15px 3px rgba(151, 150, 150, 0.582);
+          box-shadow: 0px 0px 15px 3px rgba(151, 150, 150, 0.582);
 }
 
 .contact {
@@ -514,6 +616,7 @@ body {
 }
 
 .contact button {
+  border: 1px solid #fff;
   cursor: pointer;
   border: none;
   background-color: #fff;
@@ -523,6 +626,18 @@ body {
   line-height: 19px;
   color: #04111C;
   padding: 12px 70px;
+  height: 43px;
+  border: 1px solid transparent;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.contact button:hover {
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(151, 150, 150, 0.582);
+          box-shadow: 0px 0px 15px 2px rgba(151, 150, 150, 0.582);
+  background-color: transparent;
+  border: 1px solid rgba(243, 228, 177, 0.829);
+  color: #fff;
 }
 
 .footer-wrap-mod {
@@ -550,5 +665,14 @@ body {
   background-color: #328bdf;
   line-height: 35px;
   font-size: 22px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+}
+
+.footer-wrap-mod .footer-content .social .social__icon:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 /*# sourceMappingURL=style.css.map */
