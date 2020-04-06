@@ -1,0 +1,291 @@
+body{
+    background-color: rgb(94, 82, 82);
+}
+// KHAI BAO CAC LENH DUNG NHIEU
+@mixin reset {
+    margin: 0px;
+    padding: 0px;
+    clear: both;
+}
+@mixin font($size,$family,$weight,$height,$color) {
+    font-size: $size;
+    font-family: $family, sans-serif;
+    font-weight: $weight;
+    line-height: $height;
+    color: $color;
+}
+@mixin bg-set($url, $x-pos, $y-pos, $bg-size, $bg-repeat) {
+    background: url($url);
+    background-position: $x-pos $y-pos;
+    background-size: $bg-size;
+    background-repeat: $bg-repeat;
+}
+.justify-content-evenly{
+    justify-content: space-evenly!important;
+}
+// @include font(40px, 'Poppins',600,60px, white);
+// ---------
+
+.nav-bar-tab{
+    z-index: 3;
+}
+.icon{
+    margin-right: 30px;
+    width: 70px;
+    height: 70px;
+    padding: 15px 15px;
+    background: #012F41;
+    border-radius: 30px;
+}
+.h3-t1{@include font(32px, 'Poppins',600,48px, #444);}
+.p-t1{@include font(16px, 'Poppins',normal,24px, #444);}
+.h3-t2{@include font(21px, 'Poppins',600,31px, #444);}
+.p-t2{@include font(13px, 'Poppins',normal,19px, #444);}
+.text-border-mod{            
+    padding-left: 29px;
+    border-left: 2px solid #D9C377;
+}
+.w-85{width: 85%;}
+.banner{
+    height: 675px;
+    background: radial-gradient(50% 50% at 50% 50%, #012F41 0%, #03101B 100%);
+}
+.container-fluid--mod{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1440px;
+}
+.container--mod{
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1170px;
+}
+.header-banner__img{
+    z-index: 1;
+    margin-top: -36px;
+    background: url('./img/the-rest/header-img2.png') center/contain no-repeat;
+    width: 562px;
+    height: 480px;
+}
+.header-banner__text{
+    h3{
+        //font($size,$family,$weight,$height,$color)
+        @include font(40px, 'Poppins',600,60px, white);
+    }
+    h4{
+        @include font(24px, 'Poppins',500,36px, white);
+    }
+    p{
+        @include font(16px, 'Poppins',300,24px, white);
+    }
+}
+.body-content{
+    position: relative;
+    overflow: hidden;
+    .diamond{
+        position: absolute;
+        width: 525px;
+        height: 525px;
+        background: #D9C377;
+        border-radius: 100px;
+        transform: rotate(-135deg);
+    }
+    .diamond1{
+        right: -324px;
+        top: 652px;
+    }
+    .diamond2{
+        left: -324px;
+        top: 1342px;
+    }
+    .diamond3{
+        right: -324px;
+        top: 2062px;
+    }
+}
+.use-cases{
+    z-index: 33333;
+    height: 160px;
+    margin-bottom: -38px;
+    .use-cases__left{
+        background: #F6F4EC;
+        border-radius: 30px 0px 0px 30px;
+        padding: 25px 30px;
+        h4{
+            @include font(32px, 'Poppins',600,48px, #444444);
+        }
+        p{
+            @include font(16px, 'Poppins',normal,24px, #444444);
+        }
+    }
+    .use-cases__right{
+        background: #D9C377;
+        border-radius: 0px 30px 30px 0px;
+        padding: 25px 30px;
+        h4{
+            @include font(24px, 'Poppins',600,36px, #FFFEFA);
+        }
+    }
+}
+.ecommerce{
+    .bg-eco--mod{@include bg-set('./img/the-rest/body-content1-img.png', 15px, 115px, contain, no-repeat);}
+    .row{ min-height: 652px;}
+    .ecommerce-content__left{
+        height: 520px;
+        @include bg-set('./img/the-rest/encommerce-bg.png', 40px, 0px, contain, no-repeat);
+    }
+    .ecommerce-content__right{
+        height: 490px;
+    }
+}
+.advertisement{
+    .onl-ads{background: #F6F4EC;padding-top: 50px;min-height: 690px;}
+    .ads-content__right{
+        height: 520px;
+        @include bg-set('./img/the-rest/online-advertisement-img.png', 40px, 0px, 90%, no-repeat);
+    }
+}
+.casino{
+    .casino-platform{min-height: 720px;padding-top: 50px;}
+    .bg-eco--mod{@include bg-set('./img/the-rest/decentrialized-left-1.png', -30px, 310px, auto, no-repeat);}
+    .casino-content__left{
+        margin-top: 25px;
+        height: 520px;
+        @include bg-set('./img/the-rest/decentrialized-left-2.png', center, center, contain, no-repeat);
+    }
+    .casino-content__right{
+        .casino__text{
+            min-height: 160px;
+        }
+    }
+}
+.gaming{
+    .gaming-body{
+        min-height: 650px;
+    }
+}
+.token{
+    .bg-clone{
+        @include bg-set('./img/the-rest/body-content1-img.png', 10px, -530px, contain, no-repeat);
+    }
+    .bg-eco--mod{ 
+        min-height: 650px ;
+        @include bg-set('./img/the-rest/token-bg.png', center, center, contain, no-repeat);
+        .token-content--left{
+            .token-p-mod{
+                padding: 29px;
+                background: #F6F4EC;
+            }
+        }
+        .token-content--right{
+            position: relative;
+            @include bg-set('./img/the-rest/token-right-img.png', center, center, contain, no-repeat);
+            .text-block{
+                position: absolute;
+                background: #EBD79D;
+                h5{@include font(11px, 'Poppins',normal,16px, #000);}
+                p{@include font(10px, 'Poppins',normal,15px, #000);}
+            }
+            .txt-block1{
+                top: -30px;
+                right: 0px;
+                width: 228px;
+                height: 146px;
+                padding: 13px 12px;
+                border-radius: 6px 6px 6px 0px;
+            }
+            .txt-block2{
+                bottom: 0px;
+                left: 40px;
+                width: 177px;
+                height: 181px;
+                padding: 13px 12px;
+                border-radius: 6px 0px 6px 6px;
+            }
+            .txt-block3{
+                bottom: 0px;
+                right: 38px;
+                width: 177px;
+                height: 147px;
+                padding: 13px 12px;
+                border-radius: 0px 6px 6px 6px;
+            }
+        }
+    }
+}
+.partner{
+    background: #F9F9F9;
+    padding: 40px 0px 60px 0px;
+    .scroll{
+        overflow-x: scroll;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    .partner-img{
+        cursor: pointer;
+        width: 170px;
+        height: 128px;
+    }
+    @for $i from 1 through 18 {
+        .partner#{$i}{
+            @include bg-set('./img/partner/partner#{$i}.png', center, center, contain, no-repeat);
+        }
+    }
+}
+.blogs{
+    min-height: 650px;
+    .blog-block{
+        max-width: 270px;
+        border: none;
+        .text-muted{
+            @include font(12px, 'Poppins',lighter,18px, #979797); 
+        }
+    }
+    .card-body{
+        padding: 10px;
+        border: 1px solid #DDDDDD;
+        box-sizing: border-box;
+    }
+    button{
+        cursor: pointer;
+        border: none;
+        background-color: #D9C377;
+        @include font(13px, 'Poppins',lighter,19px, #04111C); 
+        padding: 12px 70px;
+    }
+}
+.contact{
+    background: #D9C377;
+    min-height: 180px;
+    button{
+        cursor: pointer;
+        border: none;
+        background-color: #fff;
+        @include font(13px, 'Poppins',lighter,19px, #04111C); 
+        padding: 12px 70px;
+    }
+}
+
+    .footer-wrap-mod{
+        background-image: linear-gradient(90deg, #012F41, #03101B );
+        .footer-content{
+            height: 60px;
+            p{
+                @include font(13px, 'Poppins',500,19px, #fff); 
+            }
+            .social{
+                .social__icon{
+                    cursor: pointer;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 100%;
+                    background-color: rgb(50, 139, 223);
+                    line-height: 35px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
