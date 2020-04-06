@@ -26,31 +26,7 @@ body{
 #logo2{
     display: none;
 }
-.sticky{
-    position: fixed;
-    top: -100px;
-    z-index: 9999999;
-    background: #fff;
-    @include font(12px, 'Poppins',600,18px, #444);
-    a{
-        text-decoration: none!important;
-        color: #444!important;
-    }
-    #dropdownMenuButton{
-        @include font(12px, 'Poppins',600,18px, #444);
-    }
-    #logo2{
-        display: block;
-    }
-    #logo1{
-        display: none;
-    }
-    animation: slidedown 1s ease-in forwards;
-    @keyframes slidedown {
-        0%{top: -100px;}
-        100%{top: 0px;}
-    }
-}
+
 // @include font(40px, 'Poppins',600,60px, white);
 // ---------
 
@@ -82,6 +58,50 @@ body{
         &:hover{
             color: #fff;
         }
+    }
+    .dropdown-mod{
+        width: 180px;
+        a{
+            padding: 13px 17px;
+            height: 44px;
+            @include font(12px, 'Poppins',600,18px, #444);
+            width: 100%;
+            white-space: normal;
+            &:hover{
+                background: #F6F4EC;
+            }
+            &:last-child{
+                height: 64px;
+            }
+        }
+    }
+}
+.sticky{
+    position: fixed;
+    top: -100px;
+    z-index: 9999999;
+    background: #fff;
+    @include font(12px, 'Poppins',600,18px, #444);
+    a{
+        text-decoration: none!important;
+        color: #444!important;
+    }
+    #dropdownMenuButton{
+        @include font(12px, 'Poppins',600,18px, #444);
+        &:hover{
+            color: #000;
+        }
+    }
+    #logo2{
+        display: block;
+    }
+    #logo1{
+        display: none;
+    }
+    animation: slidedown 1s ease-in forwards;
+    @keyframes slidedown {
+        0%{top: -100px;}
+        100%{top: 0px;}
     }
 }
 .container-fluid--mod{
@@ -270,7 +290,7 @@ body{
         height: 128px;
         transition: 0.4s ease-out;
         &:hover{
-            box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+            box-shadow: 0px 0px 8px 2px rgba(151, 150, 150, 0.582);
         }
     }
     @for $i from 1 through 18 {
@@ -287,7 +307,7 @@ body{
         border: none;
         transition: 0.4s ease-out;
         &:hover{
-            box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
+            box-shadow: 0px 0px 14px 7px rgba(151, 150, 150, 0.582);
         }
         .text-muted{
             @include font(12px, 'Poppins',lighter,18px, #979797); 
