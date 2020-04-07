@@ -1,10 +1,9 @@
 $(document).ready(function () {
-    var offset = $(window).scrollTop();
-    var wd = $(window).width();
-    var headerh = $('.header-banner__content').height
-    var bannerh = $('.banner').height();
-    var usecases = $('.use').height();
-    $(window).on('scroll',()=>{
+    $(window).on('scroll load',()=>{
+        var offset = $(window).scrollTop();
+        var wd = $(window).width();
+        var bannerh = $('.banner').height();
+        var usecases = $('.use').height();
         if(offset >= bannerh|| wd <=480){
             $('.header-banner__text').css('margin-top','70px')
             $('.navbar--wrapper').addClass('sticky')
@@ -13,9 +12,9 @@ $(document).ready(function () {
             $('.navbar--wrapper').removeClass('sticky')
         };
     })
-    
-
 $(window).on('load',()=>{
+        var wd = $(window).width();
+        var usecases = $('.use').height();
     if(wd <=576){
         $('.ads-content__left').addClass('order-1')
     }else{
