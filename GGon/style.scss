@@ -75,6 +75,9 @@ body{
                         border-radius: 4px;
                         &:hover{
                             background: #F6F4EC;
+                            a{
+                                color : rgb(51, 48, 48);
+                            }
                         } 
                     }
                 }
@@ -84,7 +87,7 @@ body{
     #dropdownMenuButton{
         color: #aaa8a8;
         &:hover{
-            color: #fff;
+            color: rgb(51, 48, 48); 
         }
     }
     .btn-mod{

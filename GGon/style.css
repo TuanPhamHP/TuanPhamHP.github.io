@@ -100,12 +100,16 @@ body {
   background: #F6F4EC;
 }
 
+.banner .navbar--wrapper .nav-bar-tab .navbar ul.navbar-nav li:hover a {
+  color: #333030;
+}
+
 .banner #dropdownMenuButton {
   color: #aaa8a8;
 }
 
 .banner #dropdownMenuButton:hover {
-  color: #fff;
+  color: #333030;
 }
 
 .banner .btn-mod:focus {
@@ -772,8 +776,8 @@ body {
 }
 
 .footer-wrap-mod .footer-content .social .social__icon:hover {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
+  -webkit-transform: scale(1.21);
+          transform: scale(1.21);
 }
 
 @media only screen and (max-width: 1024px) {
