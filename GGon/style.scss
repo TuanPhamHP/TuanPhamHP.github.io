@@ -49,14 +49,47 @@ body{
     padding-left: 29px;
     border-left: 2px solid #D9C377;
 }
+.blur{
+    position: fixed;
+    height: 100vh;
+    background: #000;
+    top: 0px ;
+    bottom: 0px;
+    left: 0px;
+    z-index: 3;
+    opacity: 0.6;
+    display: none;
+}
+.hd{padding: 0px;}
+.row{margin: 0px !important;}
 .w-85{width: 85%;}
 .banner{
     height: 675px;
     background: radial-gradient(50% 50% at 50% 50%, #012F41 0%, #03101B 100%);
+    .navbar--wrapper{
+        .nav-bar-tab{
+            .navbar{
+                ul.navbar-nav{
+                    li{
+                        padding: 6px 12px;
+                        border-radius: 4px;
+                        &:hover{
+                            background: #F6F4EC;
+                        } 
+                    }
+                }
+            }
+        }
+    }
     #dropdownMenuButton{
         color: #aaa8a8;
         &:hover{
             color: #fff;
+        }
+    }
+    .btn-mod{
+        &:focus{
+            box-shadow: none!important;
         }
     }
     .dropdown-mod{
@@ -79,9 +112,12 @@ body{
 .sticky{
     position: fixed;
     top: -100px;
+    left: 0px;
     z-index: 9999999;
     background: #fff;
+    padding: 0px;
     @include font(12px, 'Poppins',600,18px, #444);
+    box-shadow: 0px 0px 1px 1px rgba(63, 63, 63, 0.384);
     a{
         text-decoration: none!important;
         color: #444!important;
@@ -103,6 +139,20 @@ body{
         0%{top: -100px;}
         100%{top: 0px;}
     }
+    .tg1{
+        color: rgb(131, 127, 127);
+        text-align: center;
+        &:focus{
+            outline: none;
+        }
+    }
+    .tg2{
+        color: #D9C377;
+    }
+}
+.container-fluid{
+    padding: 0px!important;
+    overflow-x: hidden;
 }
 .container-fluid--mod{
     margin-right: auto;
@@ -119,9 +169,13 @@ body{
 .header-banner__img{
     z-index: 1;
     margin-top: -36px;
-    background: url('./img/the-rest/header-img2.png') center/contain no-repeat;
+    // background: url('./img/the-rest/header-img2.png') center/contain no-repeat;
     width: 562px;
-    height: 480px;
+    // height: 480px;
+    img{
+        width: 100%;
+        height: auto;
+    }
 }
 .header-banner__text{
     h3{
@@ -139,6 +193,7 @@ body{
     position: relative;
     overflow: hidden;
     .diamond{
+        z-index: 0;
         position: absolute;
         width: 525px;
         height: 525px;
@@ -148,22 +203,23 @@ body{
     }
     .diamond1{
         right: -324px;
-        top: 652px;
+        top: 800px;
     }
     .diamond2{
         left: -324px;
-        top: 1342px;
+        top: 1500px;
     }
     .diamond3{
         right: -324px;
-        top: 2062px;
+        top: 2230px;
     }
 }
 .use-cases{
     z-index: 33333;
-    height: 160px;
+    // height: 160px;
     margin-bottom: -38px;
     .use-cases__left{
+        width: 75%;
         background: #F6F4EC;
         border-radius: 30px 0px 0px 30px;
         padding: 25px 30px;
@@ -175,6 +231,7 @@ body{
         }
     }
     .use-cases__right{
+        width: 25%;
         background: #D9C377;
         border-radius: 0px 30px 30px 0px;
         padding: 25px 30px;
@@ -184,30 +241,38 @@ body{
     }
 }
 .ecommerce{
-    .bg-eco--mod{@include bg-set('./img/the-rest/body-content1-img.png', 15px, 115px, contain, no-repeat);}
+    .hd--mod1{display: none;}
+    .bg-eco--mod{@include bg-set('./img/the-rest/body-content1-img.png', 55px, 115px, auto, no-repeat);}
     .row{ min-height: 652px;}
     .ecommerce-content__left{
         height: 520px;
-        @include bg-set('./img/the-rest/encommerce-bg.png', 40px, 0px, contain, no-repeat);
-    }
-    .ecommerce-content__right{
-        height: 490px;
+        @include bg-set('./img/the-rest/encommerce-bg.png', 0px, 0px, contain, no-repeat);
     }
 }
 .advertisement{
+    .hd--mod1{display: none;}
     .onl-ads{background: #F6F4EC;padding-top: 50px;min-height: 690px;}
     .ads-content__right{
-        height: 520px;
-        @include bg-set('./img/the-rest/online-advertisement-img.png', 40px, 0px, 90%, no-repeat);
+        // height: 520px;
+        // @include bg-set('./img/the-rest/online-advertisement-img.png', 40px, 0px, 90%, no-repeat);
+        img{
+            width: 100%;
+        height: auto;
+        }
     }
 }
 .casino{
+    .hd--mod1{display: none;}
     .casino-platform{min-height: 720px;padding-top: 50px;}
     .bg-eco--mod{@include bg-set('./img/the-rest/decentrialized-left-1.png', -30px, 310px, auto, no-repeat);}
     .casino-content__left{
         margin-top: 25px;
-        height: 520px;
-        @include bg-set('./img/the-rest/decentrialized-left-2.png', center, center, contain, no-repeat);
+        // height: 520px;
+        // @include bg-set('./img/the-rest/decentrialized-left-2.png', center, center, contain, no-repeat);
+        img{
+        width: 100%;
+        height: auto;
+        }
     }
     .casino-content__right{
         .casino__text{
@@ -216,6 +281,7 @@ body{
     }
 }
 .gaming{
+    z-index: 2;
     .gaming-body{
         min-height: 650px;
     }
@@ -226,7 +292,7 @@ body{
     }
     .bg-eco--mod{ 
         min-height: 650px ;
-        @include bg-set('./img/the-rest/token-bg.png', center, center, contain, no-repeat);
+        @include bg-set('./img/the-rest/token-bg.png', center, center, cover, no-repeat);
         .token-content--left{
             .token-p-mod{
                 padding: 29px;
@@ -236,6 +302,9 @@ body{
         .token-content--right{
             position: relative;
             @include bg-set('./img/the-rest/token-right-img.png', center, center, contain, no-repeat);
+            #tk-m{
+                display: none;
+            }
             .text-block{
                 position: absolute;
                 background: #EBD79D;
@@ -252,7 +321,7 @@ body{
                 top: -30px;
                 right: 0px;
                 width: 228px;
-                height: 146px;
+                // height: 146px;
                 padding: 13px 12px;
                 border-radius: 6px 6px 6px 0px;
             }
@@ -260,7 +329,7 @@ body{
                 bottom: 0px;
                 left: 40px;
                 width: 177px;
-                height: 181px;
+                // height: 181px;
                 padding: 13px 12px;
                 border-radius: 6px 0px 6px 6px;
             }
@@ -268,7 +337,7 @@ body{
                 bottom: 0px;
                 right: 38px;
                 width: 177px;
-                height: 147px;
+                // height: 147px;
                 padding: 13px 12px;
                 border-radius: 0px 6px 6px 6px;
             }
@@ -323,7 +392,8 @@ body{
         border: none;
         background-color: #D9C377;
         @include font(13px, 'Poppins',lighter,19px, #04111C); 
-        padding: 12px 70px;
+        width: 200px;
+        padding: 12px 30px;
         height: 43px;
         border: 1px solid transparent;
         transition: 0.4s ease-out;
@@ -356,7 +426,7 @@ body{
     }
 }
 
-    .footer-wrap-mod{
+.footer-wrap-mod{
         background-image: linear-gradient(90deg, #012F41, #03101B );
         .footer-content{
             height: 60px;
@@ -380,4 +450,469 @@ body{
                 }
             }
         }
+}
+@media only screen and (max-width: 1024px){
+    .container--mod{
+        padding: 0px 20px;
     }
+    header{
+        position: relative;
+    }
+    .use{
+        position: absolute;
+        margin: 0px 3%;
+        bottom: -32px;
+    }
+    .token{
+        .row{
+            .token-content--right{
+                .txt-block2{
+                    left: -10px;
+                }
+                .txt-block3{
+                    right: 0px;
+                }
+            }
+        }
+    }
+    .blogs{
+        padding: 20px 0px;
+        .blog-content{
+            .blog-block{
+                width: 22%;
+                box-shadow: 0px 0px 6px 1px rgb(187, 187, 187);
+                .card-img-top{
+                    img{
+                        width: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px){
+    .navbar-expand-lg{
+        max-height: 70px;
+        position: relative;
+        padding-bottom: 0px;
+        #my-nav{
+            transform: translateX(100%);
+            position: absolute;
+            top: 56px;
+            right: -30px;
+            width: 376px;
+            background-color: #fff;
+            padding: 4px 10px;
+            height: 500px;
+            ul{
+                padding-right: 40px;
+                li{
+                    text-align: left;
+                    padding: 0px 10px;
+                    min-height: 44px;
+                    &:hover{
+                        background: #F6F4EC;
+                    }
+                    a{
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
+
+                }
+                .dropdown-mod{
+                    border: none!important;
+                    background: #F6F4EC;
+                    @include font(12px, 'Poppins',normal,18px, #444);
+                }
+            }
+        }
+        .move{
+            animation: move 1s ease-in-out forwards;
+            @keyframes move {
+                0%{transform: translateX(100%);}
+                100%{transform: translateX(0%);}
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .token{
+        .bg-clone{display: none;}
+        .bg-eco--mod{
+            padding: 20px 0px;
+            .container--mod{
+                .row{
+                    .token-content--left{
+                        margin-top: 32px;
+                        .token-p-mod{
+                            padding: 15px!important;
+                            @include font(14px, 'Poppins',normal,21px, #03121E);
+                        }
+                    }
+                    .token-content--right{
+                        background: unset!important;
+                        .token-img{
+                            #tk-m{
+                                display: block;
+                                margin: auto;
+                            }
+                        }
+                
+                        .text-block{
+                            position: unset;
+                            width: 100%;
+                            border-radius: 6px;
+                            margin: 7px 0px;
+                            &:nth-last-child(1){
+                                margin-bottom: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}
+@media only screen and (max-width: 767px){
+    header{
+        .header-banner{
+            .header-banner__content{
+                .header-banner__img{
+                    img{
+                        display: block;
+                        width: 50%;
+                        height: auto;
+                        margin: 0px auto;
+                    }
+                }
+            }
+        }
+    }
+    .ecommerce{
+        padding: 0px 20px;
+        .hd--mod1{display: block;}
+        .hd--mod2{display: none;}
+        .container--mod{
+            padding: 0px 14px;
+        }
+        .bg-eco--mod{@include bg-set('./img/the-rest/body-content1-img.png', 15px, 115px, 50% auto, no-repeat);}
+        .ecommerce-content__left{
+            background-position: center;
+        }
+    }
+    .advertisement{
+        .container--mod{
+            padding: 0px 34px;
+            .ads-content__right{
+                img{
+                    display: block;
+                        width: 50%;
+                        height: auto;
+                        margin: 0px auto;
+                }
+            }
+        }
+    }
+    .casino{
+        .hd--mod1{display: block;z-index: 3;}
+        .hd--mod2{display: none;}
+        .container--mod{
+            .row{
+                .casino-content__left{
+                    img{
+                        display: block;
+                        width: 50%;
+                        height: auto;
+                        margin: 0px auto;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 480px){
+.h3-t1{@include font(27px, 'Poppins',600,40px, #444);}
+.p-t1{@include font(16px, 'Poppins',normal,24px, #444);}
+.h3-t2{@include font(21px, 'Poppins',600,31px, #444);}
+.p-t2{@include font(13px, 'Poppins',normal,19px, #444);}
+.token-p-mod2{@include font(14px, 'Poppins',normal,21px, #fff);}
+.w-85{width: 100%;}
+.container--mod{
+    padding: 0px 12px;
+}
+.body-content{
+    .diamond{
+        width: 270px;
+        height: 270px;
+        border-radius: 50px;
+    }
+    .diamond1{
+        right: -60%;
+        top: 1490px;
+    }
+    .diamond2{
+        left:-60%;
+        top: 3250px;
+    }
+    .diamond3{
+        right:-60%;
+        top: 4500px;
+        z-index: -1;
+    }
+}
+
+    .sticky{
+        @include font(12px, 'Poppins',normal,18px, #444);
+        #dropdownMenuButton{
+            @include font(12px, 'Poppins',normal,18px, #444);
+        }
+        .navbar-brand{
+            #logo2{
+                width: 64px;
+                height: 30px;
+            }
+        }
+    }
+    .dropdown-toggle{
+        width: 100%;
+    }
+    .navbar-expand-lg{
+        max-height: 70px;
+        position: relative;
+        padding-bottom: 0px;
+        #my-nav{
+            display: none;
+            transform: translateX(100%);
+            position: absolute;
+            top: 56px;
+            right: 0px;
+            width: 276px;
+            background-color: #fff;
+            padding: 4px 10px;
+            height: 500px;
+            ul{
+                padding-right: 40px;
+                li{
+                    padding: 0px 10px;
+                    min-height: 44px;
+                    &:hover{
+                        background: #F6F4EC;
+                    }
+                    a{
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                    }
+                }
+                .dropdown-mod{
+                    background: #F6F4EC;
+                    @include font(12px, 'Poppins',normal,18px, #444);
+                }
+            }
+        }
+        .move{
+            display: block!important;
+            animation: move 1s ease-in-out forwards;
+            @keyframes move {
+                0%{transform: translateX(100%);}
+                100%{transform: translateX(20%);}
+            }
+        }
+    }
+    .banner{
+        padding: 0px 14px;
+        .container--mod{
+            padding: 0px;
+        }
+        .use{
+            bottom: -256px;
+            margin-right: 20px;
+            margin-left: 0px;
+        }
+        .header-banner__text{
+            padding: 0px;
+            h3{
+                //font($size,$family,$weight,$height,$color)
+                @include font(28px, 'Poppins',600,36px, white);
+            }
+            h4{
+                @include font(18px, 'Poppins',500,27px, white);
+            }
+            p{
+                @include font(14px, 'Poppins',300,21px, white);
+            }
+        }
+        .header-banner{
+            .header-banner__content{
+                .header-banner__img{
+                    img{ width: 100%;}
+                }
+            }
+        }
+        
+    }
+    .use-cases{
+        flex-flow: row wrap;
+        position: unset!important;
+        .use-cases__left{
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+            h4{
+                @include font(27px, 'Poppins',600,40px, #444444);
+            }
+            p{
+                @include font(16px, 'Poppins',normal,24px, #444444);
+            }
+        }
+        .use-cases__right{
+            width: 100%;
+            border-radius: 0px 0px 15px 15px;
+            h4{
+                @include font(24px, 'Poppins',600,36px, #FFFEFA);
+            }
+        }
+    }
+.ecommerce{
+    padding: 0px 12px;
+    .hd--mod1{display: block;}
+    .hd--mod2{display: none;}
+    .container--mod{
+        padding: 0px;
+    }
+    .bg-eco--mod{@include bg-set('./img/the-rest/body-content1-img.png', 0px, 155px, 60% auto, no-repeat);}
+}
+.advertisement{
+    .hd--mod1{display: block; z-index: 3;}
+    .hd--mod2{display: none;}
+    .ads__block{
+        flex-flow: row wrap;
+    }
+    .ads-content__right{
+        padding: 0px;
+    }
+    .container--mod{
+        padding: 0px 14px;
+        .ads-content__right{
+            img{
+                display: unset;
+                    width: 100%;
+                    height: auto;
+                    margin: 0px auto;
+            }
+        }
+    }
+}
+.casino{
+    .hd--mod1{display: block;}
+    .hd--mod2{display: none;}
+    .container--mod{
+        .row{
+            .casino-content__left{
+                padding: 0px;
+                img{
+                    display: unset;
+                    width: 100%;
+                    height: auto;
+                    margin: 0px auto;
+                }
+            }
+        }
+    }
+}
+.gaming{
+    .gaming-body{
+        padding-right: 0px;
+        .gaming-hd{
+            p{
+                width: 100%!important;
+            }
+        }
+    }
+}
+.token{
+    .bg-clone{display: none;}
+    .bg-eco--mod{
+        .container--mod{
+            .row{
+                .token-content--left{
+                    margin-top: 32px;
+                    padding: 0px;
+                    .token-p-mod{
+                        padding: 15px!important;
+                        @include font(14px, 'Poppins',normal,21px, #03121E);
+                    }
+                }
+                .token-content--right{
+                    background: unset!important;
+                    padding: 0px;
+                    .token-img{
+                        #tk-m{
+                            display: block;
+                            margin: auto;
+                        }
+                    }
+            
+                    .text-block{
+                        position: unset;
+                        width: 100%;
+                        border-radius: 6px;
+                        margin: 7px 0px;
+                        &:nth-last-child(1){
+                            margin-bottom: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
+.partner {
+    padding: 40px 14px 60px 14px;
+    .container--mod{
+        padding: 0px;
+    }
+    .partner-img{
+        width: 45%;
+        box-shadow: 0px 0px 4px 1px rgba(224, 224, 224, 0.671);
+    }
+    .img-collapse{
+        justify-content: space-between!important;
+        padding: 0px 5px;
+    }
+}
+.contact{
+    padding: 24px 0px;
+    .row{
+        div{
+            padding: 0px;
+        }
+    }
+    .btn-wrap{
+        justify-content: center!important;
+    }
+}
+.blogs{
+    margin-bottom: 20px;
+    overflow-x: scroll;
+    min-width: 0;
+    max-width: unset;
+    .container--mod{
+        .blog-block{
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 7px 2px rgb(179, 179, 179);
+            width: 46%;
+            .txt-toggle{
+                display: none;
+            }
+        }
+    }
+}
+footer{
+    .footer-wrap-mod{
+    .footer-content{
+        justify-content: space-evenly!important;
+        height: 120px;
+        flex-flow: column wrap;
+    }
+}
+}
+}
