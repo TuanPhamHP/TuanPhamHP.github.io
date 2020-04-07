@@ -689,7 +689,7 @@ body{
             width: 276px;
             background-color: #fff;
             padding: 4px 10px;
-            height: 500px;
+            height: 100vh;
             ul{
                 padding-right: 40px;
                 li{
@@ -773,7 +773,7 @@ body{
     }
 .ecommerce{
     padding: 0px 12px;
-    .hd--mod1{display: block;}
+    .hd--mod1{display: block;margin-top: 40px;}
     .hd--mod2{display: none;}
     .container--mod{
         padding: 0px;

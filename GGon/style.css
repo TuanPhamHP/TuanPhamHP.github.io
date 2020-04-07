@@ -1058,7 +1058,7 @@ body {
     width: 276px;
     background-color: #fff;
     padding: 4px 10px;
-    height: 500px;
+    height: 100vh;
   }
   .navbar-expand-lg #my-nav ul {
     padding-right: 40px;
@@ -1186,6 +1186,7 @@ body {
   }
   .ecommerce .hd--mod1 {
     display: block;
+    margin-top: 40px;
   }
   .ecommerce .hd--mod2 {
     display: none;
