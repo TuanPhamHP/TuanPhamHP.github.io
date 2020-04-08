@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+  }
 body{
     background-color: rgb(94, 82, 82);
 }
@@ -96,6 +99,7 @@ body{
         }
     }
     .dropdown-mod{
+        margin-top: 8px;
         width: 180px;
         a{
             padding: 13px 17px;
@@ -218,9 +222,11 @@ body{
     }
 }
 .use-cases{
+    border-radius: 30px;
     z-index: 33333;
     // height: 160px;
     margin-bottom: -38px;
+    box-shadow: 0px 0px 12px 1px rgba(77, 77, 77, 0.705);
     .use-cases__left{
         width: 75%;
         background: #F6F4EC;
@@ -245,7 +251,7 @@ body{
 }
 .ecommerce{
     .hd--mod1{display: none;}
-    .bg-eco--mod{@include bg-set('./img/the-rest/body-content1-img.png', 55px, 115px, auto, no-repeat);}
+    .bg-eco--mod{@include bg-set('./img/the-rest/body-content1-img.png', 10px, 95px, contain, no-repeat);}
     .row{ min-height: 652px;}
     .ecommerce-content__left{
         height: 520px;
@@ -311,7 +317,7 @@ body{
             .text-block{
                 position: absolute;
                 background: #EBD79D;
-                h5{@include font(11px, 'Poppins',normal,16px, #000);}
+                h5{@include font(11px, 'Poppins',600,16px, #000);}
                 p{@include font(10px, 'Poppins',normal,15px, #000);}
                 transition: 0.4s ease-out;
                 transform-origin: center center;
@@ -394,7 +400,7 @@ body{
         cursor: pointer;
         border: none;
         background-color: #D9C377;
-        @include font(13px, 'Poppins',lighter,19px, #04111C); 
+        @include font(13px, 'Poppins',600,19px, #04111C); 
         width: 200px;
         padding: 12px 30px;
         height: 43px;
@@ -415,7 +421,7 @@ body{
         cursor: pointer;
         border: none;
         background-color: #fff;
-        @include font(13px, 'Poppins',lighter,19px, #04111C); 
+        @include font(13px, 'Poppins',600,19px, #04111C); 
         padding: 12px 70px;
         height: 43px;
         border: 1px solid transparent;

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #5e5252;
 }
@@ -118,6 +122,7 @@ body {
 }
 
 .banner .dropdown-mod {
+  margin-top: 8px;
   width: 180px;
 }
 
@@ -301,8 +306,11 @@ body {
 }
 
 .use-cases {
+  border-radius: 30px;
   z-index: 33333;
   margin-bottom: -38px;
+  -webkit-box-shadow: 0px 0px 12px 1px rgba(77, 77, 77, 0.705);
+          box-shadow: 0px 0px 12px 1px rgba(77, 77, 77, 0.705);
 }
 
 .use-cases .use-cases__left {
@@ -349,8 +357,8 @@ body {
 
 .ecommerce .bg-eco--mod {
   background: url("./img/the-rest/body-content1-img.png");
-  background-position: 55px 115px;
-  background-size: auto;
+  background-position: 10px 95px;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -462,7 +470,7 @@ body {
 .token .bg-eco--mod .token-content--right .text-block h5 {
   font-size: 11px;
   font-family: "Poppins", sans-serif;
-  font-weight: normal;
+  font-weight: 600;
   line-height: 16px;
   color: #000;
 }
@@ -696,7 +704,7 @@ body {
   background-color: #D9C377;
   font-size: 13px;
   font-family: "Poppins", sans-serif;
-  font-weight: lighter;
+  font-weight: 600;
   line-height: 19px;
   color: #04111C;
   width: 200px;
@@ -726,7 +734,7 @@ body {
   background-color: #fff;
   font-size: 13px;
   font-family: "Poppins", sans-serif;
-  font-weight: lighter;
+  font-weight: 600;
   line-height: 19px;
   color: #04111C;
   padding: 12px 70px;

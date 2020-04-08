@@ -30,5 +30,23 @@ $(window).on('load',()=>{
             $('.blur').toggle();
         })
 })
+$('#ecomerce-btn').on('click',(e)=>{
+    e.preventDefault();
+    var offset = $('.ecommerce').offset();
+    var top = offset.top;
+    $(window).scrollTop(top-20);
+})
+$('#online-ads-btn').on('click',(e)=>{
+    e.preventDefault();
+    var offset = $('.advertisement').offset();
+    var top = offset.top;
+    $(window).scrollTop(top-20);
+})
+$('#casino-btn').on('click',(e)=>{
+    e.preventDefault();
+    var offset = $('.casino').offset();
+    var top = offset.top;
+    $(window).scrollTop(top-20);
+})
 });
 
