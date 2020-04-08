@@ -852,6 +852,10 @@ body {
   .navbar-expand-lg #my-nav ul li a {
     padding-top: 12px;
     padding-bottom: 12px;
+    color: #444;
+  }
+  .navbar-expand-lg #my-nav ul li .dropdown #dropdownMenuButton {
+    color: #444;
   }
   .navbar-expand-lg #my-nav ul .dropdown-mod {
     border: none !important;
