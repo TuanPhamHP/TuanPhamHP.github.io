@@ -781,6 +781,16 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .navbar-collapse {
+    -webkit-box-flex: unset !important;
+        -ms-flex-positive: unset !important;
+            flex-grow: unset !important;
+  }
+  .sticky .navbar-collapse {
+    -webkit-box-flex: 1 !important;
+        -ms-flex-positive: 1 !important;
+            flex-grow: 1 !important;
+  }
   .container--mod {
     padding: 0px 20px;
   }
