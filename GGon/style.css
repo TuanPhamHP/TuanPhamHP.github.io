@@ -752,14 +752,19 @@ body {
           transform: scale(0);
 }
 
+.gaming .gaming-body .gm-block1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
 .gaming .gaming-body .gm-block2 {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .gaming .gaming-body .gm-block3 {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .token .bg-clone {
