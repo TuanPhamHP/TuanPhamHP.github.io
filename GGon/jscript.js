@@ -101,7 +101,11 @@ $(window).on('load resize',()=>{
 
     $('.header-toggler--mod').attr('data-target','');
         $('.blog-block').on('click',()=>{
-            $(this).find('.txt-toggle').toggle();
+            // $(this).find('.txt-toggle').toggle();
+            // console.log($(this).find('.txt-toggle').slideUp())
+            $(this).find('.txt-toggle').slideToggle()
+            // $(selector).slideDown();
+            
         })
         $('.header-toggler--mod').on('click',()=>{
             $('.navbar-toggler-icon--mod').toggleClass('tg2');
@@ -131,5 +135,8 @@ $('.blur').on('click',()=>{
     $('#my-nav').toggleClass('move')
     $('.blur').css('display','none');
 })
+// $('.blog-block').find('.txt-toggle').on('click',()=>{
+//     $(this).toggle();
+// })
 });
 

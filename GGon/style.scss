@@ -56,34 +56,34 @@ body{
     transform: translateX(200%);
 }
 .t-hd-animation-l{
-    animation: hdl 1s linear forwards;
+    animation: hdl 0.75s linear forwards;
     transform-origin: bottom;
 }
 .r-200p{
     transform: translateX(-200%);
 }
 .t-hd-animation-r{
-    animation: hdr 1s linear forwards;
+    animation: hdr 0.75s linear forwards;
     transform-origin: bottom;
 }
 .t-block-animation-r{
     animation-delay: 0.2;
-    animation: blr 2s ease-out forwards;
+    animation: blr 1.6s ease-out forwards;
     transform-origin: bottom;
 }
 .img-scl{
     display: block!important;
     transform: scale(0);
-    animation: scl 1s cubic-bezier(0,.7,1,1.48) forwards;
+    animation: scl 0.65s cubic-bezier(0,.87,.77,1.4) forwards;
     transform-origin: center;
     animation-delay: 0.8s;
 }
 .content-scl{
     // display: block!important;
     transform: scale(0);
-    animation: scl 1s cubic-bezier(0,.7,1,1.48) forwards;
+    animation: scl 0.5s cubic-bezier(0,.7,1,1.48) forwards;
     transform-origin: center;
-    animation-delay: 0.8s;
+    animation-delay: 0.72s;
 }
 .txt-cl-change{
     animation: cw 1s ease-in-out forwards;
@@ -417,17 +417,19 @@ body{
             transform: scale(0);
         }
         .gm-block1{
-            animation-delay: 1s;
+            animation-delay: 0.7s;
         }
         .gm-block2{
-            animation-delay: 2s;
+            animation-delay: 1.5s;
         }
         .gm-block3{
-            animation-delay: 3s;
+            animation-delay: 2.3s;
         }
     }
 }
 .token{
+    border: none!important;
+    box-shadow: none!important;
     .bg-clone{
         @include bg-set('./img/the-rest/body-content1-img.png', 10px, -530px, contain, no-repeat);
     }
@@ -436,16 +438,17 @@ body{
         @include bg-set('./img/the-rest/token-bg.png', center, center, cover, no-repeat);
         .token-content--left{
             .token-p-mod{
+                animation-delay:0.4s ;
                 padding: 29px;
                 background: #F6F4EC;
             }
             .second-left-txt{
                 color: transparent;
-                animation-delay: 1.2s;
+                animation-delay: 1.3s;
             }
             .third-left-txt{
                 color: transparent;
-                animation-delay: 2.7s;
+                animation-delay: 1.9s;
             }
         }
         .token-content--right{
@@ -468,7 +471,7 @@ body{
             }
             .txt-block1{
                 transform: scale(0);
-                animation-delay: 0.5s;
+                animation-delay: s;
                 top: -30px;
                 right: 0px;
                 width: 228px;
@@ -478,7 +481,7 @@ body{
             }
             .txt-block2{
                 transform: scale(0);
-                animation-delay: 1.7s;
+                animation-delay: 1.4s;
                 bottom: 0px;
                 left: 40px;
                 width: 177px;
@@ -488,7 +491,7 @@ body{
             }
             .txt-block3{
                 transform: scale(0);
-                animation-delay: 2.9s;
+                animation-delay: 2s;
                 bottom: 0px;
                 right: 38px;
                 width: 177px;
@@ -502,12 +505,23 @@ body{
 .partner{
     background: #F9F9F9;
     padding: 40px 0px 60px 0px;
-    .scroll{
-        overflow-x: scroll;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+    overflow: hidden;
+    border: none!important;
+    box-shadow: none!important;
+    .container--mod{
+        border: none!important;
+        box-shadow: none!important;
     }
+    .img-collapse{
+        border: none!important;
+        box-shadow: none!important;
+    }
+    // .scroll{
+    //     overflow-x: scroll;
+    //     &::-webkit-scrollbar{
+    //         display: none;
+    //     }
+    // }
     .partner-img{
         cursor: pointer;
         width: 170px;
@@ -524,6 +538,12 @@ body{
     }
 }
 .blogs{
+    border: none!important;
+    box-shadow: none!important;
+    .container--mod{
+        border: none!important;
+        box-shadow: none!important;
+    }
     min-height: 650px;
     .blog-block{
         cursor: pointer;

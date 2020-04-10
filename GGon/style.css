@@ -72,8 +72,8 @@ body {
 }
 
 .t-hd-animation-l {
-  -webkit-animation: hdl 1s linear forwards;
-          animation: hdl 1s linear forwards;
+  -webkit-animation: hdl 0.75s linear forwards;
+          animation: hdl 0.75s linear forwards;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
 }
@@ -84,8 +84,8 @@ body {
 }
 
 .t-hd-animation-r {
-  -webkit-animation: hdr 1s linear forwards;
-          animation: hdr 1s linear forwards;
+  -webkit-animation: hdr 0.75s linear forwards;
+          animation: hdr 0.75s linear forwards;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
 }
@@ -93,8 +93,8 @@ body {
 .t-block-animation-r {
   -webkit-animation-delay: 0.2;
           animation-delay: 0.2;
-  -webkit-animation: blr 2s ease-out forwards;
-          animation: blr 2s ease-out forwards;
+  -webkit-animation: blr 1.6s ease-out forwards;
+          animation: blr 1.6s ease-out forwards;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
 }
@@ -103,8 +103,8 @@ body {
   display: block !important;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: scl 1s cubic-bezier(0, 0.7, 1, 1.48) forwards;
-          animation: scl 1s cubic-bezier(0, 0.7, 1, 1.48) forwards;
+  -webkit-animation: scl 0.65s cubic-bezier(0, 0.87, 0.77, 1.4) forwards;
+          animation: scl 0.65s cubic-bezier(0, 0.87, 0.77, 1.4) forwards;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-animation-delay: 0.8s;
@@ -114,12 +114,12 @@ body {
 .content-scl {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: scl 1s cubic-bezier(0, 0.7, 1, 1.48) forwards;
-          animation: scl 1s cubic-bezier(0, 0.7, 1, 1.48) forwards;
+  -webkit-animation: scl 0.5s cubic-bezier(0, 0.7, 1, 1.48) forwards;
+          animation: scl 0.5s cubic-bezier(0, 0.7, 1, 1.48) forwards;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
+  -webkit-animation-delay: 0.72s;
+          animation-delay: 0.72s;
 }
 
 .txt-cl-change {
@@ -753,18 +753,24 @@ body {
 }
 
 .gaming .gaming-body .gm-block1 {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
 .gaming .gaming-body .gm-block2 {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .gaming .gaming-body .gm-block3 {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+
+.token {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .token .bg-clone {
@@ -783,20 +789,22 @@ body {
 }
 
 .token .bg-eco--mod .token-content--left .token-p-mod {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
   padding: 29px;
   background: #F6F4EC;
 }
 
 .token .bg-eco--mod .token-content--left .second-left-txt {
   color: transparent;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
 }
 
 .token .bg-eco--mod .token-content--left .third-left-txt {
   color: transparent;
-  -webkit-animation-delay: 2.7s;
-          animation-delay: 2.7s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
 
 .token .bg-eco--mod .token-content--right {
@@ -846,8 +854,8 @@ body {
 .token .bg-eco--mod .token-content--right .txt-block1 {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: s;
+          animation-delay: s;
   top: -30px;
   right: 0px;
   width: 228px;
@@ -858,8 +866,8 @@ body {
 .token .bg-eco--mod .token-content--right .txt-block2 {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation-delay: 1.7s;
-          animation-delay: 1.7s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
   bottom: 0px;
   left: 40px;
   width: 177px;
@@ -870,8 +878,8 @@ body {
 .token .bg-eco--mod .token-content--right .txt-block3 {
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation-delay: 2.9s;
-          animation-delay: 2.9s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   bottom: 0px;
   right: 38px;
   width: 177px;
@@ -882,14 +890,22 @@ body {
 .partner {
   background: #F9F9F9;
   padding: 40px 0px 60px 0px;
+  overflow: hidden;
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
-.partner .scroll {
-  overflow-x: scroll;
+.partner .container--mod {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
-.partner .scroll::-webkit-scrollbar {
-  display: none;
+.partner .img-collapse {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .partner .partner-img {
@@ -1032,7 +1048,16 @@ body {
 }
 
 .blogs {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
   min-height: 650px;
+}
+
+.blogs .container--mod {
+  border: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .blogs .blog-block {
