@@ -23,6 +23,18 @@ $(document).ready(function () {
         var offsetk = $('.token').offset();
         var toptk = offsetk.top;
         var tkh = $('.token').height();
+        var prtimgcol = $('#partner-img-col').width();
+        if(prtimgcol > 1360){
+            $('.partner17').removeClass('mx-auto')
+            $('.partner18').removeClass('mx-auto')
+            $('.partner17').addClass('mx-2')
+            $('.partner18').addClass('mx-2')
+        }else{
+            $('.partner17').removeClass('mx-2')
+            $('.partner18').removeClass('mx-2')
+            $('.partner17').addClass('mx-auto')
+            $('.partner18').addClass('mx-auto')
+        }
         var usecases = $('.use').height();
         if(offset >= bannerh|| wd <=480){
             $('.header-banner__text').css('margin-top','70px')

@@ -74,7 +74,7 @@ body{
 .img-scl{
     display: block!important;
     transform: scale(0);
-    animation: scl 0.65s cubic-bezier(0,.87,.77,1.4) forwards;
+    animation: scl 0.65s linear forwards;
     transform-origin: center;
     animation-delay: 0.8s;
 }
@@ -89,31 +89,31 @@ body{
     animation: cw 1s ease-in-out forwards;
 }
 @keyframes hdl{
-    0%{transform: translateX(200%) skewX(-20deg);}
-    50%{transform: translateX(0%) skewX(-20deg);}
-    60%{transform: translateX(0%) skewX(20deg);}
-    70%{transform: translateX(0%) skewX(-20deg);}
-    80%{transform: translateX(0%) skewX(20deg);}
-    90%{transform: translateX(0%) skewX(-20deg);}
-    100%{transform: translateX(0%) skewX(0deg);}
+    0%{transform: translateX(200%) skewX(-20deg);opacity: 0;}
+    50%{transform: translateX(0%) skewX(-20deg);opacity: 0.5;}
+    60%{transform: translateX(0%) skewX(20deg);opacity: 0.5;}
+    70%{transform: translateX(0%) skewX(-20deg);opacity: 0.5;}
+    80%{transform: translateX(0%) skewX(20deg);opacity: 0.5;}
+    90%{transform: translateX(0%) skewX(-20deg);opacity: 0.7;}
+    100%{transform: translateX(0%) skewX(0deg);opacity: 1;}
 }
 @keyframes hdr{
-    0%{transform: translateX(-200%) skewX(20deg);}
+    0%{transform: translateX(-200%) skewX(20deg);opacity: 0;}
     50%{transform: translateX(0%) skewX(20deg);}
     60%{transform: translateX(0%) skewX(-20deg);}
     70%{transform: translateX(0%) skewX(20deg);}
     80%{transform: translateX(0%) skewX(-20deg);}
     90%{transform: translateX(0%) skewX(20deg);}
-    100%{transform: translateX(0%) skewX(0deg);}
+    100%{transform: translateX(0%) skewX(0deg);opacity: 1;}
 }
 @keyframes blr{
-    0%{transform: translateX(-200%);}
+    0%{transform: translateX(-200%);opacity: 0;}
     50%{transform: translateX(0%)}
-    100%{transform: translateX(0%) skewX(0deg);}
+    100%{transform: translateX(0%) skewX(0deg);opacity: 1;}
 }
 @keyframes scl{
-    0%{transform: scale(0);}
-    100%{transform: scale(1);}
+    0%{transform: scale(0);opacity: 0;}
+    100%{transform: scale(1);opacity: 1;}
 }
 @keyframes cw{
     0%{color: transparent;}
