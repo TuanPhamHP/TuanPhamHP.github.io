@@ -36,16 +36,17 @@
                                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item">
-                                        <div class="dropdown">
+                                        <div class="dropdown" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
                                             <button class="btn btn-mod bg-transparent dropdown-toggle px-0 d-flex justify-content-between align-items-center" type="button"
                                                 id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                                 aria-expanded="false">
                                                 Use cases
                                             </button>
                                             <div class="dropdown-menu dropdown-mod p-0" aria-labelledby="dropdownMenuButton">
-                                                <a class="dropdown-item w-100 text-left" id="ecomerce-btn">Ecommerce</a>
-                                                <a class="dropdown-item w-100 text-left" id="online-ads-btn">Online Advertising</a>
-                                                <a class="dropdown-item w-100 text-left" id="casino-btn">Decentralized Casino Platforms</a>
+                                                <a class="dropdown-item w-100 text-left t__clicked--mod" id="ecomerce-btn">Ecommerce</a>
+                                                <a class="dropdown-item w-100 text-left t__clicked--mod" id="online-ads-btn">Online Advertising</a>
+                                                <a class="dropdown-item w-100 text-left t__clicked--mod" id="casino-btn">Decentralized Casino Platforms</a>
                                             </div>
                                         </div>
                                     </li>
@@ -95,11 +96,12 @@
                                     blockchain solution for our partners in the following fields
                                 </p>
                             </div>
-                            <div class="use-cases__right d-flex align-items-center justify-content-center">
+                            <div class="use-cases__right d-flex flex-column align-items-center justify-content-center">
                                 <h4 class="text-center">
                                     SIGN UP <br>
                                     FOR AIRDROP
                                 </h4>
+                                <p id="sgn-notif">Coming soon</p>
                             </div>
                         </div>
                     </section>
@@ -111,7 +113,7 @@
         <main>
             <div class="body-content container-fluid--mod">
                 <div class="diamond diamond1"></div>
-                <div class="diamond diamond2"></div>
+                <div class="diamond diamond2 z-1"></div>
                 <div class="diamond diamond3"></div>
             <!-- SECTION 2 ECOMMERCE -->
             <section class="ecommerce">
@@ -119,15 +121,15 @@
                     <div class="container--mod">
                         <div class="row h-100 align-items-center w-100 mx-auto">
                         <div class="hd hd--mod1">
-                                <h3 class="h3-t1">
+                                <h3 class="h3-t1 t-hd-animation-l l-200p eco-hd">
                                     Ecommerce
                                 </h3>
                                 <p class="m-0 p-t1">Payment and Incentive solutions for a truly decentralized marketplace</p>
                         </div>
-                        <div class="ecommerce-content__left col-xl-6 col-lg-6 col-md-6 col-sm-12 p-0"></div>
+                       <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 p-0 content__left-wrap"> <div class="ecommerce-content__left w-100"></div></div>
                         <div class="ecommerce-content__right col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-between p-0">
                             <div class="hd hd--mod2">
-                            <h3 class="h3-t1">
+                            <h3 class="h3-t1 l-200p eco-hd">
                                 Ecommerce
                             </h3>
                             <p class="m-0 p-t1">Payment and Incentive solutions for a truly decentralized marketplace</p>
@@ -157,14 +159,14 @@
                     <div class="container--mod">
                         <div class="row h-100 align-items-center">
                             <div class="hd hd--mod1">
-                                <h3 class="h3-t1">
+                                <h3 class="h3-t1 ads-hd r-200p">
                                     Online Advertisement
                                 </h3>
                                 <p class="m-0 p-t1">Building the Next-generation Decentralized Digital Advertising Platform.</p>
                                 </div>
                         <div class="ads-content__left col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-between p-0">
                             <div class="hd pb-3 hd--mod2">
-                            <h3 class="h3-t1">
+                            <h3 class="h3-t1 ads-hd r-200p">
                                 Online Advertisement
                             </h3>
                             <p class="m-0 p-t1">Building the Next-generation Decentralized Digital Advertising Platform.</p>
@@ -192,7 +194,7 @@
                             </div>
                         </div>
                         <div class="ads-content__right col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <img src="./img/the-rest/online-advertisement-img.png" alt="">
+                            <img src="./img/the-rest/online-advertisement-img.png" alt="" class="ads-img">
                         </div>
                         </div>
                     </div>
@@ -202,21 +204,24 @@
             <!-- ------------- -->
             <!-- SECTION 4 CASINO -->
             <section class="casino">
-                <div class="container-fluid--mod h-100 bg-eco--mod casino-platform">
+                <div class="container-fluid--mod h-100 bg-eco--mod casino-platform position-relative">
+                    <!-- <div class="row">
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 position-absolute casino-left-bg"><img src="./img/the-rest/decentrialized-left-1.png" alt=""></div>
+                    </div> -->
                     <div class="container--mod">
                         <div class="row h-100 align-items-start m-0">
                             <div class="hd hd--mod1">
-                                <h3 class="h3-t1">
+                                <h3 class="h3-t1 casino-hd r-200p">
                                     Decentralized Casino Platforms
                                 </h3>
                                 <p class="m-0 p-t1">Building the heart of a new generation of fair and transparent casino platforms</p>
                                 </div>
                         <div class="casino-content__left col-xl-5 col-lg-5 col-md-5 col-sm-12">
-                            <img src="./img/the-rest/decentrialized-left-2.png" alt="">
+                            <img src="./img/the-rest/decentrialized-left-2.png" alt="" class="casino-img">
                         </div>
                         <div class="casino-content__right col-xl-7 col-lg-7 col-md-7 col-sm-12 d-flex flex-column justify-content-between p-0 pr-0">
                             <div class="hd hd--mod2">
-                            <h3 class="h3-t1">
+                            <h3 class="h3-t1 casino-hd l-200p">
                                 Decentralized Casino Platforms
                             </h3>
                             <p class="m-0 p-t1">Building the heart of a new generation of fair and transparent casino platforms</p>
@@ -245,10 +250,10 @@
                 <div class="container--mod gaming-body d-flex flex-column justify-content-center">
                     <div class="gaming-subtitle row">
                         <div class="gaming-hd mb-5 mb-lg-5 mb-md-3">
-                            <h3 class="h3-t1">Fast-growing Gaming Ecosystem</h3>
+                            <h3 class="h3-t1 gaming-hd--mod r-200p">Fast-growing Gaming Ecosystem</h3>
                             <p class="p-t1 w-75">GON platform helps creating a dynamic and fast-growing Gaming ecosystem which balances the benefits of Game Developers and Game Players.</p>
                         </div>
-                        <div class="col-lg-4 col-md-12 p-0">
+                        <div class="col-lg-4 col-md-12 p-0 pr-1 gm-block1 gm-block">
                             <div class="icon mb-lg-4 mb-md-3"><img src="./img/icon/icon-4.png" alt=""></div>
                             <div class="gaming-content">
                                 <h4 class="h3-t2">CROWDSOURCED GAME DEVELOPMENT</h3>
@@ -256,7 +261,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-12 p-0">
+                        <div class="col-lg-4 col-md-12 p-0 pr-1 gm-block2 gm-block">
                             <div class="icon mb-lg-4 mb-md-3"><img src="./img/icon/icon-5.png" alt=""></div>
                             <div class="gaming-content">
                                 <h4 class="h3-t2">SUPPORTIVE COWORKING COMMUNITY</h3>
@@ -264,7 +269,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-12 p-0">
+                        <div class="col-lg-4 col-md-12 p-0 pr-1 gm-block3 gm-block">
                             <div class="icon mb-lg-4 mb-md-3"><img src="./img/icon/icon-6.png" alt=""></div>
                             <div class="gaming-content">
                                 <h4 class="h3-t2">DECENTRALIZED GAME MARKETPLACE</h3>
@@ -285,12 +290,12 @@
                         <div class="row">
                             <div class="token-content--left col-xl-6 col-lg-6 col-md-6">
                                 <h3 class="h3-t1 text-white">Token</h3>
-                                <p class="p-t1 token-p-mod w-100">At the first stage, GON will be an ERC20 token on the Ethereum blockchain. After the Mainnet is released, GON blockchain will be integrated into our partner’s platform and the GON ERC20 tokens will be swapped to GON Mainnet coins.
+                                <p class="p-t1 token-p-mod w-100 r-200p first-left-txt">At the first stage, GON will be an ERC20 token on the Ethereum blockchain. After the Mainnet is released, GON blockchain will be integrated into our partner’s platform and the GON ERC20 tokens will be swapped to GON Mainnet coins.
                                 </p>
-                                <p class="p-t1 token-p-mod2 text-white w-85">
+                                <p class="p-t1 token-p-mod2 w-85 second-left-txt">
                                     GONs will be built as a fixed-supply cryptocurrency. The total supply of GON will be  100,000,000,000 GON. The initial distribution will be 30,000,000,000 GON. 
                                 </p>
-                                <p class="p-t1 token-p-mod2 text-white w-85">
+                                <p class="p-t1 token-p-mod2 w-85 third-left-txt">
                                     Other 70,000,000,000 GON will be distributed within 7 years. Each quarter, 2,500,000,000 GON will be distributed.
                                 </p>
                             </div>
@@ -426,9 +431,9 @@
                 <div class="container--mod d-flex justify-content-between align-items-center footer-content">
                     <p class="m-0">© 2020 GON, Inc. All rights reserved.</p>
                     <div class="social d-flex">
-                        <div class="social__icon fb text-white text-center mr-4"><i class="fab fa-facebook-f"></i></div>
-                        <div class="social__icon monero text-white text-center mr-4"><i class="fab fa-monero"></i></div>
-                        <div class="social__icon monero text-white text-center mr-4"><i class="fas fa-paper-plane"></i></div>
+                        <div class="social__icon fb text-white text-center mr-4"><img src="./img/social/fb.png" alt=""></div>
+                        <div class="social__icon monero text-white text-center mr-4"><img src="./img/social/mi.png" alt=""></div>
+                        <div class="social__icon plane text-white text-center mr-4"><img src="./img/social/fl.png" alt=""></div>
                     </div>
                 </div>
             </div>
