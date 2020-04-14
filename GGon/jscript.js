@@ -9,6 +9,13 @@ $(document).ready(function () {
         var wd = $(window).width();
         var bannerh = $('.banner').height();
         var hbannerh = $('.header-banner__content').height();
+        if(offset >= bannerh - hbannerh|| wd < 992){
+            $('.header-banner__content').css('padding-top','90px')
+            $('.navbar--wrapper').addClass('sticky')
+        }else{
+            // $('.navbar--wrapper').removeClass('sticky')
+            $('.header-banner__content').css('padding-top','90px')
+        };
         // ecommerce
         var offseteco = $('.ecommerce').offset();
         var topeco = offseteco.top;
@@ -51,13 +58,7 @@ $(document).ready(function () {
             $('.partner18').addClass('mx-auto')
         }
         var usecases = $('.use').height();
-        if(offset >= bannerh - hbannerh|| wd < 992){
-            $('.header-banner__content').css('padding-top','90px')
-            $('.navbar--wrapper').addClass('sticky')
-        }else{
-            $('.navbar--wrapper').removeClass('sticky')
-            $('.header-banner__content').css('padding-top','0px')
-        };
+
         if(wd <= 767){
             $('.casino-content__left').find('img').attr('src','./img/the-rest/decentrialized-left-2-1.png')
         }else{
