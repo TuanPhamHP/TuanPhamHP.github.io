@@ -250,11 +250,11 @@ body{
     #logo1{
         display: none;
     }
-    animation: slidedown 1s ease-in forwards;
-    @keyframes slidedown {
-        0%{top: -100px;}
-        100%{top: 0px;}
-    }
+    // animation: slidedown 1s ease-in forwards;
+    // @keyframes slidedown {
+    //     0%{top: -100px;}
+    //     100%{top: 0px;}
+    // }
     .tg1{
         color: rgb(131, 127, 127);
         text-align: center;
