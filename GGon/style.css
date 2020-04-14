@@ -489,11 +489,13 @@ body {
 
 .sticky {
   position: fixed;
-  top: -100px;
+  top: 0px;
+  right: 0px;
   left: 0px;
   z-index: 9999999;
   background: #fff;
   padding: 0px;
+  margin-top: -3px;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -1368,7 +1370,7 @@ body {
     width: 376px;
     background-color: #fff;
     padding: 4px 10px;
-    height: 500px;
+    height: 100vh;
   }
   .navbar-expand-lg #my-nav ul {
     padding-right: 40px;

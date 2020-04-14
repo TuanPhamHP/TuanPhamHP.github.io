@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $('.header-toggler--mod').on('click',()=>{
+        $('.navbar-toggler-icon--mod').toggleClass('tg2');
+        $('#my-nav').toggleClass('move');
+        $('.blur').toggle();
+    })
     $(window).on('scroll load resize',()=>{
         var offset = $(window).scrollTop();
         var wd = $(window).width();
@@ -46,7 +51,7 @@ $(document).ready(function () {
             $('.partner18').addClass('mx-auto')
         }
         var usecases = $('.use').height();
-        if(offset >= bannerh - hbannerh|| wd <=480){
+        if(offset >= bannerh - hbannerh|| wd <= 991){
             $('.header-banner__content').css('padding-top','90px')
             $('.navbar--wrapper').addClass('sticky')
             
@@ -112,18 +117,32 @@ $(document).ready(function () {
         $('#token-m').on('click',(e)=>{
             e.preventDefault();
             $(window).scrollTop(toptk-80);
+            $('#my-nav').removeClass('move')
+            $('.blur').css('display','none');
         })
         $('#partner-m').on('click',(e)=>{
             e.preventDefault();
             $(window).scrollTop(toppn-80);
+            $('#my-nav').removeClass('move')
+            $('.blur').css('display','none');
         })
         $('#blog-m').on('click',(e)=>{
             e.preventDefault();
             $(window).scrollTop(topblg-80);
+            $('#my-nav').removeClass('move')
+            $('.blur').css('display','none');
         })
         $('#contact-m').on('click',(e)=>{
             e.preventDefault();
             $(window).scrollTop(topctt);
+            $('#my-nav').removeClass('move')
+            $('.blur').css('display','none');
+        })
+        $('#home-m').on('click',(e)=>{
+            e.preventDefault();
+            $(window).scrollTop(0);
+            $('#my-nav').removeClass('move')
+            $('.blur').css('display','none');
         })
     })
 $(window).on('load resize',()=>{
@@ -154,11 +173,6 @@ $(window).on('load resize',()=>{
             $(this).find('.txt-toggle').slideToggle()
             // $(selector).slideDown();
             
-        })
-        $('.header-toggler--mod').on('click',()=>{
-            $('.navbar-toggler-icon--mod').toggleClass('tg2');
-            $('#my-nav').toggleClass('move');
-            $('.blur').toggle();
         })
 })
 $('#ecomerce-btn').on('click',(e)=>{
