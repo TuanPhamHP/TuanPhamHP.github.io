@@ -4,6 +4,9 @@ $(document).ready(function () {
         $('#my-nav').toggleClass('move');
         $('.blur').toggle();
     })
+    $(window).on('load',()=>{
+        $(window).scrollTop(3);
+    })
     $(window).on('scroll load resize',()=>{
         var offset = $(window).scrollTop();
         var wd = $(window).width();
