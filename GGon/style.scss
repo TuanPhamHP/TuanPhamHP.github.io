@@ -53,6 +53,7 @@ body{
     border-left: 2px solid #D9C377;
 }
 .l-200p{
+    opacity: 0;
     transform: translateX(200%);
 }
 .t-hd-animation-l{
@@ -60,6 +61,7 @@ body{
     transform-origin: bottom;
 }
 .r-200p{
+    opacity: 0;
     transform: translateX(-200%);
 }
 .t-hd-animation-r{
@@ -228,14 +230,14 @@ body{
     z-index: 9999999;
     background: #fff;
     padding: 0px;
-    @include font(12px, 'Poppins',normal,18px, #444);
+    @include font(15px, 'Poppins',400,18px, #444);
     box-shadow: 0px 0px 1px 1px rgba(63, 63, 63, 0.384);
     a{
         text-decoration: none!important;
         color: #444!important;
     }
     #dropdownMenuButton{
-        @include font(12px, 'Poppins',normal,18px, #444);
+        @include font(15px, 'Poppins',400,18px, #444);
         &:hover{
             color: #000;
         }
@@ -671,6 +673,7 @@ body{
             }
         }
 }
+
 @media only screen and (max-width : 1920px){
     .container--mod{
         margin-right: auto;
