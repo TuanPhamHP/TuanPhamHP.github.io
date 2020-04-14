@@ -349,6 +349,11 @@ body {
   }
 }
 
+.t-86px {
+  height: 86px;
+  display: none;
+}
+
 .blur {
   position: fixed;
   height: 100vh;
@@ -489,14 +494,13 @@ body {
 
 .sticky {
   position: fixed;
-  height: auto;
   top: 0px;
+  height: 86px;
   right: 0px;
   left: 0px;
   z-index: 9999999;
   background: #fff;
   padding: 0px;
-  margin-top: -3px;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
