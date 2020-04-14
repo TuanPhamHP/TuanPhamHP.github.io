@@ -21,11 +21,6 @@ $(document).ready(function () {
             $('.navbar--wrapper').addClass('sticky')
             $('.t-86px').css('display','block');
             $('.header-banner__content').css('margin-top','90px');
-            if (wd >= 600) {
-                $('.sticky').css('height','70px');
-            }else{
-                $('.sticky').css('height','50px');
-            }
         }
        
         // ecommerce
@@ -163,6 +158,22 @@ $(window).on('load resize',()=>{
         var offsetus = $('.use').offset();
         var topus = offsetus.top;  
         var usecases = $('.use-cases').height();
+        var offset = $(window).scrollTop();
+        var bannerh = $('.banner').height();
+        var hbannerh = $('.header-banner__content').height();
+        if (wd >= 992) {
+           if (offset > bannerh - hbannerh) {
+            $('.navbar--wrapper').addClass('sticky')
+            $('.t-86px').css('display','block');
+           }else{
+            $('.navbar--wrapper').removeClass('sticky')
+            $('.t-86px').css('display','none');
+           }
+        }else{
+            $('.navbar--wrapper').addClass('sticky')
+            $('.t-86px').css('display','block');
+            $('.header-banner__content').css('margin-top','90px');
+        }
     if(wd <=576){
         $('.ads-content__left').addClass('order-1')
     }else{

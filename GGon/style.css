@@ -495,7 +495,6 @@ body {
 .sticky {
   position: fixed;
   top: 0px;
-  height: 86px;
   right: 0px;
   left: 0px;
   z-index: 9999999;
