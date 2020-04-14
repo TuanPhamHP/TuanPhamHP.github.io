@@ -1453,6 +1453,9 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  header .header-banner .header-banner__content {
+    margin-top: 40px;
+  }
   header .header-banner .header-banner__content .header-banner__img img {
     display: block;
     width: 50%;
