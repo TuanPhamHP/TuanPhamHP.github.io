@@ -1,5 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
 html {
   scroll-behavior: smooth;
 }
@@ -71,31 +69,27 @@ body {
 .l-200p {
   opacity: 0;
   -webkit-transform: translateX(200%);
-          -ms-transform: translateX(200%);
-      transform: translateX(200%);
+          transform: translateX(200%);
 }
 
 .t-hd-animation-l {
   -webkit-animation: hdl 0.75s linear forwards;
           animation: hdl 0.75s linear forwards;
   -webkit-transform-origin: bottom;
-          -ms-transform-origin: bottom;
-      transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 .r-200p {
   opacity: 0;
   -webkit-transform: translateX(-200%);
-          -ms-transform: translateX(-200%);
-      transform: translateX(-200%);
+          transform: translateX(-200%);
 }
 
 .t-hd-animation-r {
   -webkit-animation: hdr 0.75s linear forwards;
           animation: hdr 0.75s linear forwards;
   -webkit-transform-origin: bottom;
-          -ms-transform-origin: bottom;
-      transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 .t-block-animation-r {
@@ -104,33 +98,28 @@ body {
   -webkit-animation: blr 1.6s ease-out forwards;
           animation: blr 1.6s ease-out forwards;
   -webkit-transform-origin: bottom;
-          -ms-transform-origin: bottom;
-      transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 .img-scl {
   display: block !important;
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   -webkit-animation: scl 0.65s linear forwards;
           animation: scl 0.65s linear forwards;
   -webkit-transform-origin: center;
-          -ms-transform-origin: center;
-      transform-origin: center;
+          transform-origin: center;
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
 }
 
 .content-scl {
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   -webkit-animation: scl 0.5s cubic-bezier(0, 0.7, 1, 1.48) forwards;
           animation: scl 0.5s cubic-bezier(0, 0.7, 1, 1.48) forwards;
   -webkit-transform-origin: center;
-          -ms-transform-origin: center;
-      transform-origin: center;
+          transform-origin: center;
   -webkit-animation-delay: 0.72s;
           animation-delay: 0.72s;
 }
@@ -398,7 +387,6 @@ body {
 
 .banner {
   height: 675px;
-  background: -o-radial-gradient(50% 50%, 50% 50%, #012F41 0%, #03101B 100%);
   background: radial-gradient(50% 50% at 50% 50%, #012F41 0%, #03101B 100%);
 }
 
@@ -418,8 +406,7 @@ body {
   bottom: 0px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-animation: fullout 0.2s linear forwards;
           animation: fullout 0.2s linear forwards;
 }
@@ -502,6 +489,7 @@ body {
 
 .sticky {
   position: fixed;
+  height: auto;
   top: 0px;
   right: 0px;
   left: 0px;
@@ -622,8 +610,7 @@ body {
   background: #D9C377;
   border-radius: 100px;
   -webkit-transform: rotate(-135deg);
-          -ms-transform: rotate(-135deg);
-      transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
 .body-content .diamond1 {
@@ -727,8 +714,7 @@ body {
 
 .advertisement .ads-content__right img {
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   width: 100%;
   height: auto;
 }
@@ -755,8 +741,7 @@ body {
 
 .casino .casino-content__left img {
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   width: 100%;
   height: auto;
 }
@@ -775,8 +760,7 @@ body {
 
 .gaming .gaming-body .gm-block {
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
 }
 
 .gaming .gaming-body .gm-block1 {
@@ -850,11 +834,9 @@ body {
   position: absolute;
   background: #EBD79D;
   -webkit-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   -webkit-transform-origin: center center;
-          -ms-transform-origin: center center;
-      transform-origin: center center;
+          transform-origin: center center;
 }
 
 .token .bg-eco--mod .token-content--right .text-block h5 {
@@ -875,16 +857,14 @@ body {
 
 .token .bg-eco--mod .token-content--right .text-block:hover {
   -webkit-transform: scale(1.1);
-          -ms-transform: scale(1.1);
-      transform: scale(1.1);
+          transform: scale(1.1);
   -webkit-box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
           box-shadow: 0px 0px 20px 7px rgba(151, 150, 150, 0.582);
 }
 
 .token .bg-eco--mod .token-content--right .txt-block1 {
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   -webkit-animation-delay: s;
           animation-delay: s;
   top: -30px;
@@ -896,8 +876,7 @@ body {
 
 .token .bg-eco--mod .token-content--right .txt-block2 {
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
   bottom: 0px;
@@ -909,8 +888,7 @@ body {
 
 .token .bg-eco--mod .token-content--right .txt-block3 {
   -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-      transform: scale(0);
+          transform: scale(0);
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   bottom: 0px;
@@ -946,7 +924,6 @@ body {
   width: 170px;
   height: 128px;
   -webkit-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
 
@@ -1099,7 +1076,6 @@ body {
   max-width: 270px;
   border: none;
   -webkit-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
 
@@ -1138,7 +1114,6 @@ body {
   height: 43px;
   border: 1px solid transparent;
   -webkit-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
 
@@ -1157,8 +1132,7 @@ body {
   bottom: 10px;
   right: 50%;
   -webkit-transform: translateX(50%);
-          -ms-transform: translateX(50%);
-      transform: translateX(50%);
+          transform: translateX(50%);
   -webkit-animation: fullout2 0.3s linear forwards;
           animation: fullout2 0.3s linear forwards;
 }
@@ -1201,7 +1175,6 @@ body {
   height: 43px;
   border: 1px solid transparent;
   -webkit-transition: 0.4s ease-in-out;
-  -o-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 
@@ -1221,8 +1194,7 @@ body {
   bottom: 10px;
   right: 50%;
   -webkit-transform: translateX(50%);
-          -ms-transform: translateX(50%);
-      transform: translateX(50%);
+          transform: translateX(50%);
   -webkit-animation: fullout2 0.3s linear forwards;
           animation: fullout2 0.3s linear forwards;
 }
@@ -1238,7 +1210,6 @@ body {
 
 .footer-wrap-mod {
   background-image: -webkit-gradient(linear, left top, right top, from(#012F41), to(#03101B));
-  background-image: -o-linear-gradient(left, #012F41, #03101B);
   background-image: linear-gradient(90deg, #012F41, #03101B);
 }
 
@@ -1264,17 +1235,14 @@ body {
   line-height: 35px;
   font-size: 22px;
   -webkit-transform-origin: center center;
-          -ms-transform-origin: center center;
-      transform-origin: center center;
+          transform-origin: center center;
   -webkit-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
 }
 
 .footer-wrap-mod .footer-content .social .social__icon:hover {
   -webkit-transform: scale(1.21);
-          -ms-transform: scale(1.21);
-      transform: scale(1.21);
+          transform: scale(1.21);
 }
 
 .footer-wrap-mod .footer-content .social .social__icon img {
@@ -1376,8 +1344,7 @@ body {
   }
   .navbar-expand-lg #my-nav {
     -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-        transform: translateX(100%);
+            transform: translateX(100%);
     position: absolute;
     top: 56px;
     right: -30px;
@@ -1626,8 +1593,7 @@ body {
   .navbar-expand-lg #my-nav {
     display: none;
     -webkit-transform: translateX(100%);
-            -ms-transform: translateX(100%);
-        transform: translateX(100%);
+            transform: translateX(100%);
     position: absolute;
     top: 56px;
     right: 0px;
@@ -1905,3 +1871,4 @@ body {
             flex-flow: column wrap;
   }
 }
+/*# sourceMappingURL=style.css.map */

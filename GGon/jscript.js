@@ -5,18 +5,32 @@ $(document).ready(function () {
         $('.blur').toggle();
     })
     $(window).on('load',()=>{
-        $(window).scrollTop(3);
+        var offset = $(window).scrollTop();
+        var wd = $(window).width();
+        var c = 0
+        for (let i = 0; i < 11; i++) {
+            c = i
+            $(window).scrollTop(i);
+            if ( c == 10) {
+                $(window).scrollTop(0);
+                console.log(i)
+            }
+        }
+        if (wd < 992) {
+            $('.header-banner__content').css('padding-top','90px')
+            $('.navbar--wrapper').addClass('sticky')
+        }
     })
     $(window).on('scroll load resize',()=>{
         var offset = $(window).scrollTop();
         var wd = $(window).width();
         var bannerh = $('.banner').height();
         var hbannerh = $('.header-banner__content').height();
-        if(offset >= bannerh - hbannerh|| wd < 992){
+        if(offset >= bannerh - hbannerh){
             $('.header-banner__content').css('padding-top','90px')
             $('.navbar--wrapper').addClass('sticky')
         }else{
-            // $('.navbar--wrapper').removeClass('sticky')
+            $('.navbar--wrapper').removeClass('sticky')
             $('.header-banner__content').css('padding-top','90px')
         };
         // ecommerce
