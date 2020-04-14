@@ -34,6 +34,7 @@ $(window).on('load resize',()=>{
 })
 $(document).ready(function () {
     $('.header-toggler--mod').on('click',()=>{
+        $('.navbar--wrapper').addClass('sticky')
         $('.navbar-toggler-icon--mod').toggleClass('tg2');
         $('#my-nav').toggleClass('move');
         $('.blur').toggle();

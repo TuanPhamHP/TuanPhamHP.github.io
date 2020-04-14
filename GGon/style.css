@@ -1510,6 +1510,16 @@ body {
   }
 }
 
+@media only screen and (max-width: 567px) {
+  .wrapper header .container-fluid--mod .navbar--wrapper .nav-bar-tab .navbar #logo1 {
+    width: 89px;
+    height: auto;
+  }
+  .wrapper header .container-fluid--mod .header-banner {
+    margin-top: 40px;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .h3-t1 {
     font-size: 27px;
