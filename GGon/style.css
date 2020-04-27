@@ -16,6 +16,35 @@ body {
   display: none;
 }
 
+.loading-page {
+  position: fixed;
+  z-index: 1996;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #040305;
+}
+
+.loading-page .img-loading {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading-page .img-loading img {
+  width: 70%;
+  max-width: 420px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 .nav-bar-tab {
   z-index: 3;
 }

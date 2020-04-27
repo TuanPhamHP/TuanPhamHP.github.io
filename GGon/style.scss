@@ -32,7 +32,31 @@ body{
 
 // @include font(40px, 'Poppins',600,60px, white);
 // ---------
-
+.loading-page{
+    position: fixed;
+    z-index: 1996;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #040305;
+    .img-loading{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        img{
+            width: 70%;
+            max-width: 420px;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
 .nav-bar-tab{
     z-index: 3;
 }
@@ -89,6 +113,7 @@ body{
 }
 .txt-cl-change{
     animation: cw 1s ease-in-out forwards;
+    // color:  rgb(94, 0, 148);
 }
 @keyframes hdl{
     0%{transform: translateX(200%) skewX(-20deg);opacity: 0;}

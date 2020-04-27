@@ -218,3 +218,7 @@ $('#home-m').on('click',(e)=>{
     $('.blur').css('display','none');
 })
 });
+$(window).on('load',()=>{
+    $('.loading-page').fadeOut();
+})
+
