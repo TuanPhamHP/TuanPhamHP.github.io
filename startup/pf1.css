@@ -157,6 +157,22 @@ body {
   }
 }
 
+.sticky {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  opacity: 0.9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 9;
+  grid-column: 1/10;
+  top: 0px;
+  padding: 0 180px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+}
+
 .wrapper {
   width: 100%;
   background: #fff;
@@ -185,21 +201,6 @@ body {
   display: flex;
   border-bottom: 1px solid grey;
   height: 100px;
-}
-
-.wrapper .menu .sticky {
-  width: 100%;
-  position: fixed;
-  z-index: 3;
-  opacity: 0.9;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 9;
-  grid-column: 1/10;
-  top: 0px;
-  padding: 0 180px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .wrapper .menu #navbar {
@@ -2253,10 +2254,14 @@ body {
 .body__content--price .price--content .price--item .price {
   text-align: center;
   max-height: 440px;
-  border: 1px solid #ebebeb;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 7px 0px #c3c3c3;
+          box-shadow: 1px 1px 7px 0px #c3c3c3;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
+  margin: 0px 5px;
 }
 
 .body__content--price .price--content .price--item .price .price-btn {
@@ -2314,6 +2319,8 @@ body {
 
 .body__content--price .price--content .price--item .price:hover .btn1 {
   background-color: #00a99d;
+  -webkit-box-shadow: 1px 1px 7px 0px #a09e9e;
+          box-shadow: 1px 1px 7px 0px #a09e9e;
 }
 
 .body__content--banner {
@@ -2483,124 +2490,6 @@ body {
   color: #c4c4c4;
   text-align: center;
   font-weight: 600;
-}
-
-.body__content--side--menu {
-  width: 60px;
-  height: 220px;
-  position: fixed;
-  right: 2px;
-  bottom: 25px;
-  background-color: #8d8c8c;
-  border-radius: 15px 0px 0px 15px;
-}
-
-.body__content--side--menu ul {
-  z-index: 3;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0px;
-  padding: 0px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.body__content--side--menu ul li {
-  text-align: center;
-  z-index: 3;
-  cursor: pointer;
-  display: block;
-  list-style-type: none;
-  color: #12f3e0;
-  font-size: 28px;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-  padding: 10px 0px;
-  position: relative;
-}
-
-.body__content--side--menu ul li span {
-  width: 0px;
-  overflow: hidden;
-  position: absolute;
-  right: 58px;
-  top: 0px;
-  color: #e4e4e4;
-  height: 30px;
-  line-height: 30px;
-  background-color: #f02e2e;
-  border-radius: 10px 0px 0px 10px;
-}
-
-.body__content--side--menu ul li span:hover {
-  background-color: #e4e4e4;
-  color: #f02e2e;
-  border: 2px solid #f02e2e;
-}
-
-.body__content--side--menu ul li:hover {
-  background-color: #cac7c7;
-}
-
-.body__content--side--menu ul li:hover i {
-  -webkit-animation: rollz 1s ease-out infinite;
-          animation: rollz 1s ease-out infinite;
-}
-
-.body__content--side--menu ul li:hover span {
-  -webkit-animation: coming 0.6s ease-out forwards;
-          animation: coming 0.6s ease-out forwards;
-}
-
-@-webkit-keyframes rollz {
-  from {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-
-@keyframes rollz {
-  from {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-  }
-  to {
-    -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-  }
-}
-
-@-webkit-keyframes coming {
-  from {
-    width: 0px;
-    padding: 10px 0px;
-  }
-  to {
-    width: 148px;
-    padding: 10px 10px;
-  }
-}
-
-@keyframes coming {
-  from {
-    width: 0px;
-    padding: 10px 0px;
-  }
-  to {
-    width: 148px;
-    padding: 10px 10px;
-  }
 }
 
 @media only screen and (max-width: 1175px) {

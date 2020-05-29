@@ -38,7 +38,7 @@ function scrollto(x) {
   window.scrollTo(0, b - 140)
 }
 window.onscroll = function () { myFunction(), this.myFunction2(), myFunction3(),run()};
-var navbar = document.getElementById("navbar");
+var navbar = document.getElementById("menu");
 var features = document.getElementById("features");
 var markups = document.getElementById("bd--markup");
 var footer = document.getElementById("footer--page");
