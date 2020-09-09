@@ -1,0 +1,12 @@
+.action {
+    display: flex;
+    align-items: center;
+    &__btn {
+        padding: 4px 18px;
+    }
+    &__input {
+        width: 120px;
+        padding: 4px 8px;
+        flex-grow: 1;
+    }
+}

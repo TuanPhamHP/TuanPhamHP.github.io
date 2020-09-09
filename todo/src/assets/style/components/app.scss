@@ -1,0 +1,10 @@
+.app {
+    max-width: 700px;
+    margin: 100px auto;
+    border: 1px solid black;
+    padding: 20px;
+    
+    &__list {
+        margin-top: 50px;
+    }
+}

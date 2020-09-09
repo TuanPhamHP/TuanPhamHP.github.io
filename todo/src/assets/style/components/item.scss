@@ -1,0 +1,20 @@
+.item {
+    display: flex;
+    &__btn {
+        padding: 4px 18px;
+    }
+    &__input {
+        width: 120px;
+        padding: 4px 8px;
+        flex-grow: 1;
+        &:read-only {
+            border-color: transparent;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &.done &__input {
+        text-decoration: line-through;
+    }
+}
