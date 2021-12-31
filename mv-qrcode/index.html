@@ -111,20 +111,24 @@
 		};
 		let cameraId = '';
 		const onChangeCamera = () => {
-			if (!listDevice.length) {
-				alert('No cam detected');
-				return;
-			}
-			const myIdx = listDevice.findIndex(o => o.id === cameraId);
-			if (myIdx === -1 || myIdx + 2 > listDevice.length) {
-				cameraId = listDevice[0].id;
-				alert(`next cam: ${listDevice[0].id}`);
-				setUpQrCode(cameraId);
-			} else {
-				alert(`found another cam: ${listDevice[myIdx + 1].label}, id: ${listDevice[myIdx + 1].id}`);
-				cameraId = listDevice[myIdx + 1].id;
-				alert(`next cam: ${listDevice[myIdx + 1].id}`);
-				setUpQrCode(cameraId);
+			try {
+				if (!listDevice.length) {
+					alert('No cam detected');
+					return;
+				}
+				const myIdx = listDevice.findIndex(o => o.id === cameraId);
+				if (myIdx === -1 || myIdx + 2 > listDevice.length) {
+					cameraId = listDevice[0].id;
+					alert(`next cam: ${listDevice[0].id}`);
+					setUpQrCode(cameraId);
+				} else {
+					alert(`found another cam: ${listDevice[myIdx + 1].label}, id: ${listDevice[myIdx + 1].id}`);
+					cameraId = listDevice[myIdx + 1].id;
+					alert(`next cam: ${listDevice[myIdx + 1].id}`);
+					setUpQrCode(cameraId);
+				}
+			} catch (error) {
+				alert(error);
 			}
 		};
 		Html5Qrcode.getCameras()
@@ -157,6 +161,8 @@
 				console.log(err);
 				if (String(err).includes('Permission denied')) {
 					alert('Permission Denied');
+				} else {
+					alert(err);
 				}
 			});
 
