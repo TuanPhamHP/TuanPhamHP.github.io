@@ -53,8 +53,9 @@
 			<div id="qr-reader" style="width: calc(100% - 40px); max-width: 500px"></div>
 			<!-- <div id="qr-reader-results"></div> -->
 			<div class="text-center text-white">Hướng khung Camera vào mã QR để quét</div>
-			<div id="switch-img" class="text-white">clickme</div>
-			<div id="result-go-here" class="text-white"></div>
+			<!-- <div id="switch-img" class="text-white">clickme</div> -->
+			<div id="result-go-here" class="text-white">result:</div>
+			<div id="cam-list" class="text-white"></div>
 			<div id="trigger-cameras">
 				<button onclick="onChangeCamera()">Change Cam</button>
 			</div>
@@ -119,6 +120,7 @@
 				cameraId = listDevice[0].id;
 				setUpQrCode(cameraId);
 			} else {
+				alert(`found another cam: ${(listDevice[myIdx + 1].id, listDevice[myIdx + 1].label)}`);
 				cameraId = listDevice[myIdx + 1].id;
 				setUpQrCode(cameraId);
 			}
@@ -132,6 +134,11 @@
 				if (devices && devices.length) {
 					var id = devices[0].id;
 					listDevice = [...devices];
+					let txt = ``;
+					listDevice.forEach(o => {
+						txt += `cam: ${(o.id, o.label)}</br>`;
+					});
+					document.querySelector('#cam-list').innerHTML = txt;
 					cameraId = id;
 					setUpQrCode(id);
 					// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
