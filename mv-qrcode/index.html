@@ -51,6 +51,10 @@
 			<!-- <div id="qr-reader-results"></div> -->
 			<div class="text-center text-white">Hướng khung Camera vào mã QR để quét</div>
 			<div id="switch-img" class="text-white">clickme</div>
+			<div id="result-go-here"></div>
+			<div id="trigger-cameras">
+				<button>Change Cam</button>
+			</div>
 		</div>
 	</body>
 	<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
@@ -66,6 +70,7 @@
 			}
 			return 'desktop';
 		};
+		let listDevice = [];
 
 		var resultContainer = document.getElementById('qr-reader-results');
 		var lastResult,
@@ -77,33 +82,9 @@
 				lastResult = decodedText;
 				// Handle on success condition with the decoded message.
 				console.log(`Scan result ${decodedText}`, decodedResult);
+				document.querySelector('#result-go-here').textContent = decodedResult;
 			}
 		}
-
-		let cameraId = '';
-		Html5Qrcode.getCameras()
-			.then(devices => {
-				/**
-				 * devices would be an array of objects of type:
-				 * { id: "id", label: "label" }
-				 */
-				if (devices && devices.length) {
-					var id = devices[0].id;
-					cameraId = id;
-					setUpQrCode(id);
-					// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
-					// html5QrcodeScanner.render(onScanSuccess);
-					// .. use this to start scanning.
-				} else {
-					alert('No cam detected');
-				}
-			})
-			.catch(err => {
-				// handle err
-				if (err.includes('Permission denied')) {
-					alert('Permission Denied');
-				}
-			});
 		const setUpQrCode = id => {
 			const html5QrCode = new Html5Qrcode(/* element id */ 'qr-reader');
 			html5QrCode
@@ -123,6 +104,46 @@
 				)
 				.catch(err => console.log(err));
 		};
+		let cameraId = '';
+		const onChangeCamera = () => {
+			if (!listDevice.length) {
+				alert('No cam detected');
+				return;
+			}
+			const myIdx = listDevice.findIndex(o => o.id === cameraId);
+			if (myIdx === -1 || myIdx + 2 > listDevice.length) {
+				cameraId = listDevice[0].id;
+				setUpQrCode(cameraId);
+			} else {
+				cameraId = listDevice[myIdx + 1].id;
+				setUpQrCode(cameraId);
+			}
+		};
+		Html5Qrcode.getCameras()
+			.then(devices => {
+				/**
+				 * devices would be an array of objects of type:
+				 * { id: "id", label: "label" }
+				 */
+				if (devices && devices.length) {
+					var id = devices[0].id;
+					listDevice = [...devices];
+					cameraId = id;
+					setUpQrCode(id);
+					// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
+					// html5QrcodeScanner.render(onScanSuccess);
+					// .. use this to start scanning.
+				} else {
+					alert('No cam detected');
+				}
+			})
+			.catch(err => {
+				// handle err
+				console.log(err);
+				if (String(err).includes('Permission denied')) {
+					alert('Permission Denied');
+				}
+			});
 
 		// html5QrCode
 		// 	.start(
