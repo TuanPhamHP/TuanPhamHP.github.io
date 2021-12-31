@@ -40,6 +40,9 @@
 			#qr-shaded-region {
 				border-width: 20px !important;
 			}
+			#result-go-here {
+				word-break: break-all;
+			}
 			/* #qr-shaded-region > div {
 				display: none !important;
 			} */
@@ -51,7 +54,7 @@
 			<!-- <div id="qr-reader-results"></div> -->
 			<div class="text-center text-white">Hướng khung Camera vào mã QR để quét</div>
 			<div id="switch-img" class="text-white">clickme</div>
-			<div id="result-go-here"></div>
+			<div id="result-go-here" class="text-white"></div>
 			<div id="trigger-cameras">
 				<button>Change Cam</button>
 			</div>
@@ -81,8 +84,7 @@
 				++countResults;
 				lastResult = decodedText;
 				// Handle on success condition with the decoded message.
-				console.log(`Scan result ${decodedText}`, decodedResult);
-				document.querySelector('#result-go-here').textContent = decodedResult;
+				// console.log(`Scan result ${decodedText}`, decodedResult);
 			}
 		}
 		const setUpQrCode = id => {
@@ -97,6 +99,8 @@
 					(decodedText, decodedResult) => {
 						// do something when code is read'
 						console.log(decodedText, decodedResult);
+
+						document.querySelector('#result-go-here').innerText = decodedText;
 					},
 					errorMessage => {
 						// parse error, ignore it.
