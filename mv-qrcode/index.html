@@ -31,7 +31,7 @@
 				align-items: center;
 				justify-content: center;
 			}
-			.qr-block__wr #qr-reader__scan_region video {
+			/* .qr-block__wr #qr-reader__scan_region video {
 				max-width: 100% !important;
 			}
 			#qr-reader {
@@ -39,7 +39,7 @@
 			}
 			#qr-shaded-region {
 				border-width: 20px !important;
-			}
+			} */
 			#result-go-here {
 				word-break: break-all;
 			}
@@ -50,8 +50,8 @@
 	</head>
 	<body>
 		<div class="qr-block__wr">
-			<div id="qr-reader" style="width: calc(100% - 40px); max-width: 500px"></div>
-			<!-- <div id="qr-reader-results"></div> -->
+			<div id="qr-reader" style="width: 370px"></div>
+			<div id="qr-reader-results"></div>
 			<div class="text-center text-white">Hướng khung Camera vào mã QR để quét</div>
 			<!-- <div id="switch-img" class="text-white">clickme</div> -->
 			<div id="result-go-here" class="text-white">result:</div>
@@ -104,6 +104,7 @@
 						document.querySelector('#result-go-here').innerText = decodedText;
 					},
 					errorMessage => {
+						// alert(errorMessage);
 						// parse error, ignore it.
 					}
 				)
