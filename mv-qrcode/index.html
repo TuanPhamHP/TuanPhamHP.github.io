@@ -89,26 +89,28 @@
 			}
 		}
 		const setUpQrCode = id => {
-			const html5QrCode = new Html5Qrcode(/* element id */ 'qr-reader');
-			html5QrCode
-				.start(
-					id,
-					{
-						fps: 10, // Optional, frame per seconds for qr code scanning
-						qrbox: window.outerWidth - 10, // Optional, if you want bounded box UI
-					},
-					(decodedText, decodedResult) => {
-						// do something when code is read'
-						console.log(decodedText, decodedResult);
+			var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
+			html5QrcodeScanner.render(onScanSuccess);
+			// const html5QrCode = new Html5Qrcode(/* element id */ 'qr-reader');
+			// html5QrCode
+			// 	.start(
+			// 		{ facingMode: 'environment' },
+			// 		{
+			// 			fps: 10, // Optional, frame per seconds for qr code scanning
+			// 			qrbox: window.outerWidth - 10, // Optional, if you want bounded box UI
+			// 		},
+			// 		(decodedText, decodedResult) => {
+			// 			// do something when code is read'
+			// 			console.log(decodedText, decodedResult);
 
-						document.querySelector('#result-go-here').innerText = decodedText;
-					},
-					errorMessage => {
-						// alert(errorMessage);
-						// parse error, ignore it.
-					}
-				)
-				.catch(err => console.log(err));
+			// 			document.querySelector('#result-go-here').innerText = decodedText;
+			// 		},
+			// 		errorMessage => {
+			// 			// alert(errorMessage);
+			// 			// parse error, ignore it.
+			// 		}
+			// 	)
+			// 	.catch(err => console.log(err));
 		};
 		let cameraId = '';
 		const onChangeCamera = () => {
@@ -150,8 +152,7 @@
 					document.querySelector('#cam-list').innerHTML = txt;
 					cameraId = id;
 					setUpQrCode(id);
-					// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
-					// html5QrcodeScanner.render(onScanSuccess);
+
 					// .. use this to start scanning.
 				} else {
 					alert('No cam detected');
@@ -166,7 +167,8 @@
 					alert(err);
 				}
 			});
-
+		// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
+		// html5QrcodeScanner.render(onScanSuccess);
 		// html5QrCode
 		// 	.start(
 		// 		cameraId,
