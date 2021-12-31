@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<style>
+			.text-center {
+				text-align: center !important;
+			}
+			.text-white {
+				color: #fff !important;
+			}
+			.qr-block__wr {
+				display: block;
+				position: fixed;
+				background-color: #232323;
+				z-index: 999;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				justify-content: center;
+			}
+			.qr-block__wr #qr-reader__scan_region video {
+				max-width: 100% !important;
+			}
+			#qr-reader {
+				border: none !important;
+			}
+			#qr-shaded-region {
+				border-width: 20px !important;
+			}
+			/* #qr-shaded-region > div {
+				display: none !important;
+			} */
+		</style>
+	</head>
+	<body>
+		<div class="qr-block__wr">
+			<div id="qr-reader" style="width: calc(100% - 40px); max-width: 500px"></div>
+			<!-- <div id="qr-reader-results"></div> -->
+			<div class="text-center text-white">Hướng khung Camera vào mã QR để quét</div>
+			<div id="switch-img" class="text-white">clickme</div>
+		</div>
+	</body>
+	<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+	<script>
+		const deviceType = () => {
+			const ua = navigator.userAgent;
+			if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+				return 'tablet';
+			} else if (
+				/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)
+			) {
+				return 'mobile';
+			}
+			return 'desktop';
+		};
+
+		var resultContainer = document.getElementById('qr-reader-results');
+		var lastResult,
+			countResults = 0;
+
+		function onScanSuccess(decodedText, decodedResult) {
+			if (decodedText !== lastResult) {
+				++countResults;
+				lastResult = decodedText;
+				// Handle on success condition with the decoded message.
+				console.log(`Scan result ${decodedText}`, decodedResult);
+			}
+		}
+
+		let cameraId = '';
+		Html5Qrcode.getCameras()
+			.then(devices => {
+				/**
+				 * devices would be an array of objects of type:
+				 * { id: "id", label: "label" }
+				 */
+				if (devices && devices.length) {
+					var id = devices[0].id;
+					cameraId = id;
+					setUpQrCode(id);
+					// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
+					// html5QrcodeScanner.render(onScanSuccess);
+					// .. use this to start scanning.
+				} else {
+					alert('No cam detected');
+				}
+			})
+			.catch(err => {
+				// handle err
+				if (err.includes('Permission denied')) {
+					alert('Permission Denied');
+				}
+			});
+		const setUpQrCode = id => {
+			const html5QrCode = new Html5Qrcode(/* element id */ 'qr-reader');
+			html5QrCode
+				.start(
+					id,
+					{
+						fps: 10, // Optional, frame per seconds for qr code scanning
+						qrbox: window.outerWidth - 10, // Optional, if you want bounded box UI
+					},
+					(decodedText, decodedResult) => {
+						// do something when code is read'
+						console.log(decodedText, decodedResult);
+					},
+					errorMessage => {
+						// parse error, ignore it.
+					}
+				)
+				.catch(err => console.log(err));
+		};
+
+		// html5QrCode
+		// 	.start(
+		// 		cameraId,
+		// 		{
+		// 			fps: 10, // Optional, frame per seconds for qr code scanning
+		// 			qrbox: window.outerWidth - 10, // Optional, if you want bounded box UI
+		// 		},
+		// 		(decodedText, decodedResult) => {
+		// 			// do something when code is read'
+		// 			console.log(decodedText, decodedResult);
+		// 		},
+		// 		errorMessage => {
+		// 			// parse error, ignore it.
+		// 		}
+		// 	)
+		// 	.catch(err => console.log(err));
+		// if (!html5QrcodeScanner.html5Qrcode.canvasElement) {
+		// 	alert('Vui lòng cho phép camera hoạt động');
+		// }
+		$('#switch-img').click(function (e) {
+			$('#qr-reader__dashboard_section_swaplink')[0].click();
+		});
+	</script>
+</html>
