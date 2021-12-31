@@ -118,10 +118,12 @@
 			const myIdx = listDevice.findIndex(o => o.id === cameraId);
 			if (myIdx === -1 || myIdx + 2 > listDevice.length) {
 				cameraId = listDevice[0].id;
+				alert(`next cam: ${listDevice[0].id}`);
 				setUpQrCode(cameraId);
 			} else {
-				alert(`found another cam: ${(listDevice[myIdx + 1].id, listDevice[myIdx + 1].label)}`);
+				alert(`found another cam: ${listDevice[myIdx + 1].label}, id: ${listDevice[myIdx + 1].id}`);
 				cameraId = listDevice[myIdx + 1].id;
+				alert(`next cam: ${listDevice[myIdx + 1].id}`);
 				setUpQrCode(cameraId);
 			}
 		};
@@ -134,9 +136,11 @@
 				if (devices && devices.length) {
 					var id = devices[0].id;
 					listDevice = [...devices];
+					console.log(listDevice);
 					let txt = ``;
 					listDevice.forEach(o => {
-						txt += `cam: ${(o.id, o.label)}</br>`;
+						console.log(o.id);
+						txt += `cam:${o.id}-${o.label}</br>`;
 					});
 					document.querySelector('#cam-list').innerHTML = txt;
 					cameraId = id;
