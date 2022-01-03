@@ -109,8 +109,9 @@
 				top: 120%;
 				bottom: 0;
 				left: 0;
+				right: 0;
 				background-color: #0052a2;
-				height: 100vh;
+				/* height: 100vh; */
 				transition: 0.4s ease;
 				z-index: 3;
 				display: flex;
@@ -230,10 +231,10 @@
 		<section class="card-result-block">
 			<div class="card-result-header">
 				<i class="fas fa-chevron-left" id="icon-back-qr"></i>
-				<img src="./qr-code-icon.png" alt="" id="icon-qr-code" />
+				<img src="./images/qr-code-icon.png" alt="" id="icon-qr-code" />
 			</div>
 			<div class="result-block">
-				<div>
+				<div id="result-wr">
 					<img src="" id="result-block-img" alt="" />
 
 					<audio controls id="src-audio-pre">
@@ -297,11 +298,21 @@
 									onprocess = true;
 									postData(`${BASE_URL}/api/internal/words/scan-qr-code`, {
 										qr_code: result.text,
-									}).then(data => {
-										onprocess = false;
-										wordObj = data.data;
-										onShowResultCard();
-									});
+									}).then(
+										data => {
+											if (!data.data || data.meta.code > 300) {
+												document.querySelector('#result-wr').innerHTML =
+													data.meta.message || 'Lỗi hệ thống. Vui lòng thử lại';
+												onShowResultCard();
+												return;
+											}
+											onprocess = false;
+											wordObj = data.data;
+										},
+										err => {
+											console.log(err);
+										}
+									);
 								}
 								if (err && !(err instanceof ZXing.NotFoundException)) {
 									document.getElementById('result').textContent = err;
