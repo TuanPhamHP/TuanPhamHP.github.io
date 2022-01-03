@@ -84,99 +84,90 @@
 			if (decodedText !== lastResult) {
 				++countResults;
 				lastResult = decodedText;
-				document.querySelector('#result-go-here').innerText = decodedText;
 				// Handle on success condition with the decoded message.
 				// console.log(`Scan result ${decodedText}`, decodedResult);
 			}
 		}
-
-		let html5QrcodeScanner = new Html5QrcodeScanner(
-			'qr-reader',
-			{ fps: 10, qrbox: { width: 250, height: 250 } },
-			/* verbose= */ false
-		);
-		html5QrcodeScanner.render(onScanSuccess);
 		const setUpQrCode = id => {
-			var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
-			html5QrcodeScanner.render(onScanSuccess);
-			// const html5QrCode = new Html5Qrcode(/* element id */ 'qr-reader');
-			// html5QrCode
-			// 	.start(
-			// 		{ facingMode: 'environment' },
-			// 		{
-			// 			fps: 10, // Optional, frame per seconds for qr code scanning
-			// 			qrbox: window.outerWidth - 10, // Optional, if you want bounded box UI
-			// 		},
-			// 		(decodedText, decodedResult) => {
-			// 			// do something when code is read'
-			// 			console.log(decodedText, decodedResult);
+			alert(id);
+			const html5QrCode = new Html5Qrcode(/* element id */ 'qr-reader');
+			html5QrCode
+				.start(
+					id,
+					{
+						fps: 10, // Optional, frame per seconds for qr code scanning
+						qrbox: window.outerWidth - 10, // Optional, if you want bounded box UI
+					},
+					(decodedText, decodedResult) => {
+						// do something when code is read'
+						console.log(decodedText, decodedResult);
 
-			// 			document.querySelector('#result-go-here').innerText = decodedText;
-			// 		},
-			// 		errorMessage => {
-			// 			// alert(errorMessage);
-			// 			// parse error, ignore it.
-			// 		}
-			// 	)
-			// 	.catch(err => console.log(err));
+						document.querySelector('#result-go-here').innerText = decodedText;
+					},
+					errorMessage => {
+						// alert(errorMessage);
+						// parse error, ignore it.
+					}
+				)
+				.catch(err => console.log(err));
 		};
 		let cameraId = '';
-		// const onChangeCamera = () => {
-		// 	try {
-		// 		if (!listDevice.length) {
-		// 			alert('No cam detected');
-		// 			return;
-		// 		}
-		// 		const myIdx = listDevice.findIndex(o => o.id === cameraId);
-		// 		if (myIdx === -1 || myIdx + 2 > listDevice.length) {
-		// 			cameraId = listDevice[0].id;
-		// 			alert(`next cam: ${listDevice[0].id}`);
-		// 			setUpQrCode(cameraId);
-		// 		} else {
-		// 			alert(`found another cam: ${listDevice[myIdx + 1].label}, id: ${listDevice[myIdx + 1].id}`);
-		// 			cameraId = listDevice[myIdx + 1].id;
-		// 			alert(`next cam: ${listDevice[myIdx + 1].id}`);
-		// 			setUpQrCode(cameraId);
-		// 		}
-		// 	} catch (error) {
-		// 		alert(error);
-		// 	}
-		// };
-		// Html5Qrcode.getCameras()
-		// 	.then(devices => {
-		// 		/**
-		// 		 * devices would be an array of objects of type:
-		// 		 * { id: "id", label: "label" }
-		// 		 */
-		// 		if (devices && devices.length) {
-		// 			var id = devices[0].id;
-		// 			listDevice = [...devices];
-		// 			console.log(listDevice);
-		// 			let txt = ``;
-		// 			listDevice.forEach(o => {
-		// 				console.log(o.id);
-		// 				txt += `cam:${o.id}-${o.label}</br>`;
-		// 			});
-		// 			document.querySelector('#cam-list').innerHTML = txt;
-		// 			cameraId = id;
-		// 			setUpQrCode(id);
+		const onChangeCamera = () => {
+			try {
+				if (!listDevice.length) {
+					alert('No cam detected');
+					return;
+				}
+				const myIdx = listDevice.findIndex(o => o.id === cameraId);
+				if (myIdx === -1 || myIdx + 2 > listDevice.length) {
+					cameraId = listDevice[0].id;
+					// alert(`next cam: ${listDevice[0].id}`);
+					setUpQrCode(cameraId);
+				} else {
+					// alert(`found another cam: ${listDevice[myIdx + 1].label}, id: ${listDevice[myIdx + 1].id}`);
+					cameraId = listDevice[myIdx + 1].id;
+					// alert(`next cam: ${listDevice[myIdx + 1].id}`);
+					setUpQrCode(cameraId);
+				}
+			} catch (error) {
+				alert(error);
+			}
+		};
+		Html5Qrcode.getCameras()
+			.then(devices => {
+				/**
+				 * devices would be an array of objects of type:
+				 * { id: "id", label: "label" }
+				 */
+				if (devices && devices.length) {
+					var id = devices[0].id;
+					listDevice = [...devices];
+					console.log(listDevice);
+					let txt = ``;
+					listDevice.forEach(o => {
+						console.log(o.id);
+						txt += `cam:${o.id}-${o.label}</br>`;
+					});
+					document.querySelector('#cam-list').innerHTML = txt;
+					cameraId = id;
+					setUpQrCode(id);
+					// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
+					// html5QrcodeScanner.render(onScanSuccess);
+					// .. use this to start scanning.
+				} else {
+					alert('No cam detected');
+				}
+			})
+			.catch(err => {
+				// handle err
+				console.log(err);
+				if (String(err).includes('Permission denied')) {
+					alert('Permission Denied');
+				} else {
+					alert(err);
+				}
+			});
 
-		// 			// .. use this to start scanning.
-		// 		} else {
-		// 			alert('No cam detected');
-		// 		}
-		// 	})
-		// 	.catch(err => {
-		//		// handle err
-		// 	console.log(err);
-		// 	if (String(err).includes('Permission denied')) {
-		// 		alert('Permission Denied');
-		// 	} else {
-		// 		alert(err);
-		// 	}
-		// });
-		// var html5QrcodeScanner = new Html5QrcodeScanner('qr-reader', { fps: 10, qrbox: window.outerWidth - 10 });
-		// html5QrcodeScanner.render(onScanSuccess);
 		// html5QrCode
 		// 	.start(
 		// 		cameraId,
@@ -196,8 +187,8 @@
 		// if (!html5QrcodeScanner.html5Qrcode.canvasElement) {
 		// 	alert('Vui lòng cho phép camera hoạt động');
 		// }
-		$('#switch-img').click(function (e) {
-			$('#qr-reader__dashboard_section_swaplink')[0].click();
-		});
+		// $('#switch-img').click(function (e) {
+		// 	$('#qr-reader__dashboard_section_swaplink')[0].click();
+		// });
 	</script>
 </html>
