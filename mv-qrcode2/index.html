@@ -337,6 +337,7 @@
 											if (!data.data || data.meta.code > 300) {
 												document.querySelector('#result-wr').innerHTML =
 													data.meta.message || 'Lỗi hệ thống. Vui lòng thử lại';
+												onprocess = false;
 												onShowResultCard();
 												return;
 											}
