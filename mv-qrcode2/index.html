@@ -41,6 +41,12 @@
 				max-width: 600px;
 				margin: auto;
 			}
+			#result-wr-success {
+				display: none;
+			}
+			#result-wr-success.on-show {
+				display: block;
+			}
 			.mist::before {
 				content: '';
 				position: fixed;
@@ -248,8 +254,8 @@
 				<img src="./images/qr-code-icon.png" alt="" id="icon-qr-code" />
 			</div>
 			<div class="result-block">
-				<div id="result-wr"></div>
-				<div>
+				<div id="result-wr-failed"></div>
+				<div id="result-wr-success">
 					<img src="" id="result-block-img" alt="" />
 
 					<audio controls id="src-audio-pre">
@@ -291,6 +297,7 @@
 
 				function onShowResultCardFailed() {
 					const cardResultBlock = document.querySelector('.card-result-block');
+					document.querySelector('#result-wr-success').classList.remove('on-show');
 					cardResultBlock.classList.add('on-show');
 					cardResultBlock.querySelector('#result-block-img').src = '';
 					cardResultBlock.querySelector('#src-audio-pre').src = '';
@@ -298,7 +305,8 @@
 				}
 				function onShowResultCard() {
 					const cardResultBlock = document.querySelector('.card-result-block');
-					document.querySelector('#result-wr').innerHTML = '';
+					document.querySelector('#result-wr-failed').innerHTML = '';
+					document.querySelector('#result-wr-success').classList.add('on-show');
 					cardResultBlock.classList.add('on-show');
 					cardResultBlock.querySelector('#result-block-img').src = wordObj.picture.url;
 					cardResultBlock.querySelector('#src-audio-pre').src = wordObj.sound.url;
@@ -343,7 +351,7 @@
 									}).then(
 										data => {
 											if (!data.data || data.meta.code > 300) {
-												document.querySelector('#result-wr').innerHTML =
+												document.querySelector('#result-wr-failed').innerHTML =
 													data.meta.message || 'Lỗi hệ thống. Vui lòng thử lại';
 												onprocess = false;
 												onShowResultCardFailed();
