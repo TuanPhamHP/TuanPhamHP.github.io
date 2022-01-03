@@ -248,7 +248,8 @@
 				<img src="./images/qr-code-icon.png" alt="" id="icon-qr-code" />
 			</div>
 			<div class="result-block">
-				<div id="result-wr">
+				<div id="result-wr"></div>
+				<div>
 					<img src="" id="result-block-img" alt="" />
 
 					<audio controls id="src-audio-pre">
@@ -288,9 +289,16 @@
 				let onprocess;
 				let selectedDeviceId;
 
+				function onShowResultCardFailed() {
+					const cardResultBlock = document.querySelector('.card-result-block');
+					cardResultBlock.classList.add('on-show');
+					cardResultBlock.querySelector('#result-block-img').src = '';
+					cardResultBlock.querySelector('#src-audio-pre').src = '';
+					// cardResultBlock.querySelector('#src-audio-suff').src = wordObj.sound.url;
+				}
 				function onShowResultCard() {
 					const cardResultBlock = document.querySelector('.card-result-block');
-
+					document.querySelector('#result-wr').innerHTML = '';
 					cardResultBlock.classList.add('on-show');
 					cardResultBlock.querySelector('#result-block-img').src = wordObj.picture.url;
 					cardResultBlock.querySelector('#src-audio-pre').src = wordObj.sound.url;
@@ -338,11 +346,12 @@
 												document.querySelector('#result-wr').innerHTML =
 													data.meta.message || 'Lỗi hệ thống. Vui lòng thử lại';
 												onprocess = false;
-												onShowResultCard();
+												onShowResultCardFailed();
 												return;
 											}
 											onprocess = false;
 											wordObj = data.data;
+											onShowResultCard();
 										},
 										err => {
 											console.log(err);
