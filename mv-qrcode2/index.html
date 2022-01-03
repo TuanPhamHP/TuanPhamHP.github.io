@@ -47,6 +47,7 @@
 					<select id="sourceSelect" style="max-width: 400px"></select>
 				</div>
 
+				<a class="button" id="switchButton">Switch</a>
 				<label>Result:</label>
 				<pre><code id="result"></code></pre>
 			</section>
@@ -61,7 +62,7 @@
 					.listVideoInputDevices()
 					.then(videoInputDevices => {
 						const sourceSelect = document.getElementById('sourceSelect');
-						selectedDeviceId = videoInputDevices[0].deviceId;
+						selectedDeviceId = videoInputDevices[videoInputDevices.length - 1].deviceId;
 						if (videoInputDevices.length >= 1) {
 							videoInputDevices.forEach(element => {
 								const sourceOption = document.createElement('option');
@@ -70,9 +71,6 @@
 								sourceSelect.appendChild(sourceOption);
 								if (String(element.label).includes('back')) {
 									selectedDeviceId = element.deviceId;
-									setTimeout(() => {
-										document.getElementById('startButton').click();
-									}, 1000);
 								}
 							});
 
@@ -103,6 +101,20 @@
 							document.getElementById('result').textContent = '';
 							console.log('Reset.');
 						});
+						document.getElementById('switchButton').addEventListener('click', () => {
+							codeReader.reset();
+							const myIdx = videoInputDevices.findIndex(o => o.deviceId === selectedDeviceId);
+							if (myIdx === -1 || myIdx + 2 > videoInputDevices.length) {
+								selectedDeviceId = videoInputDevices[0].deviceId;
+							} else {
+								selectedDeviceId = videoInputDevices[myIdx + 1].deviceId;
+							}
+							document.getElementById('startButton').click();
+						});
+
+						setTimeout(() => {
+							document.getElementById('startButton').click();
+						}, 1000);
 					})
 					.catch(err => {
 						console.error(err);
