@@ -92,6 +92,14 @@
 			alert(id);
 			const html5QrCode = new Html5Qrcode(/* element id */ 'qr-reader');
 			html5QrCode
+				.stop()
+				.then(ignore => {
+					// QR Code scanning is stopped.
+				})
+				.catch(err => {
+					// Stop failed, handle it.
+				});
+			html5QrCode
 				.start(
 					id,
 					{
