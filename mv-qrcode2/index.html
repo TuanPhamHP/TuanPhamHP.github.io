@@ -28,35 +28,240 @@
 			onload="this.rel='stylesheet';this.onload=null"
 			href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
+		<!-- gg fonts -->
+
+		<style>
+			.wrapper {
+				background-color: #30373e;
+				height: 0px;
+				transition: 0.4s ease;
+				display: none;
+			}
+			.wrapper.on-show {
+				height: 100vh;
+				display: block;
+			}
+			#video {
+				background-color: transparent;
+			}
+			#fake-wr {
+				width: 100%;
+				height: 100%;
+				z-index: 2;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				border-radius: 13px;
+			}
+			.close-btn {
+				background-color: #ee7f2d;
+				border-radius: 4px;
+				width: 170px;
+				height: 40px;
+				color: #fff;
+				cursor: pointer;
+				line-height: 40px;
+				text-align: center;
+				font-weight: 500;
+				margin: auto;
+				margin-top: 40px;
+			}
+			.repeat-btn {
+				background-color: #ee7f2d;
+				border-radius: 4px;
+				width: 100%;
+				height: 40px;
+				color: #fff;
+				cursor: pointer;
+				line-height: 40px;
+				text-align: center;
+				font-weight: 500;
+				margin-top: 16px;
+			}
+			.show-qr-btn {
+				background-color: #ee7f2d;
+				border-radius: 4px;
+				width: 100%;
+				height: 40px;
+				color: #fff;
+				cursor: pointer;
+				line-height: 40px;
+				text-align: center;
+				font-weight: 500;
+				margin-top: 16px;
+			}
+			.text-white {
+				color: #fff;
+			}
+			.text-center {
+				text-align: center;
+			}
+			.card-result-block {
+				position: fixed;
+				top: 120%;
+				bottom: 0;
+				left: 0;
+				background-color: #0052a2;
+				height: 100vh;
+				transition: 0.4s ease;
+				z-index: 3;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+			}
+			.card-result-block .result-block {
+				height: calc(100% - 42px);
+				padding: 16px 12px;
+				background: #fff;
+				border-radius: 6px 6px 0 0;
+				display: flex;
+				justify-content: space-between;
+				flex-flow: column;
+			}
+			.card-result-block .result-block img {
+				max-width: 100% !important;
+			}
+			.card-result-block.on-show {
+				top: 0;
+			}
+			audio {
+				width: 100% !important;
+			}
+			.card-result-header {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				color: #fff;
+				height: 42px;
+				padding: 0 12px;
+			}
+			.home-page {
+				display: none;
+				height: 0;
+				overflow: hidden;
+				transition: 0.4s ease;
+			}
+			.home-page.on-show {
+				display: block;
+				height: fit-content;
+				overflow: hidden;
+			}
+			.homepage-block {
+				width: 100%;
+				padding: 12px;
+			}
+			.title-big {
+				color: #1f71fa;
+				font-size: 22px;
+				font-weight: 500;
+				font-family: 'Roboto', sans-serif;
+			}
+			.inner-content {
+				font-size: 12px;
+				color: #7e7e7e;
+			}
+			.inner-content a {
+				color: #219aff;
+			}
+		</style>
 	</head>
 
 	<body>
-		<main class="wrapper" style="padding-top: 2em">
+		<section class="home-page on-show">
+			<img src="./images/main-bg-show.png" alt="" style="width: 100%" />
+			<div class="homepage-block">
+				<img src="./images/home-page-logo.png" alt="minh-viet-logo" style="margin-bottom: 12px" />
+				<h3 class="title-big">
+					Bộ Flashcard <br />
+					cho Đại Bàng Con Minh Việt
+				</h3>
+				<p class="inner-content">
+					Đây là món quà của team Sáng tạo Minh Việt Kids giúp các em bé vui thích học tiếng Anh hơn và học được tốt
+					hơn. <br /><br />
+					Nếu như bố mẹ muốn tìm hiểu thêm về chương trình học tiền mẫu giáo (PreK) có thể click vào link bên dưới để
+					tham khảo thêm.<br />
+					<br />
+					<a href="https://www.facebook.com/minhvietkids">https://www.facebook.com/minhvietkids</a>
+					<a href="https://web.minhvietkids.org/tin-tuc/prek.html">https://web.minhvietkids.org/tin-tuc/prek.html</a>
+				</p>
+				<div class="show-qr-btn" id="show-qr-btn">Quét QR Code ở mặt sau flashcard</div>
+			</div>
+		</section>
+		<main class="wrapper">
+			<div class="card-result-header" style="margin-bottom: 60px">
+				<i class="fas fa-chevron-left" id="icon-back-home"></i>
+			</div>
 			<section class="container" id="demo-content">
-				<div>
+				<div style="display: none">
 					<a class="button" id="startButton">Start</a>
 					<a class="button" id="resetButton">Reset</a>
 				</div>
 
-				<div>
-					<video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+				<div style="position: relative; display: flex; justify-content: center">
+					<div id="fake-wr"></div>
+					<video id="video" width="100%" height="300" style="max-width: 450px"></video>
 				</div>
-
+				<div class="text-white text-center" style="margin-bottom: 60px">Hướng khung Camera vào mã QR để quét</div>
 				<div id="sourceSelectPanel" style="display: none">
 					<label for="sourceSelect">Change video source:</label>
 					<select id="sourceSelect" style="max-width: 400px"></select>
 				</div>
 
-				<a class="button" id="switchButton">Switch</a>
-				<label>Result:</label>
-				<pre><code id="result"></code></pre>
+				<img
+					id="switchButton"
+					src="https://static.thenounproject.com/png/390579-200.png"
+					alt="switch-camera"
+					width="40px"
+					style="display: block; margin: auto; filter: invert(1)"
+				/>
+				<label style="display: none">Result:</label>
+				<pre style="display: none"><code id="result"></code></pre>
+				<div class="close-btn" id="close-qr-btn">Đóng</div>
 			</section>
 		</main>
+		<section class="card-result-block">
+			<div class="card-result-header">
+				<i class="fas fa-chevron-left" id="icon-back-qr"></i>
+				<img src="./qr-code-icon.png" alt="" id="icon-qr-code" />
+			</div>
+			<div class="result-block">
+				<div>
+					<img src="" id="result-block-img" alt="" />
 
+					<audio controls id="src-audio-pre">
+						<!-- <source id="src-audio-pre" src="" type="audio/ogg" /> -->
+						<!-- <source id="src-audio-suff" src="" type="audio/mpeg" /> -->
+						Your browser does not support the audio tag.
+					</audio>
+				</div>
+
+				<div class="repeat-btn" onclick="(()=>{	document.getElementById('src-audio-pre').play()})()">Nghe lại</div>
+			</div>
+		</section>
 		<script type="text/javascript" src="https://unpkg.com/@zxing/library@latest/umd/index.min.js"></script>
 		<script type="text/javascript">
+			const BASE_URL = 'https://api-dev.minhviet.org';
 			window.addEventListener('load', function () {
+				let wordObj;
+				let onprocess;
 				let selectedDeviceId;
+				function onShowResultCard() {
+					const cardResultBlock = document.querySelector('.card-result-block');
+
+					cardResultBlock.classList.add('on-show');
+					cardResultBlock.querySelector('#result-block-img').src = wordObj.picture.url;
+					cardResultBlock.querySelector('#src-audio-pre').src = wordObj.sound.url;
+					// cardResultBlock.querySelector('#src-audio-suff').src = wordObj.sound.url;
+				}
+				function repeatAudio() {}
 				const codeReader = new ZXing.BrowserMultiFormatReader();
 				codeReader
 					.listVideoInputDevices()
@@ -79,17 +284,26 @@
 							};
 
 							const sourceSelectPanel = document.getElementById('sourceSelectPanel');
-							sourceSelectPanel.style.display = 'block';
+							// sourceSelectPanel.style.display = 'block';
 						}
 
 						document.getElementById('startButton').addEventListener('click', () => {
 							codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
 								if (result) {
-									console.log(result);
 									document.getElementById('result').textContent = result.text;
+									if (onprocess) {
+										return;
+									}
+									onprocess = true;
+									postData(`${BASE_URL}/api/internal/words/scan-qr-code`, {
+										qr_code: result.text,
+									}).then(data => {
+										onprocess = false;
+										wordObj = data.data;
+										onShowResultCard();
+									});
 								}
 								if (err && !(err instanceof ZXing.NotFoundException)) {
-									console.error(err);
 									document.getElementById('result').textContent = err;
 								}
 							});
@@ -120,6 +334,68 @@
 						console.error(err);
 					});
 			});
+			function hideHomePage() {
+				const homepageBlock = document.querySelector('.home-page');
+				homepageBlock.classList.remove('on-show');
+			}
+			function showHomePage() {
+				const homepageBlock = document.querySelector('.home-page');
+				homepageBlock.classList.add('on-show');
+			}
+			function hideQr() {
+				const target = document.querySelector('.wrapper');
+				target.classList.remove('on-show');
+			}
+			function showQr() {
+				const target = document.querySelector('.wrapper');
+				target.classList.add('on-show');
+			}
+			document.querySelector('#show-qr-btn').addEventListener('click', () => {
+				hideHomePage();
+				showQr();
+			});
+			document.querySelector('#close-qr-btn').addEventListener('click', () => {
+				showHomePage();
+				hideQr();
+			});
+			document.querySelector('#icon-back-home').addEventListener('click', () => {
+				showHomePage();
+				hideQr();
+			});
+			document.querySelector('#icon-qr-code').addEventListener('click', () => {
+				const cardResultBlock = document.querySelector('.card-result-block');
+
+				cardResultBlock.classList.remove('on-show');
+				cardResultBlock.querySelector('#result-block-img').src = '';
+				cardResultBlock.querySelector('#src-audio-pre').src = '';
+				wordObj = undefined;
+			});
+			document.querySelector('#icon-back-qr').addEventListener('click', () => {
+				const cardResultBlock = document.querySelector('.card-result-block');
+
+				cardResultBlock.classList.remove('on-show');
+				cardResultBlock.querySelector('#result-block-img').src = '';
+				cardResultBlock.querySelector('#src-audio-pre').src = '';
+				wordObj = undefined;
+			});
+			async function postData(url = '', data = {}) {
+				// Default options are marked with *
+				const response = await fetch(url, {
+					method: 'POST', // *GET, POST, PUT, DELETE, etc.
+					mode: 'cors', // no-cors, *cors, same-origin
+					cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+					credentials: 'same-origin', // include, *same-origin, omit
+					headers: {
+						'Content-Type': 'application/json',
+						'x-api-key': '9aJwmb2i4F7iKqyba4jnTjIUgvv7LiihBZbgTMQzx9aye',
+						// 'Content-Type': 'application/x-www-form-urlencoded',
+					},
+					redirect: 'follow', // manual, *follow, error
+					referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+					body: JSON.stringify(data), // body data type must match "Content-Type" header
+				});
+				return response.json(); // parses JSON response into native JavaScript objects
+			}
 		</script>
 	</body>
 </html>
