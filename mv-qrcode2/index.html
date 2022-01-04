@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="ZXing for JS" />
 
-		<title>ZXing TypeScript | Decoding from camera stream</title>
+		<title>MV - QR Code</title>
 
 		<link
 			rel="stylesheet"
@@ -118,6 +118,9 @@
 				font-weight: 500;
 				margin-top: 16px;
 			}
+			.mb-20 {
+				margin-bottom: 20px !important;
+			}
 			.text-white {
 				color: #fff;
 			}
@@ -140,6 +143,7 @@
 			}
 			.card-result-block .result-block {
 				height: calc(100% - 42px);
+				overflow-y: scroll;
 				padding: 16px 12px;
 				background: #fff;
 				border-radius: 6px 6px 0 0;
@@ -192,6 +196,9 @@
 			.inner-content a {
 				color: #219aff;
 			}
+			#result-block-img {
+				display: block;
+			}
 		</style>
 	</head>
 
@@ -213,7 +220,7 @@
 					<a href="https://www.facebook.com/minhvietkids">https://www.facebook.com/minhvietkids</a>
 					<a href="https://web.minhvietkids.org/tin-tuc/prek.html">https://web.minhvietkids.org/tin-tuc/prek.html</a>
 				</p>
-				<div class="show-qr-btn" id="show-qr-btn">Quét QR Code ở mặt sau flashcard</div>
+				<div class="show-qr-btn mb-20" id="show-qr-btn">Quét QR Code ở mặt sau flashcard</div>
 			</div>
 		</section>
 		<main class="wrapper">
@@ -245,7 +252,7 @@
 				/>
 				<label style="display: none">Result:</label>
 				<pre style="display: none"><code id="result"></code></pre>
-				<div class="close-btn" id="close-qr-btn">Đóng</div>
+				<div class="close-btn mb-20" id="close-qr-btn">Đóng</div>
 			</section>
 		</main>
 		<section class="card-result-block">
@@ -255,8 +262,8 @@
 			</div>
 			<div class="result-block">
 				<div id="result-wr-failed"></div>
-				<div id="result-wr-success">
-					<img src="" id="result-block-img" alt="" />
+				<div id="result-wr-success" style="padding-bottom: 20px">
+					<img src="" id="result-block-img" alt="" style="margin-bottom: 20px" />
 
 					<audio controls id="src-audio-pre">
 						<!-- <source id="src-audio-pre" src="" type="audio/ogg" /> -->
