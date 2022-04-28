@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập flex</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="./assets/style/flex-style.css" />
+  <link rel="stylesheet" href="./assets/style/bai-tap-tong-hop-b1.css">
+  <link rel="stylesheet" href="./assets/style/main.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/brand.png" alt="brand">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Bài tập</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class=" main container">
+    <section class="py-5">
+      <h2>Clone lại giao diện sau:</h2>
+    </section>
+    <section class="d-flex  mb-3 exc-1">
+      <h3 class="p-3">Menu bên phải kèm animation nhé.</h3>
+      <ul>
+        <li><a href="#"><i class="fas fa-hand-holding-usd ry"></i></a><span>Dòng 1 nè</span></li>
+        <li><a href="#"><i class="fas fa-hand-holding-usd ry"></i></a><span>Dòng 2 nè</span></li>
+        <li><a href="#"><i class="fas fa-dharmachakra rz"></i></a><span>Dòng 3 nè</span></li>
+        <li><a href="#"><i class="fas fa-cog rz"></i></a><span>Dòng 4 nè</span></li>
+      </ul>
+    </section>
+
+
+    <section class="py-5 container">
+      <div class="divider"></div>
+      <h4 class="mt-2" id="exc1-doc">Tài nguyên:</h4>
+      <p>Mã màu: turquoise(background), #4f4f4f(background menu chưa hover), #000(background menu đã hover)</p>
+      <p>Font: Roboto, 16px, normal | bold</p>
+      <p>Icon: mọi người tải ảnh icon bất kì hoặc <a
+          href="https://viblo.asia/p/huong-dan-font-awesome-5-ban-mien-phi-gGJ59Qyj5X2" target="_blank">
+          xem hướng dẫn dùng font-awesome
+        </a></p>
+      <p>Dim: padding 16px, menu : 40px x 40px </p>
+      <h4>Yêu cầu:</h4>
+      <p>
+        Cơ bản: Clone lại được đủ giao diện trên. <br>
+        Bao gồm: màu, nền, sắp xếp khối, hiệu ứng đơn giản (thay đổi màu menu khi hover).
+      </p>
+      <p>
+        Nâng cao: Clone lại được toàn bộ giao diện trên, có phần pseudo, animation <br>
+      </p>
+      <p><b>*DOC để làm phần nâng cao:</b> <a
+          href="https://viblo.asia/p/tap-tanh-tim-hieu-css-animation-bai-2-transforms-4dbZNpNg5YM" target="_blank">Về
+          transform (xoay, di chuyển, thu phóng ....)</a>,
+        <a href="https://viblo.asia/p/tap-tanh-tim-hieu-css-animation-bai-3-keyframes-animation-3Q75w86BKWb"
+          target="_blank">Về
+          animation (nhiều thay đổi phức tạp, có tính đồng bộ)</a>
+
+      </p>
+      <div class="divider"></div>
+    </section>
+
+    <section class="py-5 container">
+      <div class="exc-2">
+        <div class="btn">
+          <p>Độ khó 1: pseudo-class(hover) + transition</p>
+          <a href="" class="button2 btn">So Dark</a><br>
+
+          <p>Độ khó 2: Gradient background + Box-shadow + pseudo-class(hover) + transition(or animation for infinite
+            effect)</p>
+          <a href="" class="button1">So Colorful</a><br>
+          <p>Độ khó 2: pseudo-class(checked) + transition + sibling selector</p>
+          <div class="btn ip-btn ">
+            <input type="checkbox" name="touch" id="touchthis">
+            <label for="touchthis" class="mx-auto"></label>
+          </div>
+          <p>Độ khó 3: Box-shadow + pseudo-class(hover) + transition</p>
+          <div id="btn"><a href="" class="btn button3">The Neon
+              Button<span></span><span></span><span></span><span></span></a></div>
+          <p>Độ khó 3: pseudo-element + pseudo-class(hover) + transition</p>
+          <div class="wrap"><a href="#">Button</a></div>
+        </div>
+
+      </div>
+      <div class="divider"></div>
+      <h4 class="mt-2">Tài nguyên:</h4>
+      <p>Mã màu: #99d1f1(background), các màu gradient, màu nút được phép tùy chọn</p>
+      <p>Font: 'Courier New', Courier, monospace , 16px, normal | bold</p>
+
+      <p>Dim: padding 16px, button-height: 58px</p>
+      <h4>Yêu cầu:</h4>
+      <p>
+        Cơ bản: Clone lại được đủ giao diện trên. <br>
+        Bao gồm: màu, nền, sắp xếp khối, hiệu ứng đơn giản (thay đổi màu menu khi hover).
+      </p>
+      <p>
+        Nâng cao: Clone lại được toàn bộ giao diện trên, có phần pseudo, animation <br>
+      </p>
+      <p><b>*DOC để làm phần nâng cao: <a href="#exc1-doc">
+            như trên
+          </a>
+
+      </p>
+      <div class="divider"></div>
+    </section>
+  </main>
+
+</body>
+
+</html>
+<!-- 
+  pseudo : 
+  class : mang ý nghĩa như 1 class định danh bình thường .
+  bắt đầu bằng 1 dấu ':'
+  :hover : được tạo ra khi con trỏ chuột nằm trong element target .
+  :link : là 1 đường dẫn .
+  :visited : là 1 đường dẫn, nhưng đã được lưu vào trong bộ nhớ máy
+  :focus : dùng cho thẻ input
+  :nth-child()
+
+  elements : mang ý nghĩa là 1 elements hay là 1 thẻ giá và nhận target là cha cấp 1
+  bắt đầu bằng dấu '::'
+  ::before : property bắt buộc phải có là content:'';
+  ::after : property bắt buộc phải có là content:'';
+
+ -->
