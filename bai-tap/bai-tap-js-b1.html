@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập JS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="./assets/style/flex-style.css" />
+  <link rel="stylesheet" href="./assets/style/bai-tap-tong-hop-b1.css">
+  <link rel="stylesheet" href="./assets/style/main.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/brand.png" alt="brand">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Bài tập</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class=" main container">
+    <section class="py-5">
+      <h2>Thực hiện các bài tập sau:</h2>
+    </section>
+
+
+    <div class="container">
+      <div class="card">
+        <h5 class="card-header">Bài 1</h5>
+        <div class="card-body">
+          <h5 class="card-title">Tính toán hóa đơn</h5>
+          <p class="card-text">
+            Gia đình An nhận 1 danh sách hóa đơn ghi về số tiền (mảng các số) mà họ đã sử dụng tại nhiều nhà hàng trong
+            1 tuần du
+            lịch.
+            Mẹ An muốn từ danh sách đó biết được: <br>
+            <b>Tổng số tiền tiêu hết của tất cả các hóa đơn</b> <br>
+            <b>Có bao nhiêu hóa đơn lớn hơn $50, tổng của các hóa đơn này.</b> <br>
+            <b>Có bao nhiêu hóa đơn nhỏ hơn $30, tổng của các hóa đơn này.</b> <br>
+
+          </p>
+        </div>
+      </div>
+      <section class="py-5">
+        <div class="divider"></div>
+
+        <h4>Yêu cầu:</h4>
+        <p>
+          Sử dụng Array, Function để thực hiện yêu cầu<br>
+          Có thể sử dụng mỗi function để giải 1 ý trong bài toán <br>
+          Output trả ra sử dụng console.log<br>
+          Đặt tên biến 1, tên function cách tường minh<br>
+          Kết quả trả ra với lời thực hiện dạng: functionName(variable);
+        </p>
+        <p>
+          Nâng cao: Có valid input và output<br>
+        </p>
+
+        <div class="divider"></div>
+      </section>
+      <!--  -->
+      <div class="card">
+        <h5 class="card-header">Bài 2</h5>
+        <div class="card-body">
+          <h5 class="card-title">Tính toán hóa đơn 2</h5>
+          <p class="card-text">
+            Vẫn là mảng danh sách hóa đơn như bài 1. Lúc này ta có thêm tiền tips, số tiền tips được quy định như
+            sau:<br>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Giá trị hóa đơn</th>
+                <th scope="col">Tips</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td> &lt; $30</td>
+                <td>$2</td>
+              </tr>
+              <tr>
+                <td>>= $30</td>
+                <td>12% (giá trị hóa đơn)</td>
+              </tr>
+              <tr>
+                <td>>= $50</td>
+                <td>10% (giá trị hóa đơn)</td>
+              </tr>
+
+            </tbody>
+          </table>
+          Mẹ An muốn từ danh sách đó biết được: <br>
+          <b>Tổng số tiền tips</b> <br>
+          <b>Hóa đơn loại nào tiêu tốn nhiều tip nhất(tổng số tip của loại hóa đơn nào là lớn nhất)</b> <br>
+          <b>Hóa đơn có tổng số tiền (tiền tip + tiền hóa đơn) lớn nhất?</b> <br>
+
+          </p>
+        </div>
+      </div>
+      <section class="py-5">
+        <div class="divider"></div>
+
+        <h4>Yêu cầu:</h4>
+        <p>
+          Sử dụng Array, Function để thực hiện yêu cầu<br>
+          Có thể sử dụng mỗi function để giải 1 ý trong bài toán <br>
+          Output trả ra sử dụng console.log<br>
+          Đặt tên biến 1 cách tường minh
+        </p>
+        <p>
+          Nâng cao: Có valid input và output<br>
+        </p>
+
+        <div class="divider"></div>
+      </section>
+    </div>
+
+  </main>
+
+</body>
+
+</html>
