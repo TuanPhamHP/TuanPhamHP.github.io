@@ -1,0 +1,50 @@
+.form-register {
+  height: 120vh;
+  padding: 80px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8847f9), color-stop(#7b1caa), to(#9861b4));
+  background-image: linear-gradient(#8847f9, #7b1caa, #9861b4);
+}
+
+.form-register form {
+  width: 560px;
+  min-height: 600px;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 16px 24px;
+}
+
+.form-register form .form-title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #9861b4;
+}
+
+.form-register form .brand-block {
+  text-align: center;
+}
+
+.form-register form .brand-image {
+  width: 120px;
+}
+
+.form-register form .input-lable {
+  font-weight: 500;
+}
+
+.form-register form .form-input-text {
+  height: 44px;
+  padding: 12px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+}
+
+.form-register form .form-input-text:focus, .form-register form .form-input-text:focus-visible {
+  outline: none;
+  border-bottom-color: #9861b4;
+}
+
+.form-register form .btn-submit {
+  width: 100%;
+  background-color: #9861b4;
+}
+/*# sourceMappingURL=form.css.map */
