@@ -14,4 +14,8 @@ header {
   background-image: -webkit-gradient(linear, left top, right top, from(#013e3d), to(#bcf3f2));
   background-image: linear-gradient(to right, #013e3d, #bcf3f2);
 }
+
+.pointer {
+  cursor: pointer !important;
+}
 /*# sourceMappingURL=main.css.map */
