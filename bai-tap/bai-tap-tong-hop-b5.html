@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập flex</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/brand.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="./assets/style/flex-style.css" />
+  <link rel="stylesheet" href="./assets/style/bai-tap-tong-hop-b1.css">
+  <link rel="stylesheet" href="./assets/style/bai-tap-tong-hop-b5.css">
+  <link rel="stylesheet" href="./assets/style/main.css">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./assets/images/brand.png" alt="brand">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Bài tập</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class=" main container">
+    <section class="py-5">
+      <h2>Clone lại giao diện sau (sử dụng table và form):</h2>
+    </section>
+
+
+    <section class="py-5 container main-b">
+      <div class="formal py-3">
+        <h1>FORM DANG KY</h1>
+        <table>
+          <tr>
+            <th>
+              <span class="green">Ho va Ten</span>
+            </th>
+            <th>
+              <input type="text" placeholder="your name" value="Pham Anh Tuan" class="txt">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">Ngay/thang/nam sinh</span>
+            </th>
+            <th>
+              <input type="text" placeholder="your name" value="29/08/1996" class="txt">
+            </th>
+            <th>
+              <span class="green">Gioi tinh</span>
+            </th>
+            <th>
+              <input type="radio" id="nam" name="gender" value="Nam" checked>
+              <label for="nam">Nam</label>
+              <input type="radio" id="nu" name="gender" value="Nu">
+              <label for="nu">Nu</label>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">Hang muc du thi</span>
+            </th>
+            <th>
+              <input type="radio" id="th" name="cate" value="tieuhoc" checked>
+              <label for="th">Tieu hoc</label>
+              <input type="radio" id="thcs" name="cate" value="thcs">
+              <label for="thcs">THCS</label>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="4">
+              <span class="red">Bat buoc voi hang muc Tieu hoc va THCS (*)</span>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">Hoc sinh lop <span class="red">(*)</span>:</span>
+            </th>
+            <th>
+              <input type="text" placeholder="class" value="1" class="txt">
+            </th>
+            <th>
+              <span class="green">Hoc sinh Truong <span class="red">(*)</span>:</span>
+            </th>
+            <th><input type="text" placeholder="school" value="None" class="txt"></th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">Thanh pho/quan/huyen<span class="red">(*)</span>:</span>
+            </th>
+            <th>
+              <input type="text" placeholder="address" value="" class="txt">
+            </th>
+            <th>
+              <span class="green">Tinh/thanh pho:</span>
+            </th>
+            <th>
+              <input type="text" placeholder="school" value="Ha Noi" class="txt">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">Dia chi lien he truc tiep:</span>
+            </th>
+            <th colspan="3">
+              <input type="text" placeholder="contact" value="" class="txt">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">Dien thoai lien he:</span>
+            </th>
+            <th colspan="3">
+              <input type="text" placeholder="phone" value="" class="txt">
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">Email:</span>
+            </th>
+            <th colspan="3">
+              <input type="text" placeholder="email" value="" id="email" class="txt">
+            </th>
+          </tr>
+          <tr>
+            <th colspan="4">
+              <span class="red">Bai du thi(*Chu y: dat ten file theo ten tac pham du thi)</span>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">File 1:</span>
+            </th>
+            <th colspan="3">
+              <input type="file" value="Chon tep" class="btn">
+              <span class="red" id="file1">00-01.jpg</span>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">File 2:</span>
+            </th>
+            <th colspan="3">
+              <input type="file" value="Chon tep" class="btn">
+              <span class="red" id="file2">Chi gui anh/video</span>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">File 3:</span>
+            </th>
+            <th colspan="3">
+              <input type="file" value="Chon tep" class="btn">
+              <span class="red" id="file3">Chi gui anh/video</span>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">File 4:</span>
+            </th>
+            <th colspan="3">
+              <input type="file" value="Chon tep" class="btn">
+              <span class="red" id="file4">Chi gui anh/video</span>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <span class="green">File 5:</span>
+            </th>
+            <th colspan="3">
+              <input type="file" value="Chon tep" class="btn">
+              <span class="red" id="file5">Chi gui anh/video</span>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="4">
+              <h3>Cam ket cua thi sinh</h3>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="4">
+              <span id="last">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem itaque <span id="bold">
+                  necessitatibus iste expedita cumque!</span> Saepe quisquam esse reiciendis. Sint,
+                necessitatibus? Saepe quisquam esse reiciendis. Sint, necessitatibus? Saepe quisquam esse
+                reiciendis. Sint, necessitatibus? Saepe quisquam esse reiciendis. Sint, necessitatibus? Saepe q
+                Saepe quisquam esse reiciendis. Sint,</span>
+            </th>
+          </tr>
+          <tr>
+            <th colspan="4" id="submit">
+              <a href="#" class="f-btn">Gui Bai</a>
+            </th>
+          </tr>
+        </table>
+      </div>
+      <div class="divider my-4"></div>
+      <p class="text-danger fw-bold">
+        *Lưu ý: KHÔNG nên tham khảo code mẫu/inspect cấu trúc trước khi tự code. Việc này giúp các bạn nhận ra điểm
+        không hợp lý tại code của bản thân.
+      </p>
+
+      <h4 class="mt-2">Tài nguyên:</h4>
+      <p>Mã màu: #f7f7f7(background), #66b440 (màu chữ xanh), #ff3c00 (màu đỏ), #e86619 (màu cam) <br>
+        gradient (linear-gradient(
+        rgb(250, 250, 250),
+        rgb(252, 252, 249),
+        rgb(255, 255, 255),
+        rgb(213, 247, 247),
+        rgb(180, 227, 227),
+        rgb(178, 240, 240)
+        ))</p>
+      <p>Font: 'Roboto' , 16px, normal | bold</p>
+
+      <p>Dim:
+        table (max-width: 1024px);<br>
+        th,td (height: 60px; padding: 0 35px); <br>
+        input (heightL 60px)
+
+      </p>
+      <h4>Yêu cầu:</h4>
+      <p>
+        Cơ bản: Clone lại được đủ giao diện trên. <br>
+        Bao gồm: màu, nền, sắp xếp khối.
+      </p>
+
+      <p><b>*DOC đọc thêm: ---
+        </b>
+      </p>
+      <p>
+        Mọi câu hỏi cần giải đáp vui lòng liên hệ mình qua Zalo.
+      </p>
+      <div class="divider"></div>
+    </section>
+  </main>
+
+</body>
+
+</html>
+<!-- 
+  pseudo : 
+  class : mang ý nghĩa như 1 class định danh bình thường .
+  bắt đầu bằng 1 dấu ':'
+  :hover : được tạo ra khi con trỏ chuột nằm trong element target .
+  :link : là 1 đường dẫn .
+  :visited : là 1 đường dẫn, nhưng đã được lưu vào trong bộ nhớ máy
+  :focus : dùng cho thẻ input
+  :nth-child()
+
+  elements : mang ý nghĩa là 1 elements hay là 1 thẻ giá và nhận target là cha cấp 1
+  bắt đầu bằng dấu '::'
+  ::before : property bắt buộc phải có là content:'';
+  ::after : property bắt buộc phải có là content:'';
+
+ -->
