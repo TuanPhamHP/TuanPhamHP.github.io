@@ -8,12 +8,72 @@
   <link rel="icon" type="image/x-icon" href="./assets/images/brand.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
   <link rel="stylesheet" href="./assets/style/flex-style.css" />
   <link rel="stylesheet" href="./assets/style/bai-tap-tong-hop-b1.css">
   <link rel="stylesheet" href="./assets/style/main.css">
 
+  <link rel="stylesheet" href="./transform/assets/css/style.css" />
+  <style>
+    table.text-white * {
+
+      color: #fff !important;
+
+    }
+
+    .old-price {
+      color: #6c6b6b;
+      font-size: 18px;
+      /* text-decoration: line-through; */
+    }
+
+    .current-price {
+      color: #ff003c;
+      font-size: 20px
+    }
+
+    .navbar-custom {
+      height: 400px;
+      width: 300px;
+    }
+
+    .list-navigator-item {
+      padding: 4px 16px;
+      list-style-type: none;
+    }
+
+    .list-navigator-item .nav-item {
+      padding: 4px 12px;
+    }
+
+    .list-navigator-item .nav-item.active {
+      background-color: #0d6efd;
+    }
+
+    .card-dd img {
+      transition: 0.4s ease;
+      filter: grayscale(0.7);
+    }
+
+    .card-dd {
+      overflow: hidden;
+      transition: 0.4s ease;
+    }
+
+    .card-dd:hover {
+      box-shadow: 1px 2px 18px 2px rgba(90, 90, 90, 0.613);
+    }
+
+    .card-dd:hover img {
+      transform: rotateZ(1deg) scale(1.1);
+      filter: grayscale(0);
+
+    }
+  </style>
 </head>
 
 <body>
@@ -39,10 +99,10 @@
     </nav>
   </header>
   <main class=" main container">
-    <section class="py-5">
+    <section class="pt-5">
       <h2>Clone lại giao diện sau:</h2>
     </section>
-    <section class="d-flex  mb-3 exc-1">
+    <!--    <section class="d-flex  mb-3 exc-1">
       <h3 class="p-3">Menu bên phải kèm animation nhé.</h3>
       <ul>
         <li><a href="#"><i class="fas fa-hand-holding-usd ry"></i></a><span>Dòng 1 nè</span></li>
@@ -80,34 +140,102 @@
 
       </p>
       <div class="divider"></div>
+    </section> -->
+    <h3>B1</h3>
+    <section class=" container px-0">
+      <div class="card mb-3 card-dd" style="width: 350px">
+        <img
+          src="https://static01.nyt.com/images/2022/09/01/business/00roose-1/merlin_212276709_3104aef5-3dc4-4288-bb44-9e5624db0b37-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+          class="card-img-top" alt="AI card">
+        <div class="card-body">
+          <h5 class="card-title">Bức tranh khổ lớn</h5>
+          <p class="mb-2">
+            <span class="current-price fw-bold">4.800.000đ</span>
+            <span class="old-price text-decoration-line-through fst-italic">5.200.000đ</span>
+          </p>
+          <p class="card-text">
+            <q>Bức tranh được tạo lên từ trí thông minh nhân tạo (AI). Rất hợp để treo trong phòng làm
+              việc để ngắm nha.</q> - Ai đó
+          </p>
+          <a href="https://www.google.com/search?q=AI+Art&rlz=1C1GCEA_enVN884VN884&sxsrf=ALiCzsZTwg2f22vag8GY1xAR2xyMoh1SmQ:1663641738821&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiCv4C3rKL6AhX0mVYBHROpBj4Q_AUoAXoECAEQAw&biw=1920&bih=969&dpr=1#imgrc=e1EkyHEV6C3HoM"
+            class="">Xem thêm</a>
+        </div>
+      </div>
     </section>
 
-    <section class="py-5 container">
-      <div class="exc-2">
-        <div class="btn">
-          <p>Độ khó 1: pseudo-class(hover) + transition</p>
-          <a href="" class="button2 btn">So Dark</a><br>
-
-          <p>Độ khó 2: Gradient background + Box-shadow + pseudo-class(hover) + transition(or animation for infinite
-            effect)</p>
-          <a href="" class="button1">So Colorful</a><br>
-          <p>Độ khó 2: pseudo-class(checked) + transition + sibling selector</p>
-          <div class="btn ip-btn ">
-            <input type="checkbox" name="touch" id="touchthis">
-            <label for="touchthis" class="mx-auto"></label>
+    <h3>B2</h3>
+    <section class=" container px-0">
+      <section class="wrapper container d-flex">
+        <div class="products--block">
+          <p class="text-center title">Đây là khối product 3D</p>
+          <div class="product position-relative">
+            <div class="preview w-100 d-block">
+              <img src="./transform/assets/images/glass-1.jpg" alt="" class="w-100 d-block" />
+            </div>
+            <div class="descriptions position-absolute">
+              <p class="name">Kính Mắt Behance - Bộ sưu tập mùa hè</p>
+              <p class="price">
+                <span class="old-price">$59.99</span>
+                <span class="new-price">$39.99</span>
+              </p>
+              <p class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni hic
+                maxime doloremque illo quisquam qui saepe numquam magnam in
+                debitis, accusamus eaque quidem at modi eligendi, optio commodi
+                ratione praesentium.
+              </p>
+              <button class="btn add-to-cart">
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </div>
           </div>
-          <p>Độ khó 3: Box-shadow + pseudo-class(hover) + transition</p>
-          <div id="btn"><a href="" class="btn button3">The Neon
-              Button<span></span><span></span><span></span><span></span></a></div>
-          <p>Độ khó 3: pseudo-element + pseudo-class(hover) + transition</p>
-          <div class="wrap"><a href="#">Button</a></div>
         </div>
-
-      </div>
+        <div class="products--block-doubled">
+          <p class="text-center title">Đây là khối navigation bar (menu v.v horizontal)</p>
+          <div class="navbar-wrapper position-relative navbar--horizontal">
+            <ul class="nav-bar position-relative px-0">
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Trang
+                  chủ</a></li>
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Sản phẩm</a>
+              </li>
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Về chúng
+                  tôi</a></li>
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+          <p class="text-center title">Đây là khối navigation bar (menu v.v vertical)</p>
+          <div class="navbar-wrapper position-relative">
+            <ul class="nav-bar position-relative d-flex">
+              <li class="link logo"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript"><i
+                    class="fab fa-pinterest"></i></a></li>
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Trang
+                  chủ</a></li>
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Sản phẩm</a>
+              </li>
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Về chúng
+                  tôi</a></li>
+              <li class="link"><a
+                  href="https://stackoverflow.com/questions/14513776/highlight-matching-text-in-javascript">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+      </section>
+      <div style="height: 400px"></div>
       <div class="divider"></div>
-      <h4 class="mt-2">Tài nguyên:</h4>
-      <p>Mã màu: #99d1f1(background), các màu gradient, màu nút được phép tùy chọn</p>
-      <p>Font: 'Courier New', Courier, monospace , 16px, normal | bold</p>
+      <h4 class="mt-2">Tài nguyên B2:</h4>
+      <p>Mã màu: #292429(background), các màu gradient, màu nút được phép tùy chọn</p>
+      <p>Hiệu ứng bóng:
+        box-shadow: 1px 1px 10px 1px rgba(177, 177, 177, 0.329);</p>
+      <p>Font: Poppins , 16px, normal | bold</p>
 
       <p>Dim: padding 16px, button-height: 58px</p>
       <h4>Yêu cầu:</h4>
@@ -118,9 +246,12 @@
       <p>
         Nâng cao: Clone lại được toàn bộ giao diện trên, có phần pseudo, animation <br>
       </p>
-      <p><b>*DOC để làm phần nâng cao: <a href="#exc1-doc">
-            như trên
-          </a>
+      <p><b>*DOC để làm phần nâng cao:</b> <a
+          href="https://viblo.asia/p/tap-tanh-tim-hieu-css-animation-bai-2-transforms-4dbZNpNg5YM" target="_blank">Về
+          transform (xoay, di chuyển, thu phóng ....)</a>,
+        <a href="https://viblo.asia/p/tap-tanh-tim-hieu-css-animation-bai-3-keyframes-animation-3Q75w86BKWb"
+          target="_blank">Về
+          animation (nhiều thay đổi phức tạp, có tính đồng bộ)</a>
 
       </p>
       <div class="divider"></div>
