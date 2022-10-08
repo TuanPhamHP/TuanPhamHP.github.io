@@ -1,0 +1,4 @@
+List files change: 
+	/assets/media/images
+	/assets/media/style/home_v2.scss
+	/home.html	

@@ -1,0 +1,52 @@
+// STYLES FOR LANDINGPAGE ONLY
+
+// ---- LAYOUTS
+body {
+	.container-landing-semi {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (min-width: 320px) {
+	body {
+		.container-landing-semi {
+			max-width: calc(100% - 32px) !important;
+		}
+	}
+}
+@media (min-width: 576px) {
+	body {
+		.container-landing-semi {
+			max-width: 540px !important;
+		}
+	}
+}
+@media (min-width: 768px) {
+	body {
+		.container-landing-semi {
+			max-width: 740px !important;
+		}
+	}
+}
+@media (min-width: 992px) {
+	body {
+		.container-landing-semi {
+			max-width: 960px !important;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	body {
+		.container-landing-semi {
+			max-width: 1140px !important;
+		}
+	}
+}
+@media (min-width: 1366px) {
+	body {
+		.container-landing-semi {
+			max-width: 1608px !important;
+		}
+	}
+}

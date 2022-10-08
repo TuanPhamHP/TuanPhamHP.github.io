@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>1SK - View All</title>
+
+	<!-- SEO -->
+	<meta name="keywords" content="suc khoe, sức khỏe, luyen tap, luyện tập, thu vien, thư viện" />
+	<meta name="description" content="Thư viện 1SK - Description" />
+	<meta property="og:title" content="Thư viện 1SK - Open Graph Title" />
+	<meta property="og:type" content="article" />
+	<meta property="og:description" content="Thư viện 1SK - Open Graph Description" />
+	<meta property="og:image"
+		content="https://static.1sk.vn:8403/v1.0/upload/website-1sk/1sk_assets/img/webp/image1.webp" />
+	<meta data-hid="og:image:width" property="og:image:width" content="600" />
+	<meta data-hid="og:image:height" property="og:image:height" content="600" />
+	<meta data-hid="og:image:alt" property="og:image:alt"
+		content="https://static.1sk.vn:8403/v1.0/upload/website-1sk/1sk_assets/img/webp/image1.webp" />
+	<meta property="og:url" content="https://1sk.vn/" />
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta data-n-head="ssr" name="robots" content="index, follow" />
+	<link rel="alternate" href="https://1sk.vn/" hreflang="vi-vn" />
+	<meta name="geo.region" content="VN-HN" />
+	<meta name="geo.placename" content="Hà Nội" />
+	<!-- CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet" />
+	<!--  -->
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" href="./assets/style/main.css" />
+	<link rel="stylesheet" href="./assets/style/landing.css" />
+	<link rel="stylesheet" href="./assets/style/header_v2.css" />
+	<link rel="stylesheet" href="./assets/style/scale-detail.css" />
+	<!--  -->
+	<!--  -->
+
+	<!-- SCRIPT -->
+	<!-- CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!--  -->
+	<!--  -->
+</head>
+
+<body id="mainPageBody">
+	<!-- MAIN HEADER -->
+	<header id="header" class="header-wr header">
+		<div class="" id="headerTopWr">
+			<div class="bg-white">
+				<div class="header__bottom-block container px-0">
+					<nav class="header__navigator navbar navbar-expand-lg navbar-light bg-transparent p-0">
+						<div id="btnToggleHeaderNavigator" class="pointer">
+							<img src="./assets/media/images/more-menu-icon.svg" loading="lazy" alt="">
+						</div>
+						<div class="show-on-mobile">
+							<a href="#">
+
+								<img src="./assets/media/images/white-brand-icon.svg" height="32px" loading="lazy" alt="brand-icon">
+							</a>
+						</div>
+						<div class="show-on-mobile">
+							<img src="./assets/media/images/white-lookup-icon.svg" loading="lazy" alt="search-icon"
+								id="toggleSearchBtn" class="me-3">
+							<a class="mobile-cart-btn">
+								<span class="cart-counter">3</span>
+								<img src="./assets/media/images/white-bag-icon.svg" loading="lazy" alt="cart-icon">
+							</a>
+						</div>
+						<button id="btnActiveHeaderMasterNavigator" class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#headerMasterNavigator" aria-controls="headerMasterNavigator" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse h-100 w-100" id="headerMasterNavigator">
+							<div class="navbar-nav w-100">
+								<a class="nav-item nav-link h-100 header-logo-v2 ps-0" href="#">
+									<img src="./assets/media/images/header-logo-v2.svg" alt="1sk logo">
+								</a>
+								<a class="nav-item nav-link h-100 text-white ps-0" href="#">TRANG CHỦ</a>
+								<a class="nav-item nav-link h-100 text-white" href="#">TẬP LUYỆN</a>
+								<a class="nav-item nav-link h-100 text-white" href="#">TƯ VẤN</a>
+								<a class="nav-item nav-link h-100 text-white on-active" href="#">CỬA HÀNG</a>
+								<a class="nav-item nav-link h-100 text-white tel-tag ms-auto brt-a pointer pe-0">
+									<img src="./assets/media/images/user-active.svg" class="me-2" loading="lazy" alt="">
+									Đăng nhập
+								</a>
+								<div class="nav-item nav-link h-100">
+
+									<div class=" btn-prim  text-white btn-download  pointer">Tải ứng dụng
+
+										<div class="download-popover-customize">
+											<em>
+												Quét mã để tải ứng dụng
+											</em>
+											<img src="./assets/media/images/popover-qr-code.svg" alt="popover-qr-code" class="my-3">
+											<em class="mt-4 mb-2">
+												Cài đặt ứng dụng 1SK
+											</em>
+											<a href="#" class="mb-3"><img src="./assets/media/images/popover-chplay.png"
+													alt="popover-chplay"></a>
+											<a href="#"><img src="./assets/media/images/popover-appstore.png" alt="popover-appstore"></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="bg-color-primary" id="navigatorSearchBar">
+				<div class="container px-0">
+					<div class="row mx-0 align-items-start align-items-center my-0 py-1 main-top-block">
+
+						<div class="col-xl-12 col-lg-12 col-md-12   px-0 hide-on-mobile">
+							<ul class="d-flex main-top-navigator">
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-1.svg" alt="header-bottom-icon-1">
+										Thiết bị chăm sóc sức khỏe</a>
+								</li>
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-2.svg" alt="header-bottom-icon-1">
+										Thiết bị tập luyện</a>
+								</li>
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-3.svg" alt="header-bottom-icon-1">
+										Thực phẩm chức năng</a>
+								</li>
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-4.svg" alt="header-bottom-icon-1">
+										Phụ kiện - trang phục</a>
+								</li>
+								<li class="each-tab-navigator ms-auto">
+									<div class="libpage-tabs__search search-block">
+										<input type="text" placeholder="Tìm kiếm sản phẩm..." id="libPageSearchInput" />
+										<img src="./assets/media/images/look-up-icon.svg" loading="lazy" alt="look-up-icon" />
+									</div>
+								</li>
+								<li class="each-tab-navigator " style="min-width: 150px;">
+
+									<a href="#" class="text-white cart-btn">
+										<img src="./assets/media/images/bag-white.svg" loading="lazy" alt="cart-img" class="pe-2">
+										<span class="cart-counter">3</span>
+										Giỏ hàng</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- PAGE CONTENT -->
+	<main id="libPageMain">
+		<section id="libPageTabs" class="libpage-section detail-device-tabs__wr container-fluid  main-top-product">
+
+			<div class="libpage-tabs__container container px-0 h-100">
+				<div class="row h-100">
+					<div class="col-xl-6 col-lg-6 col-12 prod-group-img">
+						<img src="./assets/media/images/scale-prod-img.svg" loading="lazy" alt="scale-prod-img">
+					</div>
+					<div class="col-xl-6 col-lg-6 col-12 prod-group-text">
+						<h3 class="prod-group-name">
+							Cân sức khoẻ thông minh 1sk
+						</h3>
+						<p class="prod-desc">
+							Cân sức khoẻ thông minh 1sk là sản phẩm Cân thông minh bán chạy số 1 trên nền tảng chăm sóc sức khoẻ kỹ
+							thuật số 1sk. <br>
+							Cân thông minh 1sk được thiết kế tinh tế và gọn gàng, kết nối với app 1SK.Connect trên điện thoại thông
+							minh giúp kiểm tra và theo dõi các chỉ số sức khoẻ. Nếu bạn là người quan tâm đến tình trạng sức khỏe của
+							bản thân và gia đình thì cân thông minh 1sk là sự lựa chọn thực sự lý tưởng.
+						</p>
+						<div class="prod-rating-n-review">
+							<span class="star-rating">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+
+							</span>
+							<span class="review-counter">
+								985 đánh giá
+							</span>
+							<a href="#" class="view-all-review-btn">
+								Xem tất cả
+							</a>
+						</div>
+						<div class="prod-price">
+							<span class="prod-sale-price">349.000đ</span>
+							<span class="prod-original-price">599.000đ</span>
+							<span class="prod-sale-percentage">
+								-42%
+							</span>
+						</div>
+						<div class="prod-act-btn hide-on-mobile-flex">
+							<div class="prod-btn btn-add-to-cart  pointer"> <img src="./assets/media/images/bag-icon.svg"
+									alt="cart-img" class="pe-1">Thêm vào giỏ hàng</div>
+							<div class="prod-btn btn-buy-now  pointer">Mua ngay</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="property-section property-tabs__wr container-fluid">
+
+			<div class="property-tabs__container container-landing-semi px-0 ">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6 property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/chi-so.png" loading="lazy" alt="do 14 chi so co the">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Phân tích 14 chỉ số cơ thể
+								</p>
+								<p class="property__desc">
+									Đo lường sức khỏe chính xác
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6 property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/nguyen-li-hoat-dong.svg" loading="lazy" alt="nguyen li hoat dong">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Nguyên lý hoạt động
+								</p>
+								<p class="property__desc">
+									Hoạt động dựa trên phương pháp trở kháng điện sinh học - BIA
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6  property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/sang-trong.svg" loading="lazy" alt="sang trong">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Thiết kế sang trọng, mỏng nhẹ
+								</p>
+								<p class="property__desc">
+									Di chuyển dễ, đặt mọi vị trí trong nhà
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6 property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/ket-noi-ung-dung.png" loading="lazy" alt="ket noi ung dung">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Kết nối ứng dụng 1SK.Connect
+								</p>
+								<p class="property__desc">
+									Dễ dàng theo dõi, ghi nhớ các chỉ số trên cơ thể người
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6  property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/cam-bien.png" loading="lazy" alt="cam bien">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Cảm biến siêu nhạy
+								</p>
+								<p class="property__desc">
+									2 cặp cảm biến đảm bảo phép đo chính xác
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6 property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/led.png" loading="lazy" alt="led screen">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Màn hình LED rõ ràng
+								</p>
+								<p class="property__desc">
+									Hiển thị thông tin trực quan và chuyển đổi đơn vị Kg và Lb linh hoạt
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6  property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/bluetooth.png" loading="lazy" alt="bluetooth">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Công nghệ Bluetooth 5.0
+								</p>
+								<p class="property__desc">
+									Kết nối Bluetooth năng lượng thấp giúp tiết kiệm năng lượng
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-3 col-lg-3 col-md-6 col-6  property-block__wr">
+						<div class="each-property">
+							<img src="./assets/media/images/ho-so.png" loading="lazy" alt="ho-so">
+
+							<div class="property__text-block">
+								<p class="property__title">
+									Hồ sơ sức khỏe cho từng thành viên trong gia đình
+								</p>
+								<p class="property__desc">
+									Lưu trữ thông tin lên đến 99 người sử dụng
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="middle-banner container">
+			<div class="swiper propertySwiper">
+				<div class="swiper-wrapper align-items-center">
+					<div class="swiper-slide d-flex">
+						<div class="col col-6">
+							<a href="#"><img class="slider-item" src="./assets/media/images/property-slider-1.png" loading="lazy"
+									alt="1sk-store-img"></a>
+						</div>
+						<div class="col col-6 each-slider-title">
+							Đo 14 chỉ số sức khỏe quan trọng: <br> mỡ, cơ, xương, nước
+						</div>
+					</div>
+					<div class="swiper-slide d-flex">
+						<div class="col col-6">
+							<a href="#"><img class="slider-item" src="./assets/media/images/property-slider-2.png" loading="lazy"
+									alt="1sk-store-img"></a>
+						</div>
+						<div class="col col-6 each-slider-title">
+							Màn hình LED hiển thị sắc nét
+						</div>
+					</div>
+					<div class="swiper-slide d-flex">
+						<div class="col col-6">
+							<a href="#"><img class="slider-item" src="./assets/media/images/property-slider-3.png" loading="lazy"
+									alt="1sk-store-img"></a>
+						</div>
+						<div class="col col-6 each-slider-title">
+							Kết nối với app 1SK.Connect
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="advance-inf-section advance-inf-tabs__wr bg-f7 glance-block container-fluid">
+
+			<div class="advance-inf-tabs__container container px-0">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-12 image-block">
+						<img src="./assets/media/images/tracking-img1.png" loading="lazy" alt="1sk-store-img">
+					</div>
+					<div class="col-xl-8 col-lg-8 col-md-8 col-12 text-block">
+						<img src="./assets/media/images/small-scale1.png" width="auto" style="max-width: 214px"
+							class="hide-on-mobile" loading="lazy" alt="1sk-store-img">
+
+						<p class="advance-inf-tabs__desc">
+							Với cơ chế thông minh, chiếc cân 1SK có thể kiêm nhiệm vai trò trợ lý sức khỏe tại gia nhờ hệ thống tính
+							năng ưu việt. Sản phẩm có thiết kế gọn gàng, tối giản và phù hợp với nhiều phong cách nội thất khác nhau.
+						</p>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="advance-inf-section advance-inf-tabs__wr bg-white ppi-block container-fluid ">
+
+			<div class="advance-inf-tabs__container container px-0 second-advance-inf">
+
+				<!--  -->
+				<div class="row ">
+
+					<div class="col-xl-8 col-lg-8 col-md-8 col-12 text-block">
+						<p class="advance-inf-tabs__title text-right">
+							Thiết kế sang trọng, độ bền cao
+						</p>
+
+						<p class="advance-inf-tabs__desc text-right mt-4 fw-normal">
+							Nổi bật nhất trong thiết kế và cũng là điểm gây ấn tượng đối với người dùng trên cân thông minh 1SK đó
+							chính là thiết kế vô cùng sang trọng và tinh tế. Việc sử dụng kính cường lực cho bàn cân, không chỉ tạo sự
+							cứng cáp mà còn cho bạn cảm giác an toàn khi đứng lên. Thiết kế này cũng khiến cho sản phẩm trở nên thẩm
+							mỹ, chống bám bẩn, vệ sinh tiện lợi.
+						</p>
+
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-12 image-block">
+						<img src="./assets/media/images/tracking-img2.png" loading="lazy" alt="1sk-store-img">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="advance-inf-section advance-inf-tabs__wr bg-f7 ppi-block container-fluid ">
+
+			<div class="advance-inf-tabs__container container px-0 third-advance-inf">
+
+				<!--  -->
+				<div class="row ">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-12 image-block ">
+						<img src="./assets/media/images/tracking-img3-m.png" loading="lazy" class="show-on-mobile"
+							alt="1sk-store-img">
+						<img src="./assets/media/images/tracking-img3.png" loading="lazy" class="hide-on-mobile"
+							alt="1sk-store-img">
+						<img src="./assets/media/images/small-scale2.png" width="auto" class="hide-on-mobile"
+							style="max-width: 298px" class="absolute-img" loading="lazy" alt="1sk-store-img">
+					</div>
+					<div class="col-xl-7 col-lg-7 col-md-8 col-12 text-block">
+						<p class="advance-inf-tabs__title ">
+							Cho biết rất nhiều chỉ số quan trọng của cơ thể
+						</p>
+
+						<p class="advance-inf-tabs__desc  mt-4 fw-normal">
+							Cân thông minh 1SK có khả năng phân tích 14 chỉ số cơ thể như cân nặng, khối lượng xương, khối lượng mỡ cơ
+							thể không tính mỡ, mức độ béo phì, lượng nước trong cơ thể, chỉ số mỡ nội tạng, protein, tạng người/Chỉ số
+							vóc dáng, % mỡ cơ thể, lượng cơ, lượng mỡ dưới da, cân nặng tiêu chuẩn, BMI , BMR.
+						</p>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="advance-inf-section advance-inf-tabs__wr bg-white ppi-block container-fluid ">
+
+			<div class="advance-inf-tabs__container container px-0 fourth-advance-inf">
+
+				<!--  -->
+				<div class="row ">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-12 image-block ">
+						<img src="./assets/media/images/tracking-img4.png" loading="lazy" alt="1sk-store-img">
+
+					</div>
+					<div class="col-xl-7 col-lg-7 col-md-8 col-12 text-block">
+						<p class="advance-inf-tabs__title ">
+							Sử dụng 3 viên pin AAA
+						</p>
+
+						<p class="advance-inf-tabs__desc  mt-4 fw-normal">
+							Cân thông minh 1SK chỉ sử dụng nguồn năng đến từ 3 viên pin AAA, chúng ta có thể sử dụng chiếc cân này cả
+							12 tháng mới cần thay pin.
+						</p>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="advance-inf-section advance-inf-tabs__wr bg-f7 ppi-block container-fluid ">
+
+			<div class="advance-inf-tabs__container w-100 px-0 fifth-advance-inf">
+
+				<!--  -->
+				<div class="row">
+					<div class="col-xl-5 col-lg-5 col-md-5 col-12 image-block ps-0 justify-content-start">
+						<img src="./assets/media/images/tracking-img5.png" loading="lazy" alt="1sk-store-img">
+
+					</div>
+					<div class="col-xl-7 col-lg-7 col-md-8 col-12 text-block ">
+						<p class="advance-inf-tabs__title ">
+							Hệ sinh thái thiết bị sức khỏe kỹ thuật số 1SK
+						</p>
+
+						<p class="advance-inf-tabs__desc  fw-normal">
+							Chăm sóc sức khỏe cho bạn và gia đình một cách toàn diện. <br>
+							1SK tự hào là nền tảng chăm sóc sức khỏe kỹ thuật số hàng đầu Việt Nam. <br>
+							Từ Cân sức khỏe thông minh 1SK bạn có thể kết nối tới hệ sinh thái, đồng bộ các chỉ số sức khoẻ và sử dụng
+							những dịch vụ chăm sóc sức khoẻ mà 1SK mang lại
+						</p>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section class="technique-parameter-section technique-parameter-tabs__wr container-fluid ">
+
+			<div class="technique-parameter-tabs__container container px-0 ">
+				<h2 class="section-title">
+					Thông số kỹ thuật
+				</h2>
+				<div class="row ">
+					<div class="each-pr">
+						<p class="pr-title">Màn hình hiển thị</p>
+						<p class="pr-desc">
+							67*29.5mm
+						</p>
+					</div>
+					<div class="each-pr">
+						<p class="pr-title">Kích thước cân</p>
+						<p class="pr-desc">
+							280*280*24mm
+						</p>
+					</div>
+					<div class="each-pr">
+						<p class="pr-title">Chuyển đổi đơn vị</p>
+						<p class="pr-desc">
+							KG/LB
+						</p>
+					</div>
+					<div class="each-pr">
+						<p class="pr-title">Tải trọng cho phép</p>
+						<p class="pr-desc">
+							3 Kg - 180 Kg
+						</p>
+					</div>
+					<div class="each-pr">
+						<p class="pr-title">Độ cao giới hạn</p>
+						<p class="pr-desc">
+							1-2.2m
+						</p>
+					</div>
+					<div class="each-pr">
+						<p class="pr-title">Tuổi thọ thiết bị</p>
+						<p class="pr-desc">
+							10 năm
+						</p>
+					</div>
+					<div class="each-pr">
+						<p class="pr-title">Khoảng cách độ cao</p>
+						<p class="pr-desc">
+							100 - 200cm
+						</p>
+					</div>
+					<div class="each-pr">
+						<p class="pr-title">Loại pin</p>
+						<p class="pr-desc">
+							3 pin AAA 1.5V
+						</p>
+					</div>
+					<div class=" each-pr">
+						<p class="pr-title">Nhiệt độ/độ ẩm</p>
+						<p class="pr-desc">
+							-10°C ~ 50°C / 20% ~ 90%
+						</p>
+					</div>
+					<div class=" each-pr">
+						<p class="pr-title"> Khối lượng</p>
+						<p class="pr-desc">
+							1.5 Kg
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--  -->
+		<section id="detailSection" class="detail2-cmt-block-section prod-info-tabs__wr container-fluid ">
+			<div class="detail2-cmt-block-tabs__container container px-0 ">
+				<div class="row ">
+					<div class="col-xl-12 col-lg-12 col-12 infomation-block">
+
+						<div class="customer-comments">
+							<div class="customer-comments-header">
+								<div>
+									<h4 class=" infomation-block__title">
+										Khách hàng nhận xét
+									</h4>
+									<div class="ct-block">
+										<div class="avarage-star-rating">
+											<span class="avg-counter">4.8/5</span>
+											<span class="star-rating">
+												<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star"
+													class="">
+												<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star"
+													class="">
+												<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star"
+													class="">
+												<img src="./assets/media/images/empty-star-icon.svg" loading="lazy" alt="mtyrate-star" class="">
+												<img src="./assets/media/images/empty-star-icon.svg" loading="lazy" alt="mtyrate-star" class="">
+											</span>
+										</div>
+										<div class="comments-summary">
+											<b>985</b> đánh giá
+											từ khách hàng
+										</div>
+									</div>
+								</div>
+								<div class="prod-btn btn-new-cmd  pointer">
+									Viết nhận xét</div>
+							</div>
+
+							<div class="customer-comments-body">
+								<div class="each-comment-block">
+									<span class="star-rating">
+										<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+										<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+										<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+										<img src="./assets/media/images/empty-star-icon.svg" loading="lazy" alt="mtyrate-star" class="">
+										<img src="./assets/media/images/empty-star-icon.svg" loading="lazy" alt="mtyrate-star" class="">
+									</span>
+									<p class="mb-1">
+										<span class="cmt-title">Nên sử dụng </span>
+										<span class="cmt-username">Thanh Nhã </span>
+										<span class="cmt-datetime">12/10/2021 17:27:53 PM </span>
+									</p>
+									<p class="cmt-detail">
+										Từ ngày biết đến viên rau củ mình k còn lo lắng về những nữa ăn vội vàng mà k chuẩn bị rau xanh nữa,
+										vì đã bổ sung chất xơ nhờ viên này rồi. Uống viên này ăn ngon miệng lắm, mẹ mình hay bị táo nên mình
+										mua cho mẹ uống thử
+									</p>
+								</div>
+								<div class="each-comment-block">
+									<span class="star-rating">
+										<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+										<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+										<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+										<img src="./assets/media/images/empty-star-icon.svg" loading="lazy" alt="mtyrate-star" class="">
+										<img src="./assets/media/images/empty-star-icon.svg" loading="lazy" alt="mtyrate-star" class="">
+									</span>
+									<p class="mb-1">
+										<span class="cmt-title">Giá cả hợp lý </span>
+										<span class="cmt-username">Đào Kim Thoa</span>
+										<span class="cmt-datetime">12/10/2021 17:27:53 PM </span>
+									</p>
+									<p class="cmt-detail">
+										Từ ngày biết đến viên rau củ mình k còn lo lắng về những nữa ăn vội vàng mà k chuẩn bị rau xanh nữa,
+										vì đã bổ sung chất xơ nhờ viên này rồi. Uống viên này ăn ngon miệng lắm, mẹ mình hay bị táo nên mình
+										mua cho mẹ uống thử
+									</p>
+								</div>
+							</div>
+
+							<div class="customer-comments-pagination">
+								<div class="page-count current-page">1</div>
+								<div class="page-count ">2</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+		<div class="customer-email">
+			<div class="customer-email-container container px-0">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-12 customer-email-wr">
+						<div class="d-flex align-items-center">
+							<img src="./assets/media/images/paper-plane.svg" loading="lazy" alt="paper-plane"
+								class="me-3 paper-plane">
+							<div>
+								<p class="customer-email__title text-white">Cùng tham gia với chúng tôi</p>
+								<p class="customer-email__desc text-white mb-0">Đăng ký nhận các chương trình ưu đãi, khuyến mãi hấp dẫn
+									từ 1SK</p>
+							</div>
+						</div>
+						<div action="post" class="customer-email-input">
+							<input type="text" placeholder="Nhập email của bạn">
+							<button type="submit" class="submit-email-btn pointer">Gửi</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</main>
+	<!-- FOOTER -->
+
+
+
+	<footer id="footer" class="footer-wr footer">
+		<section class="libpage-section footer-main">
+			<div class="footer-main__container container px-0">
+				<div class="row mx-0 ft-main-block">
+					<div class="d-flex align-items-start ft-1st ps-0">
+						<figure class="footer-logo">
+							<img src="./assets/media/images/logo_footer.svg" loading="lazy" alt="footer-logo-1sk" />
+						</figure>
+						<p class="ft-contact-title text-white ps-4 pt-2 font-size-14">
+							Công ty cổ phần đầu tư phát triển <br>
+							công nghệ điện tử viễn thông (ELCOM Corp)
+						</p>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-12 col-12 pb-md-3 pb-sm-3 ft-top-bl px-0">
+						<!-- <div class="d-flex align-items-start ft-1st">
+									<figure class="footer-logo">
+										<img src="./assets/media/images/logo_footer.svg" loading="lazy" alt="footer-logo-1sk" />
+									</figure>
+									<p class="ft-contact-title text-white ps-4 pt-2 font-size-14">
+										Công ty cổ phần đầu tư phát triển
+										công nghệ điện tử viễn thông (ELCOM Corp)
+									</p>
+								</div> -->
+						<address class="ft-contact-content mb-2">
+							<span class="font-weight-bold">Trụ sở chính:</span> Tòa nhà ELCOM,
+							Duy Tân, Quận Cầu Giấy, Hà Nội.
+						</address>
+						<p class=" font-size-14 text-white" style="line-height: 28px;">
+							Giấy chứng nhận ĐKKD số 0101435127 do Sở Kế hoạch & Đầu tư Thành phố Hà Nội.
+							Cấp ngày 18/07/2003. Thay đổi lần thứ 24, ngày 28/05/2020
+						</p>
+						<figure class="d-lg-block d-none footer-logo mb-1 footer-verified">
+							<img src="./assets/media/images/thong-bao-website-voi-bo-cong-thuong.png"
+								alt="thong-bao-website-voi-bo-cong-thuong" />
+						</figure>
+					</div>
+					<div class="col-12 d-none show-lower-991 ft-divider-mb"></div>
+					<div class="col-xl-2   col-lg-3 col-lg-2 col-md-4 col-6 ps-lg-3 px-sm-0 ft-info">
+						<p class="ft-block-title">VỀ 1SK</p>
+						<a class="d-block ft-block__content no-decoration" href="#">Điều khoản sử dụng</a>
+						<a class="d-block ft-block__content no-decoration" href="#">Các chính sách</a>
+						<a class="d-block ft-block__content no-decoration" href="/thu-vien-1sk">Thư viện</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-lg-2 col-md-4 col-6 ps-lg-2 px-sm-0 ft-info">
+						<p class="ft-block-title">DANH MỤC SẢN PHẨM</p>
+						<a class="d-block ft-block__content no-decoration" href="#">Thiết bị thông minh</a>
+						<a class="d-block ft-block__content no-decoration" href="#">Dinh dưỡng</a>
+						<a class="d-block ft-block__content no-decoration" href="/thu-vien-1sk">Phụ kiện</a>
+					</div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 px-sm-0 ft-info">
+						<p class="ft-block-title">HỖ TRỢ KHÁCH HÀNG</p>
+						<a class="d-flex align-items-center ft-block__content no-decoration" href="tel:1900969615">
+							<img src="./assets/media/images/phone-prim-icon.svg" class="pe-2" loading="lazy" alt="1sk-store-img" />
+							Hotline: 1900 9696 15</a>
+						<a class="d-flex align-items-center ft-block__content no-decoration" href="mailto:support@1sk.vn">
+							<img src="./assets/media/images/mail-prim-icon.svg" class="pe-2" loading="lazy" alt="1sk-store-img" />
+							support@1sk.vn</a>
+					</div>
+					<div class="col-12 d-none show-lower-991 ft-divider-mb"></div>
+					<div class="col-xl-2 col-lg-3 col-md-4 col-6 px-lg-0 ft-app mb-lg-4 px-sm-0 ft-info mt-3">
+						<p class="ft-block-title">TẢI ỨNG DỤNG 1SK</p>
+						<div class="app-block">
+							<div>
+								<img src="./assets/media/images/qr-code.png" loading="lazy" alt="qr-code-app" class="qr-code" />
+							</div>
+							<span class="text-white mx-1">Hoặc</span>
+							<div class="app-links  ms-0">
+								<a href="#">
+									<img src="./assets/media/images/app-store.png" loading="lazy" alt="app-store-app" class="mb-2" />
+								</a>
+								<a href="#">
+									<img src="./assets/media/images/google-play.png" loading="lazy" alt="google-play-app" class="" />
+								</a>
+							</div>
+						</div>
+						<p class="mb-0 ft-block__content font-size-11 qr-em text-center qrcode-desc" style="width: 79px;">
+							<em>Quét mã để tải ứng dụng </em>
+						</p>
+					</div>
+					<figure class="d-block footer-logo mb-2 d-lg-none px-0 hide-on-mobile ">
+						<img src="./assets/media/images/thong-bao-website-voi-bo-cong-thuong.png"
+							alt="thong-bao-website-voi-bo-cong-thuong" />
+					</figure>
+				</div>
+				<div class="copy-right">
+					<figure class="d-block footer-logo d-lg-none px-0 show-on-mobile bct-logo">
+						<img src="./assets/media/images/thong-bao-website-voi-bo-cong-thuong.png"
+							alt="thong-bao-website-voi-bo-cong-thuong" />
+					</figure>
+					<div class="copyright-footer font-size-14 pt-4" style="color: #fff; line-height: 190%; letter-spacing: 0.4px">
+						Bản quyền <img src="./assets/media/images/circle-c-icon.svg" loading="lazy" alt="1sk-store-img" height="9px"
+							class="ms-2 me-1"> ELCOM
+						Corporation 2021
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+	<!-- BTN SCROLL UP -->
+	<div id="btnScrollToTop" class="btn-scroll-to-top pointer" id="top-link"><i class="fas fa-arrow-up"></i></i></div>
+	<!-- MENU SIDEBAR -->
+	<div id="menuSidebar" class="menu-sidebar-wr">
+		<div class="menu-sidebar__content" id="menuSidebarContent">
+			<ul class="navigator-list-content">
+
+				<li class="each-navigator pointer border-btm">
+					<a class="no-decoration" href="#">
+						<img src="/assets/media/images/logo_footer.png" height="35px" loading="lazy" alt="1sk-store-img">
+					</a>
+				</li>
+				<li class="each-navigator pointer ">
+					<a class="no-decoration" href="#">TRANG CHỦ</a>
+				</li>
+				<li class="each-navigator pointer">
+					<a class="no-decoration" href="#">TẬP LUYỆN</a>
+				</li>
+				<li class="each-navigator pointer each-navigator-on-active " type="button" data-bs-toggle="collapse"
+					data-bs-target="#moreV" aria-expanded="false" aria-controls="moreV">
+					<a class="no-decoration d-flex align-items-center justify-content-between" href="#">TƯ VẤN
+						<img src="./assets/media/images/chevron-down.svg" loading="lazy" alt="1sk-store-img">
+					</a>
+				</li>
+				<div class="collapse" id="moreV">
+					<li class="each-navigator pointer navigator-child">
+						<a class="no-decoration" href="#">Thiết bị thông minh</a>
+					</li>
+					<li class="each-navigator pointer navigator-child">
+						<a class="no-decoration" href="#">Dinh dưỡng</a>
+					</li>
+					<li class="each-navigator pointer navigator-child">
+						<a class="no-decoration" href="#">Phụ kiện</a>
+					</li>
+				</div>
+				<li class="each-navigator pointer ">
+					<a class="no-decoration" href="#">ĐĂNG NHẬP</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<!--  -->
+	<div id="productSticky">
+		<div class="container d-flex align-items-center justify-content-between px-0">
+			<div class="left-side">
+				<img src="./assets/media/images/scale-prod-img.svg" class="ls-img hide-on-mobile" loading="lazy"
+					alt="1sk-store-img">
+				<div class="prd-inf hide-on-mobile">
+					<h4 class="prd-name">Cân sức khoẻ thông minh 1sk</h4>
+					<div class="prd-price">
+						<span class="prd-sale-price">349.000đ</span>
+						<span class="prd-original-price">599.000đ</span>
+						<span class="prd-sale-percentage">
+							-42%
+						</span>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="prd-act-btn">
+				<div class="prd-btn btn-add-to-cart  pointer hide-on-mobile"> <img src="./assets/media/images/bag-icon.svg"
+						alt="cart-img" class="pe-1">Thêm vào giỏ hàng</div>
+				<div class="prd-btn btn-add-to-cart  pointer show-on-mobile"> <img src="./assets/media/images/bag-icon.svg"
+						alt="cart-img" class="pe-1"></div>
+				<div class="prd-btn btn-buy-now  pointer">Mua ngay</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./assets/js/main.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const currentWidth = window.outerWidth
+		var swiper = new Swiper(".propertySwiper", {
+			slidesPerView: 1,
+			spaceBetween: 30,
+			keyboard: {
+				enabled: true,
+			},
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+
+		});
+		if (currentWidth <= 560) {
+			var swiper2 = new Swiper(".tripleSwiper", {
+				slidesPerView: 3,
+				spaceBetween: 5,
+				pagination: {
+					el: ".swiper-pagination-2",
+					clickable: true,
+				},
+			});
+		} else {
+			var swiper2 = new Swiper(".tripleSwiper", {
+				slidesPerView: 3,
+				spaceBetween: 30,
+				pagination: {
+					el: ".swiper-pagination-2",
+					clickable: true,
+				},
+			});
+		}
+
+
+		const editorContent = document.querySelector('#editorContent');
+
+
+		window.addEventListener('scroll', () => {
+			const currentCs = window.pageYOffset;
+			const target = document.querySelector('#productSticky');
+			if (!target) {
+				return;
+			}
+			currentCs > 250
+				? (() => {
+					target.classList.add('on-sticky');
+				})()
+				: (() => {
+					target.classList.remove('on-sticky');
+				})();
+		});
+	})
+
+
+</script>
+
+</html>

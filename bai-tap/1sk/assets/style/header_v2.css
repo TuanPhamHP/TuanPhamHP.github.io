@@ -1,0 +1,272 @@
+body .header {
+  height: 136px;
+  background-color: #fff;
+}
+
+body .header.header-no-cart {
+  height: 80px;
+}
+
+body .header .header__navigator {
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.03);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.03);
+}
+
+body .header__bottom-block #btnToggleHeaderNavigator {
+  display: none;
+}
+
+body .header__bottom-block .header__navigator {
+  height: 80px;
+}
+
+body .header__bottom-block .header__navigator .header-logo-v2 {
+  margin-right: 200px;
+}
+
+body .header__bottom-block .header__navigator .navbar-nav {
+  height: 100%;
+}
+
+body .header__bottom-block .header__navigator .navbar-nav .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  min-width: 76px;
+  text-transform: uppercase;
+  padding: 0 24px;
+  text-align: center;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  color: #2b2b2b !important;
+}
+
+body .header__bottom-block .header__navigator .navbar-nav .nav-item.on-active, body .header__bottom-block .header__navigator .navbar-nav .nav-item:not(.tel-tag):hover {
+  color: #2b2b2b !important;
+}
+
+body .header__bottom-block .header__navigator .navbar-nav .nav-item.on-active {
+  color: #00c2c5 !important;
+  font-weight: 700;
+}
+
+body .header .btn-download {
+  background: #00c2c5;
+  border-radius: 12px;
+  text-transform: none;
+  width: 132px;
+  padding: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  position: relative;
+}
+
+body .header .btn-download .download-popover-customize {
+  position: absolute;
+  background: #ffffff;
+  -webkit-box-shadow: 0px -3px 4px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px -3px 4px 2px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 6px;
+  width: 260px;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #2b2b2b;
+  top: 40px;
+  right: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+body .header .btn-download .download-popover-customize:after {
+  content: ' ';
+  position: absolute;
+  top: -7px;
+  right: 22px;
+  display: inline-block;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: #fff;
+  height: 8px;
+  width: 14px;
+}
+
+body .header .nav-item:hover .download-popover-customize {
+  pointer-events: all;
+  opacity: 1;
+  right: 0;
+  top: 60px;
+  z-index: 3;
+}
+
+body .header .tel-tag {
+  text-transform: unset !important;
+}
+
+body .header .each-tab-navigator .libpage-tabs__search.search-block {
+  height: 36px;
+  max-width: 236px;
+}
+
+body .header .each-tab-navigator .libpage-tabs__search.search-block input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #bdbdbd;
+}
+
+body .header .each-tab-navigator .libpage-tabs__search.search-block input:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #bdbdbd;
+}
+
+body .header .each-tab-navigator .libpage-tabs__search.search-block input::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #bdbdbd;
+}
+
+body .header .each-tab-navigator .libpage-tabs__search.search-block input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #bdbdbd;
+}
+
+body .header .main-top-navigator {
+  padding-left: 0;
+}
+
+body .header .main-top-block .main-top-navigator .each-tab-navigator a.link-target {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  padding-right: 24px;
+}
+
+body .header .main-top-block .main-top-navigator .each-tab-navigator a.link-target:hover {
+  color: #fff !important;
+}
+
+body .header .main-top-block .main-top-navigator .each-tab-navigator .link-target:hover {
+  color: #fff !important;
+}
+
+body .header .on-sticky-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+  -webkit-animation: jumpOut 0.4s cubic-bezier(0.25, 0.71, 0.13, 0.99) forwards;
+          animation: jumpOut 0.4s cubic-bezier(0.25, 0.71, 0.13, 0.99) forwards;
+}
+
+@-webkit-keyframes jumpOut {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes jumpOut {
+  0% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+body .footer-wr .footer-main__container .ft-block__content {
+  color: #fff;
+  font-size: 14px;
+  line-height: 27px;
+  margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 992px) {
+  #headerTopWr .bg-white {
+    background-color: #00c2c5 !important;
+  }
+  .header__bottom-block #btnToggleHeaderNavigator {
+    z-index: 2;
+    display: block !important;
+  }
+  .btn-download-on-mobile {
+    background: #ffffff;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+    margin-top: 12px;
+    text-align: center;
+    /* new/main */
+    color: #00c2c5;
+    padding: 11px;
+  }
+  #downloadModal .modal-body {
+    position: relative;
+  }
+  #downloadModal .modal-body .btn-close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+  }
+  #downloadModal .download-modal-customize {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=header_v2.css.map */

@@ -1,0 +1,219 @@
+// header v2 / overwrite v1
+body {
+	.header {
+		height: 136px;
+		background-color: #fff;
+		&.header-no-cart {
+			height: 80px;
+		}
+		.header__navigator {
+			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.03);
+		}
+
+		&__bottom-block {
+			#btnToggleHeaderNavigator {
+				display: none;
+			}
+			.header__navigator {
+				height: 80px;
+				.header-logo-v2 {
+					margin-right: 200px;
+				}
+				.navbar-nav {
+					height: 100%;
+					.nav-item {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-weight: 400;
+						font-size: 16px;
+						line-height: 20px;
+						min-width: 76px;
+						text-transform: uppercase;
+						padding: 0 24px;
+						text-align: center;
+						transition: 0.2s ease;
+						color: #2b2b2b !important;
+						&.on-active,
+						&:not(.tel-tag):hover {
+							color: #2b2b2b !important;
+							// background-color: #fff;
+						}
+						&.on-active {
+							color: #00c2c5 !important;
+							font-weight: 700;
+						}
+					}
+				}
+			}
+		}
+		.btn-download {
+			background: #00c2c5;
+			border-radius: 12px;
+			text-transform: none;
+			width: 132px;
+			padding: 14px;
+			font-weight: 500;
+			font-size: 14px;
+			position: relative;
+			.download-popover-customize {
+				position: absolute;
+				background: #ffffff;
+				box-shadow: 0px -3px 4px 2px rgba(0, 0, 0, 0.15);
+				padding: 30px;
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+				justify-content: center;
+				border-radius: 6px;
+				width: 260px;
+				font-size: 12px;
+				line-height: 18px;
+				text-align: center;
+				color: #2b2b2b;
+				top: 40px;
+				right: 0;
+				z-index: -1;
+				pointer-events: none;
+				opacity: 0;
+				transition: 0.2s ease;
+				&:after {
+					content: ' ';
+					position: absolute;
+					top: -7px;
+					right: 22px;
+					display: inline-block;
+					clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+					// border: 2px solid rgba(0, 0, 0, 0.25);
+
+					background-color: #fff;
+					height: 8px;
+					width: 14px;
+				}
+			}
+		}
+		.nav-item {
+			&:hover {
+				.download-popover-customize {
+					pointer-events: all;
+					opacity: 1;
+					right: 0;
+					top: 60px;
+					z-index: 3;
+				}
+			}
+		}
+		.btn-prim {
+		}
+		.tel-tag {
+			text-transform: unset !important;
+		}
+		.each-tab-navigator {
+			.libpage-tabs__search.search-block {
+				height: 36px;
+				max-width: 236px;
+				input {
+					&::placeholder {
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 16px;
+						color: #bdbdbd;
+					}
+				}
+			}
+		}
+		.main-top-navigator {
+			padding-left: 0;
+		}
+		.main-top-block .main-top-navigator .each-tab-navigator {
+			a.link-target {
+				display: flex;
+				align-items: center;
+				gap: 4px;
+				color: #fff !important;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 24px;
+				letter-spacing: 0.02em;
+				padding-right: 24px;
+				&:hover {
+					color: #fff !important;
+				}
+			}
+		}
+		.main-top-block .main-top-navigator .each-tab-navigator .link-target:hover {
+			color: #fff !important;
+		}
+		.on-sticky-top {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			// width: 100vw;
+			box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+			z-index: 5;
+			animation: jumpOut 0.4s cubic-bezier(0.25, 0.71, 0.13, 0.99) forwards;
+		}
+	}
+	@keyframes jumpOut {
+		0% {
+			transform: translateY(-100%);
+		}
+		100% {
+			transform: translateY(0%);
+		}
+	}
+
+	.footer-wr {
+		.footer-main__container {
+			.ft-block__content {
+				color: #fff;
+				font-size: 14px;
+				line-height: 27px;
+				margin-bottom: 8px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 992px) {
+	#headerTopWr {
+		.bg-white {
+			background-color: #00c2c5 !important;
+		}
+	}
+
+	.header__bottom-block #btnToggleHeaderNavigator {
+		z-index: 2;
+		display: block !important;
+	}
+
+	.btn-download-on-mobile {
+		background: #ffffff;
+		border-radius: 8px;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 18px;
+		/* identical to box height */
+		margin-top: 12px;
+		text-align: center;
+
+		/* new/main */
+
+		color: #00c2c5;
+		padding: 11px;
+	}
+	#downloadModal {
+		.modal-body {
+			position: relative;
+			.btn-close {
+				position: absolute;
+				right: 12px;
+				top: 12px;
+			}
+		}
+		.download-modal-customize {
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
