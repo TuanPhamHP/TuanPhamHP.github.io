@@ -1,0 +1,15 @@
+body {
+	background-color: #f7f7f7;
+}
+header {
+	position: sticky;
+	top: 0;
+	z-index: 4;
+}
+.divider {
+	height: 2px;
+	background-image: linear-gradient(to right, rgb(1, 62, 61), rgb(188, 243, 242));
+}
+.pointer {
+	cursor: pointer !important;
+}

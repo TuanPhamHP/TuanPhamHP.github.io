@@ -1,0 +1,93 @@
+* {
+	font-family: Roboto;
+}
+.main-b {
+	.formal {
+		width: 100%;
+		max-width: 1024px;
+		margin: 0px auto;
+		background-image: linear-gradient(
+			rgb(250, 250, 250),
+			rgb(252, 252, 249),
+			rgb(255, 255, 255),
+			rgb(213, 247, 247),
+			rgb(180, 227, 227),
+			rgb(178, 240, 240)
+		);
+	}
+
+	table {
+		width: 100%;
+		margin: 0px auto;
+		text-align: left;
+		overflow: hidden;
+	}
+	h1 {
+		width: 600px;
+		text-align: center;
+		margin: 20px auto;
+		color: #e86619;
+	}
+	.green {
+		color: #66b440;
+	}
+	.red {
+		color: #ff3c00;
+	}
+	th {
+		height: 60px;
+		line-height: 60px;
+		overflow: hidden;
+		padding: 0px 35px;
+	}
+	input {
+		padding-left: 10px;
+		background-color: transparent;
+	}
+	input:focus {
+		outline: none;
+	}
+	.txt {
+		border: none;
+		border-bottom: 0.1em solid #4f4f4f;
+		// letter-spacing: 10px;
+		font-weight: 600;
+		width: 100%;
+	}
+	#email {
+		width: 100%;
+		height: 40px;
+	}
+	#email:focus {
+		background-color: #e8f0fe;
+	}
+	.btn {
+		height: 40px;
+	}
+	h3 {
+		padding: 0px;
+		margin: 0px;
+		color: #fe0000;
+		height: 40px;
+	}
+	#last {
+		height: 10px;
+		line-height: 10px;
+		font-weight: 100;
+	}
+	#bold {
+		font-weight: 600;
+	}
+	a.f-btn {
+		text-decoration: none;
+		color: white;
+		height: 55px;
+		line-height: 55px;
+		background: #ff3c00;
+		padding: 10px 30px;
+		border-radius: 5px;
+	}
+	#submit {
+		text-align: center;
+	}
+}

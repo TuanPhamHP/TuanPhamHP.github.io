@@ -1,0 +1,34 @@
+.company-info {
+	line-height: 35px;
+}
+.ft-block-title {
+	margin-top: 10px;
+	line-height: 16px;
+}
+a.ft-block__content {
+	line-height: 27px;
+}
+.iconby {
+	width: 20px;
+	padding: 1px;
+}
+.footer-logo {
+	margin-bottom: 27px;
+	padding-left: 0;
+}
+.app-links > a {
+	width: 120px;
+}
+.connect-youtube {
+	width: 28px;
+}
+.connect-facebook {
+	width: 20px;
+}
+.copyright-footer {
+	padding: 2px;
+}
+.footer-wr .footer-main {
+	background-color: #4086ff;
+	padding: 60px 0;
+}

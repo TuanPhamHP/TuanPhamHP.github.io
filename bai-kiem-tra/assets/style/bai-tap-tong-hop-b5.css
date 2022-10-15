@@ -1,0 +1,101 @@
+* {
+  font-family: Roboto;
+}
+
+.main-b .formal {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0px auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), color-stop(#fcfcf9), color-stop(white), color-stop(#d5f7f7), color-stop(#b4e3e3), to(#b2f0f0));
+  background-image: linear-gradient(#fafafa, #fcfcf9, white, #d5f7f7, #b4e3e3, #b2f0f0);
+}
+
+.main-b table {
+  width: 100%;
+  margin: 0px auto;
+  text-align: left;
+  overflow: hidden;
+}
+
+.main-b h1 {
+  width: 600px;
+  text-align: center;
+  margin: 20px auto;
+  color: #e86619;
+}
+
+.main-b .green {
+  color: #66b440;
+}
+
+.main-b .red {
+  color: #ff3c00;
+}
+
+.main-b th {
+  height: 60px;
+  line-height: 60px;
+  overflow: hidden;
+  padding: 0px 35px;
+}
+
+.main-b input {
+  padding-left: 10px;
+  background-color: transparent;
+}
+
+.main-b input:focus {
+  outline: none;
+}
+
+.main-b .txt {
+  border: none;
+  border-bottom: 0.1em solid #4f4f4f;
+  font-weight: 600;
+  width: 100%;
+}
+
+.main-b #email {
+  width: 100%;
+  height: 40px;
+}
+
+.main-b #email:focus {
+  background-color: #e8f0fe;
+}
+
+.main-b .btn {
+  height: 40px;
+}
+
+.main-b h3 {
+  padding: 0px;
+  margin: 0px;
+  color: #fe0000;
+  height: 40px;
+}
+
+.main-b #last {
+  height: 10px;
+  line-height: 10px;
+  font-weight: 100;
+}
+
+.main-b #bold {
+  font-weight: 600;
+}
+
+.main-b a.f-btn {
+  text-decoration: none;
+  color: white;
+  height: 55px;
+  line-height: 55px;
+  background: #ff3c00;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.main-b #submit {
+  text-align: center;
+}
+/*# sourceMappingURL=bai-tap-tong-hop-b5.css.map */
