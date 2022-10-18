@@ -69,10 +69,29 @@ Cho 1 thẻ p có id="pTest" như sau:
           <button class="btn btn-danger">-</button>
           <button class="btn btn-success">+</button>
         </div>
-        <pre>
+        <pre style="white-space: break-spaces">
 Sử dụng DOM + function để viết hàm sao cho: 
 khi click vào nút "+" thì tăng font-size của thẻ p lên 1px 
 khi click vào nút "-" thì giảm font-size của thẻ p xuống 1px
+Note: 
+  Logic làm bài:
+  B1: set font-size mặc định của thẻ là 16px bằng attribute style (style="font-size: 16px");
+  B2: sử dụng getAttribute để lấy font-size hiện tại của thẻ (lấy attribute style) 
+      hoặc sử dụng "element.style.fontSize" để lấy giá trị của thuộc tính font-size (nên dùng cách này) 
+      => lưu lại giá trị hiện tại của font-size VD: (16px);
+  B3: sử dụng setAttribute để set font-size mới cho thẻ 
+  (lưu ý: cần tách chuỗi "16px" thành dạng: "16" + "px", khi đó có với số 16 thì tăng thêm 1 rồi ghép lại thành chuỗi mới để set giá trị)
+  => Có thể sử dụng hàm: parseInt('16px') -> 16 
+  sau đó + 1 và ghép với chuỗi 'px';
+  VD: chuyển từ "16px" thành "17px" (copy đoạn code dưới và chạy thử)
+  --------------
+  let chuoi = '16px';
+  let so = parseInt(chuoi);
+  let ketqua = so + 1 + 'px'
+  console.log('Đây là chuỗi 16px sau khi được parseInt: ' + so);
+  console.log('Đây là kết quả: '+ ketqua);
+  -------------
+ 
 </pre>
       </h3>
 
