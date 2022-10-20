@@ -41,6 +41,7 @@
 
 .sidebar .list-nav i {
   margin-right: 6px;
+  pointer-events: none;
 }
 
 .sidebar .list-nav .item-vac {
@@ -66,6 +67,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   max-width: 100%;
+  pointer-events: none;
 }
 
 .sidebar .list-nav .item-title {

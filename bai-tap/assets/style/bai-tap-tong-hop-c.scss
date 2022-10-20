@@ -27,6 +27,7 @@
 		transition: 0.3s ease;
 		i {
 			margin-right: 6px;
+			pointer-events: none;
 		}
 		.item-vac {
 			padding: 12px;
@@ -46,6 +47,7 @@
 				text-overflow: ellipsis;
 				overflow: hidden;
 				max-width: 100%;
+				pointer-events: none;
 			}
 		}
 		.item-title {
