@@ -2,88 +2,133 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bài tập form</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập số 01</title>
   <link rel="icon" type="image/x-icon" href="./assets/images/brand.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <!-- <link rel="stylesheet" href="./assets/style/flex-style.css" /> -->
+  <link rel="stylesheet" href="./assets/style/bai-tap-tong-hop-b1.css">
+  <link rel="stylesheet" href="./assets/style/footer.css">
   <link rel="stylesheet" href="./assets/style/main.css">
-  <link rel="stylesheet" href="./assets/style/form.css">
-  <style>
-  </style>
+  <link rel="stylesheet" href="./assets/style/main-ft.css">
+  <link rel="stylesheet" href="./assets/style/smartband-detail.css">
+  <script src="./assets/js/main.js"></script>
 </head>
 
-<body>
+<body class="bg-white">
 
-  <main>
+  <main class=" main ">
     <div class="container">
       <section class="py-5">
         <h2>Clone lại giao diện sau:</h2>
       </section>
     </div>
-    <section>
-      <div class="form-register">
-        <form action="#" class="bg-white">
-          <div class="each-form-block mb-2 brand-block">
-            <img src="./assets/images/img_554646.png" alt="brand-image" class="brand-image">
-            <p class="mt-3 form-title">Đăng ký tài khoản</p>
+    <footer class="container-fluid">
+
+      <div class="container footer-main__container">
+        <div class="row mx-0 px-2 px-md-0">
+          <div class="col-12 px-0">
+            <div class="d-flex align-items-start pt-1 mt-3">
+              <figure class="footer-logo">
+                <img src="./assets/images/logo_footer 2.png" height="65px" width="auto" alt="logo CoLearn">
+              </figure>
+            </div>
           </div>
-          <div class="each-form-block mb-2">
-            <p class="input-lable mb-1">Họ và tên</p>
-            <input type="text" placeholder="Họ và tên" required minlength="6" class="form-input-text w-100">
+          <div class="col-md-6 p-0 mb-1">
+
+            <div class="company-info  pe-2">
+              <span class="font-weight-bold">Công ty chủ quản: </span>Công ty Cổ phần Đầu tư Phát triển Công nghệ Điện
+              tử
+              (CLS Corp)
+            </div>
+            <div class="company-info">
+              <span class="font-weight-bold">Trụ sở chính: </span>Tòa nhà ABC, phố Duy Tân,quận Cầu Giấy,thành phố Hà
+              Nội, Việt Nam
+            </div>
+            <div class="company-info">
+              <span class="font-weight-bold">Giấy chứng nhận ĐKKD: </span>số 12345678 do Sở Kế hoạch & Đầu tư Thành phố
+              Hà Nội. <br> Cấp ngày 18/07/2001. <br>Thay đổi lần thứ 31, ngày 28/05/2020
+            </div>
+            <img src="./assets/images/thong-bao-website-voi-bo-cong-thuong-grande 1.png"
+              alt="thong-bao-website-voi-bo-cong-thuong" class="mt-4 mb-2" style="width:170px">
           </div>
-          <div class="each-form-block mb-2">
-            <p class="input-lable mb-1">Email</p>
-            <input type="email" placeholder="Email" required class="form-input-text w-100">
+          <div class="col-6 col-md-2 p-0">
+            <p class="ft-block-title fw-900">THÔNG TIN</p>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Giới thiệu</a>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Dịch vụ</a>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Điều khoản sử dụng</a>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Hướng dẫn sử dụng</a>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Blog</a>
           </div>
-          <div class="each-form-block mb-2">
-            <p class="input-lable mb-1">Số điện thoại</p>
-            <input type="text" placeholder="Số điện thoại" class="form-input-text w-100">
+          <div class="col-6 col-md-2 p-0">
+            <p class="ft-block-title fw-900">DỊCH VỤ</p>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Hỏi bài</a>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Lớp học</a>
+            <a class="d-block ft-block__content text-dark mb-1 pb-1" href="">Thư viện nội dung</a>
+            <p class="ft-block-title fw-900 mt-4">KẾT NỐI NGAY</p>
+            <img src="./assets/images/youtube.png" alt="" class="connect-youtube me-3">
+            <img src="./assets/images/facebook.png" alt="" class="connect-facebook">
           </div>
-          <div class="each-form-block mb-2">
-            <p class="input-lable mb-1">Mật khẩu</p>
-            <input type="password" placeholder="Mật khẩu từ  6 - 12 ký tự." required maxlength="12" minlength="6"
-              class="form-input-text w-100">
+          <div class="col-md-2 p-0">
+            <p class="ft-block-title fw-900">HỖ TRỢ KHÁCH HÀNG</p>
+            <a class="d-block ft-block__content text-dark mb-1 px-1 pb-1" href=""> Hotline: 1900080888</a>
+            <a class="d-block ft-block__content text-dark mb-1 px-1 pb-1" href=""> support@gmail.com.vn</a>
+            <p class="d-block ft-block__content text-dark mb-1 px-1 pb-1" style="height: 31px;" href=""><span></span>
+            </p>
+            <p class="ft-block-title fw-900 mt-4">TẢI ỨNG DỤNG </p>
+            <div class="download-app d-flex flex-row flex-nowrap">
+              <div class="qr-app me-2">
+                <a href=""><img src="./assets/images/qr.png" alt=""
+                    style="width:74px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 4px;"></a>
+              </div>
+              <div class="app-links d-flex d-md-block">
+                <a href=""><img src="./assets/images/googleplay.svg" alt="google-play-app" class="google-play-app mb-2"
+                    style="width:120px"></a>
+
+                <a href=""><img src="./assets/images/appstore.svg" alt="app-store-app" class="app-store-app"
+                    style="width:120px"></a>
+              </div>
+            </div>
+            <p class="font-size-10 color-darkgrey fw-400-italic p-0 my-2">Quét mã QR code để cài đặt </p>
           </div>
-          <div class="each-form-block mb-2">
-            <p class="input-lable mb-1">Xác nhận mật khẩu</p>
-            <input type="password" placeholder="Xác nhận lại mật khẩu vừa ghi" required maxlength="12" minlength="6"
-              class="form-input-text w-100">
-          </div>
-          <div class="each-form-block mt-4">
-            <label for="registerPolicy">
-              <input type="checkbox" id="registerPolicy" class="form-input-checkbox">
-              Tôi đã đọc và đồng ý với <a href="https://vi.wikipedia.org/wiki/Ch%C3%ADnh_s%C3%A1ch">điều khoản</a> của
-              ứng dụng.
-            </label>
-          </div>
-          <button class="btn btn-submit text-white text-center d-block mt-4">Đăng ký</button>
-        </form>
+        </div>
+
       </div>
-    </section>
-    <section class="container-fluid">
-      <div class="container py-5">
+    </footer>
 
-        <h4>Tài nguyên:</h4>
-        <p>Mã màu: linear-gradient(rgb(136, 71, 249), rgb(123, 28, 170), rgb(152, 97, 180));(background), #d5d5d5
-          (border), #9861b4(màu nút)</p>
-        <p>Font: Roboto, 16px, normal | bold</p>
-        <p>Ảnh: mọi người tải ảnh trực tiếp trên browser</p>
-        <p>Dim: với thẻ Form: width: 560px; padding: 16px 24px;</p>
-        <h4>Yêu cầu:</h4>
-        <p>
-          Cơ bản: Clone lại được đủ giao diện trên. <br>
-          Bao gồm: màu, nền, font, độ đậm nhạt, tự động resize lại ảnh.
-        </p>
+    <section class="py-5 container">
+      <div class="divider"></div>
+      <h4 class="mt-3">Tài nguyên:</h4>
+      <p><b>Font:</b> Roboto, 16px, normal | bold <br>
+        Link font:
+      <pre id="linkfont" style="font-size: 16px;"></pre>
+      font-family: font-family: 'Roboto', sans-serif;
 
-
-        <div class="divider"></div>
-
-      </div>
+      </p>
+      <p><b>Box:</b>
+        <br>Container - width : 1380px (màn >= 1440px); 100%(màn <= 556px); </p>
+          <p><b>Shadow:</b> box-shadow: 0px 4px 4px rgb(0 0 0 / 25%) (shadow của khối qrCode)</p>
+          <p><b>Màu:</b> #84d7fa70 (background footer)</p>
+          <p><b>Ảnh:</b> mọi người tải tại <a
+              href="https://drive.google.com/drive/folders/1JRpsp85lzTGUSUOErh_m3pbKFgBxO7wN?usp=sharing"
+              target="_blank">đây</a></p>
+          <p>---------------</p>
+          <h4>Yêu cầu:</h4>
+          <p>Clone lại toàn bộ giao diện - Không sử dụng bootstrap 5. <b>(5đ)</b></p>
+          <p><b>Reponsive:</b> Mobile (<=556px) <b>(3đ)</b> </p>
+          <div class="divider"></div>
     </section>
   </main>
+  <script>
+    document.querySelector('#linkfont').textContent =
+      `<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">`
+  </script>
 </body>
 
 </html>

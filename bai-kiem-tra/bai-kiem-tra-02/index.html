@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập số 02</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/style.css">
+
+
+  <script src="../assets/js/main.js"></script>
+</head>
+
+<body>
+  <main class="container-fluid page-container d-flex">
+    <div class="cloak-mini" onclick="toggleSidebar()"></div>
+    <div class="sidebar" id="mainSidebar">
+      <div class="brand">
+        <img src="./assets/images/coffee-logo-design-creative-idea-logo-elements-2.png" height="76px" class="brand-img"
+          alt="">
+        <p class="brand-name">Coffee Lovers</p>
+      </div>
+      <ul class="sidebar-navigator">
+        <li class="item-group-title">
+          ADMIN
+        </li>
+        <li class="item-group-nav active">
+          <i class="fa-solid fa-store"></i>
+          <span class="nav-text">Trang chủ</span>
+        </li>
+        <li class="item-group-nav">
+          <i class="fa-solid fa-receipt"></i>
+          <span class="nav-text">Đơn hàng</span>
+        </li>
+        <li class="item-group-nav">
+          <i class="fa-solid fa-chart-column"></i>
+          <span class="nav-text">Thống kê</span>
+        </li>
+        <li class="item-group-title">
+          SUPPORT
+        </li>
+        <li class="item-group-nav">
+          <i class="fa-solid fa-bell"></i>
+          <span class="nav-text">Thông báo</span>
+        </li>
+        <li class="item-group-nav">
+          <i class="fa-solid fa-comment-sms"></i>
+          <span class="nav-text">Khiếu nại</span>
+        </li>
+        <li class="item-group-nav">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span class="nav-text">Liên hệ</span>
+        </li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <header>
+        <div class="cursor-pointer btn-toggle-sidebar" onclick="toggleSidebar()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </header>
+      <h2 class="page-title">Danh sách sản phẩm
+      </h2>
+      <div>
+        <div class="row list-products">
+          <div class="product-wr">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/product-1.jpg" class="img-preview" alt="">
+              </div>
+              <p class="product-name">
+                Machiato
+              </p>
+              <div class="product-detail">
+                <p class="product-desc">
+                  Có vị béo thơm đặc trưng của sữa quyện lẫn với vị ngọt nhẹ hoặc
+                  đôi chút hơi
+                  mặn tùy theo công thức của người pha chế thức uống.
+                </p>
+                <p class="product-price">36.000đ
+                </p>
+              </div>
+              <div class="group-btn">
+                <div class="btn-zoom">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-wr">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/product-2.jpeg" class="img-preview" alt="">
+              </div>
+              <p class="product-name">
+                Nâu đá
+              </p>
+              <div class="product-detail">
+                <p class="product-desc">
+                  Có vị béo thơm đặc trưng của sữa quyện lẫn với vị ngọt nhẹ của sữa
+                <p class="product-price">36.000đ
+                </p>
+              </div>
+              <div class="group-btn">
+                <div class="btn-zoom">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-wr">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/product-3.jpg" class="img-preview" alt="">
+              </div>
+              <p class="product-name">
+                Cà phê trứng
+              </p>
+              <div class="product-detail">
+                <p class="product-desc">
+                  Có vị béo thơm đặc trưng của sữa quyện lẫn với vị ngậy của trứng.
+                </p>
+                <p class="product-price">36.000đ
+                </p>
+              </div>
+              <div class="group-btn">
+                <div class="btn-zoom">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-wr">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/product-4.jpg" class="img-preview" alt="">
+              </div>
+              <p class="product-name">
+                Expreso
+              </p>
+              <div class="product-detail">
+                <p class="product-desc">
+                  Có vị béo thơm đặc trưng của sữa quyện lẫn với vị ngọt nhẹ hoặc
+                  đôi chút hơi
+                  mặn tùy theo công thức của người pha chế thức uống.
+                </p>
+                <p class="product-price">36.000đ
+                </p>
+
+              </div>
+              <div class="group-btn">
+                <div class="btn-zoom">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-wr">
+            <div class="product-card">
+              <div class="product-img">
+                <img src="./assets/images/product-5.jpg" class="img-preview" alt="">
+              </div>
+              <p class="product-name">
+                Đen - đá
+              </p>
+              <div class="product-detail">
+                <p class="product-desc">
+                  Vị thơm nồng của cà phê nguyên chất.
+                </p>
+                <p class="product-price">36.000đ
+                </p>
+
+              </div>
+              <div class="group-btn">
+                <div class="btn-zoom">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <section class="barem container">
+    <div class="divider"></div>
+    <h2 class="mt-3">Tài nguyên:</h2>
+    <p><b>Font:</b> 'Be Vietnam Pro', 16px, normal | bold <br>
+      Link font:
+    <pre id="linkfont" style="font-size: 16px;"></pre>
+    Font-family: font-family: 'Be Vietnam Pro', sans-serif;
+    </p>
+    <br>
+    <p><b>Icons:</b> <br>
+      Link icons font:
+    <pre id="linkfonticon" style="font-size: 16px;"></pre>
+    Icons code:
+    <br><i class="fa-solid fa-bars"></i> : <span class="icon-f" data-ref=' <i class="fa-solid fa-bars"></i>'></span>
+    <br><i class="fa-solid fa-store"></i> : <span class="icon-f" data-ref='<i class=" fa-solid fa-store"></i>'></span>
+    <br><i class="fa-solid fa-receipt"></i> : <span class="icon-f"
+      data-ref='<i class="fa-solid fa-receipt"></i>'></span>
+    <br><i class="fa-solid fa-chart-column"></i> : <span class="icon-f"
+      data-ref='<i class="fa-solid fa-chart-column"></i>'></span>
+    <br><i class="fa-solid fa-bell"></i> : <span class="icon-f" data-ref='<i class="fa-solid fa-bell"></i>'></span>
+    <br><i class="fa-solid fa-comment-sms"></i> : <span class="icon-f"
+      data-ref='<i class="fa-solid fa-comment-sms"></i>'></span>
+    <br><i class="fa-solid fa-map-location-dot"></i> : <span class="icon-f"
+      data-ref='<i class="fa-solid fa-map-location-dot"></i>'></span>
+    <br>
+    </p> <br>
+    <p><b>Shadow:</b> box-shadow: 1px 1px 10px rgb(124 124 124 / 26%) (shadow của khối sidebar)</p>
+    <br>
+    <p><b>Màu:</b></p>
+    <div class="d-flex py-1">
+      <div class="color-demo" style="background-color: #0cb9c5;"></div><span> - #0cb9c5 (màu active sidebar);</span>
+    </div>
+    <div class="d-flex py-1">
+      <div class="color-demo" style="background-color: #95969b49;"></div><span> - #95969b49 (màu hover sidebar);</span>
+    </div>
+    <div class="d-flex py-1">
+      <div class="color-demo" style="background-color: #198754;"></div><span> - #198754 (màu text giá);</span>
+    </div>
+    <div class="d-flex py-1">
+      <div class="color-demo" style="background-color: #d5d5d5a8;"></div><span> - #d5d5d5a8 (màu border);</span>
+    </div>
+    <br>
+    <p><b>Ảnh:</b> mọi người tải tại <a
+        href="https://drive.google.com/drive/folders/15LuDQGzwfDL_5zrivs3jZ3w8PxCVf_ab?usp=sharing"
+        target="_blank">đây</a></p>
+    <p>---------------</p>
+    <h2>Yêu cầu:</h2>
+    <p><b>HTML-CSS:</b>Clone lại toàn bộ giao diện - Không sử dụng bootstrap. <b>(6đ)</b></p>
+    <p><b>HTML-CSS:</b> Mỗi khối sản phẩm có đầy đủ: Kích thước bằng nhau, transition, các nút trong
+      khối<b>(1đ)</b> </p>
+    <p><b>CSS:</b> Cấu trúc flexbox cho khối sản phẩm đúng dạng 12 col. <b>(1đ)</b> </p>
+    <p><b>Reponsive:</b> Mobile (<=556px). <b>(3đ)</b> </p>
+    <p><b>JS:</b> Toggle sidebar qua button " <i class="fa-solid fa-bars"></i> ". <b>(3đ)</b> </p>
+    <p><b>JS:</b> Tại màn mobile sau khi reponsive thì toggle thông qua lớp cloak và btn " <i
+        class="fa-solid fa-bars"></i> ". <b>(1đ)</b> </p>
+    <p><b>JS:</b> Thay đổi trạng thái active của các "nav-item" khi click vào chúng. <b>(2đ)</b> </p>
+    <div class="divider"></div>
+    <p id="demo"></p>
+  </section>
+</body>
+
+
+<script src="./assets/js/main.js"></script>
+<script>
+
+  document.querySelector('#linkfonticon').textContent = ` <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />`
+  document.querySelector('#linkfont').textContent =
+    `<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">`
+
+  document.querySelectorAll('.icon-f').forEach(o => {
+    console.log(o)
+    o.textContent = o.getAttribute('data-ref')
+  })
+
+</script>
+
+</html>
