@@ -1,7 +1,7 @@
 function checkAuth() {
 	console.log('?');
 	let person = prompt('Please enter your code', '');
-	if (person !== '1231231') {
+	if (person !== 'ppz12d') {
 		setTimeout(() => {
 			document.head.innerHTML = `
       <meta charset="UTF-8" />
