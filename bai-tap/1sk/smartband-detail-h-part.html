@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>BRAND - View All</title>
+
+	<!-- SEO -->
+	<meta name="keywords" content="suc khoe, sức khỏe, luyen tap, luyện tập, thu vien, thư viện" />
+	<meta name="description" content="Thư viện BRAND - Description" />
+	<meta property="og:title" content="Thư viện BRAND - Open Graph Title" />
+	<meta property="og:type" content="article" />
+	<meta property="og:description" content="Thư viện BRAND - Open Graph Description" />
+	<meta property="og:image"
+		content="https://static.BRAND.vn:8403/v1.0/upload/website-BRAND/BRAND_assets/img/webp/image1.webp" />
+	<meta data-hid="og:image:width" property="og:image:width" content="600" />
+	<meta data-hid="og:image:height" property="og:image:height" content="600" />
+	<meta data-hid="og:image:alt" property="og:image:alt"
+		content="https://static.BRAND.vn:8403/v1.0/upload/website-BRAND/BRAND_assets/img/webp/image1.webp" />
+	<meta property="og:url" content="https://BRAND.vn/" />
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta data-n-head="ssr" name="robots" content="index, follow" />
+	<link rel="alternate" href="https://BRAND.vn/" hreflang="vi-vn" />
+	<meta name="geo.region" content="VN-HN" />
+	<meta name="geo.placename" content="Hà Nội" />
+	<!-- CDN -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+		integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet" />
+	<!--  -->
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" href="./assets/style/main.css" />
+	<link rel="stylesheet" href="./assets/style/header_v2.css" />
+	<link rel="stylesheet" href="./assets/style/landing.css" />
+	<link rel="stylesheet" href="./assets/style/smartband-detail.css" />
+	<!--  -->
+	<!--  -->
+
+	<!-- SCRIPT -->
+	<!-- CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<!--  -->
+	<!--  -->
+	<style>
+		.demo-color {
+			border: 1px solid;
+			border-radius: 3px;
+			width: 20px;
+			height: 20px;
+		}
+	</style>
+</head>
+
+<body id="mainPageBody">
+	<!-- MAIN HEADER -->
+	<header id="header" class="header-wr header">
+		<div class="on-sticky-top" id="headerTopWr">
+			<div class="bg-white">
+				<div class="header__bottom-block container px-0">
+					<nav class="header__navigator navbar navbar-expand-lg navbar-light bg-transparent p-0">
+						<div id="btnToggleHeaderNavigator" class="pointer">
+							<img src="./assets/media/images/more-menu-icon.svg" loading="lazy" alt="">
+						</div>
+						<div class="show-on-mobile">
+							<a href="#">
+
+								<img src="./assets/media/images/white-brand-icon.svg" height="32px" loading="lazy" alt="brand-icon">
+							</a>
+						</div>
+						<div class="show-on-mobile">
+							<img src="./assets/media/images/white-lookup-icon.svg" loading="lazy" alt="search-icon"
+								id="toggleSearchBtn" class="me-3">
+							<a class="mobile-cart-btn">
+								<span class="cart-counter">3</span>
+								<img src="./assets/media/images/white-bag-icon.svg" loading="lazy" alt="cart-icon">
+							</a>
+						</div>
+						<button id="btnActiveHeaderMasterNavigator" class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#headerMasterNavigator" aria-controls="headerMasterNavigator" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse h-100 w-100" id="headerMasterNavigator">
+							<div class="navbar-nav w-100">
+								<a class="nav-item nav-link h-100 header-logo-v2 ps-0" href="#">
+									<img src="./assets/media/images/header-logo-v2.svg" alt="BRAND logo">
+								</a>
+								<a class="nav-item nav-link h-100 text-white ps-0" href="#">TRANG CHỦ</a>
+								<a class="nav-item nav-link h-100 text-white" href="#">TẬP LUYỆN</a>
+								<a class="nav-item nav-link h-100 text-white" href="#">TƯ VẤN</a>
+								<a class="nav-item nav-link h-100 text-white on-active" href="#">CỬA HÀNG</a>
+								<a class="nav-item nav-link h-100 text-white tel-tag ms-auto brt-a pointer pe-0">
+									<img src="./assets/media/images/user-active.svg" class="me-2" loading="lazy" alt="">
+									Đăng nhập
+								</a>
+								<div class="nav-item nav-link h-100">
+
+									<div class=" btn-prim  text-white btn-download  pointer">Tải ứng dụng
+
+										<div class="download-popover-customize">
+											<em>
+												Quét mã để tải ứng dụng
+											</em>
+											<img src="./assets/media/images/popover-qr-code.svg" alt="popover-qr-code" class="my-3">
+											<em class="mt-4 mb-2">
+												Cài đặt ứng dụng BRAND
+											</em>
+											<a href="#" class="mb-3"><img src="./assets/media/images/popover-chplay.png"
+													alt="popover-chplay"></a>
+											<a href="#"><img src="./assets/media/images/popover-appstore.png" alt="popover-appstore"></a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+			<div class="bg-color-primary" id="navigatorSearchBar">
+				<div class="container px-0">
+					<div class="row mx-0 align-items-start align-items-center my-0 py-1 main-top-block">
+
+						<div class="col-xl-12 col-lg-12 col-md-12   px-0 hide-on-mobile">
+							<ul class="d-flex main-top-navigator">
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-1.svg" alt="header-bottom-icon-1">
+										Thiết bị chăm sóc sức khỏe</a>
+								</li>
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-2.svg" alt="header-bottom-icon-1">
+										Thiết bị tập luyện</a>
+								</li>
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-3.svg" alt="header-bottom-icon-1">
+										Thực phẩm chức năng</a>
+								</li>
+								<li class="each-tab-navigator">
+									<a href="#" class="link-target">
+										<img src="./assets/media/images/header-bottom-icon-4.svg" alt="header-bottom-icon-1">
+										Phụ kiện - trang phục</a>
+								</li>
+								<li class="each-tab-navigator ms-auto">
+									<div class="libpage-tabs__search search-block">
+										<input type="text" placeholder="Tìm kiếm sản phẩm..." id="libPageSearchInput" />
+										<img src="./assets/media/images/look-up-icon.svg" loading="lazy" alt="look-up-icon" />
+									</div>
+								</li>
+								<li class="each-tab-navigator " style="min-width: 150px;">
+
+									<a href="#" class="text-white cart-btn">
+										<img src="./assets/media/images/bag-white.svg" loading="lazy" alt="cart-img" class="pe-2">
+										<span class="cart-counter">3</span>
+										Giỏ hàng</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- PAGE CONTENT -->
+	<main id="libPageMain">
+		<section id="libPageTabs" class="libpage-section detail-device-tabs__wr container-fluid  main-top-product">
+
+			<div class="libpage-tabs__container container px-0 h-100 prod-style-2">
+				<div class="row h-100">
+					<div class="col-xl-6 col-lg-6 col-12 prod-group-img">
+						<img src="./assets/media/images/smartband-prod-img.svg" loading="lazy" alt="scale-prod-img">
+					</div>
+					<div class="col-xl-6 col-lg-6 col-12 prod-group-text">
+						<h3 class="prod-group-name">
+							Vòng đeo sức khỏe thông minh BRAND
+						</h3>
+						<p class="prod-desc">
+							Vòng đeo sức khỏe thông minh BRAND là sản phẩm bán chạy số 1 trên nền tảng chăm sóc sức khỏe kỹ thuật số
+							thông minh BRAND. Vòng đeo có kiểu dáng thời trang, gọn nhẹ, đo các chỉ số vận động & sức khỏe, và đồng bộ
+							với điện thoại thông minh qua App BRAND.Connect.
+						</p>
+						<div class="prod-rating-n-review">
+							<span class="star-rating">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+								<img src="./assets/media/images/yellow-star-icon.svg" loading="lazy" alt="fullrate-star" class="">
+
+							</span>
+							<span class="review-counter">
+								985 đánh giá
+							</span>
+							<a href="#" class="view-all-review-btn">
+								Xem tất cả
+							</a>
+						</div>
+						<div class="prod-price">
+							<span class="prod-sale-price">399.000đ</span>
+							<span class="prod-original-price">699.000đ</span>
+							<span class="prod-sale-percentage">
+								-43%
+							</span>
+						</div>
+						<div class="prod-act-btn hide-on-mobile-flex">
+							<div class="prod-btn btn-add-to-cart  pointer"> <img src="./assets/media/images/bag-icon.svg"
+									alt="cart-img" class="pe-1">Thêm vào giỏ hàng</div>
+							<div class="prod-btn btn-buy-now  pointer">Mua ngay</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container-fluid">
+			<div class="container py-5">
+
+				<h4>Tài nguyên:</h4>
+				<p class="mb-0">Mã màu:
+				</p>
+				<div class="pt-1 pb-3">
+					<div class="d-flex align-start" style="gap: 12px">
+						<div class="demo-color" style="background-color: #00c2c5;"></div>
+						<span>#00c2c5 - Màu nút solid, text</span>
+					</div>
+					<div class="d-flex align-start" style="gap: 12px">
+						<div class="demo-color" style="background-color: #00c2c51a;"></div>
+						<span>#00c2c51a - Màu nút outlined</span>
+					</div>
+					<div class="d-flex align-start" style="gap: 12px">
+						<div class="demo-color" style="background-color: #00adb0 ;"></div>
+						<span>#00adb0 - Màu header</span>
+					</div>
+					<div class="d-flex align-start" style="gap: 12px">
+						<div class="demo-color" style="background-color: #f7f7f7 ;"></div>
+						<span>#f7f7f7 - Màu nền của banner</span>
+					</div>
+					<div class="d-flex align-start" style="gap: 12px">
+						<div class="demo-color" style="background-color: #fd382a ;"></div>
+						<span>#fd382a - Màu đỏ của badget</span>
+					</div>
+					<div class="d-flex align-start" style="gap: 12px">
+						<div class="demo-color" style="background-color: #bdbdbd ;"></div>
+						<span>#bdbdbd - Màu giá cũ</span>
+					</div>
+				</div>
+				<p class="mb-0">Ảnh (click chuột phải, copy image address):
+				</p>
+				<div class="pt-1 pb-3">
+					<div class="" style="gap: 12px">
+						<div>
+							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/yellow-star-icon.svg" height="40px"
+								alt="">
+						</div>
+						<div>
+							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/look-up-icon.svg" height="40px"
+								alt="">
+						</div>
+						<div>
+							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/smartband-prod-img.svg"
+								height="100px" alt="">
+						</div>
+						<div>
+							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/header-logo-v2.svg" height="100px"
+								alt="">
+						</div>
+
+					</div>
+				</div>
+				<p>Font: 'Be Vietnam Pro', sans-serif | 16px, normal | bold <br>
+					Link fonts: <a href=" https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+v" target="_blank"> Click</a>
+
+				</p>
+				<p>Dim: cho phép sử dụng inspect để lấy dim</p>
+				<h4>Yêu cầu:</h4>
+				<p>
+					Cơ bản: Clone lại được đủ giao diện trên sử dụng row, col, container. <br>
+					Bao gồm: màu, nền, font, độ đậm nhạt, tự động resize lại ảnh.
+				</p>
+				<p>
+					Nâng cao: ---<br>
+				</p>
+				<p><b>*DOC đọc thêm:</b> <a href="https://www.w3schools.com/cssref/func_linear-gradient.asp" target="_blank">Về
+						gradient</a>,
+					<a href="https://viblo.asia/p/form-validation-part-1-validation-in-html-xac-thuc-form-voi-ma-html-1VgZvo6mlAw"
+						target="_blank">
+						Built-in validation method (dùng để tạo điều kiện gửi form vd: trường bắt buộc, số lượng ký tự etc...)</a>
+				</p>
+				<div class="divider"></div>
+
+			</div>
+		</section>
+	</main>
+	<!-- FOOTER -->
+
+
+	<!-- BTN SCROLL UP -->
+	<div id="btnScrollToTop" class="btn-scroll-to-top pointer" id="top-link"><i class="fas fa-arrow-up"></i></i></div>
+	<!-- MENU SIDEBAR -->
+	<div id="menuSidebar" class="menu-sidebar-wr">
+		<div class="menu-sidebar__content" id="menuSidebarContent">
+			<ul class="navigator-list-content">
+
+				<li class="each-navigator pointer border-btm">
+					<a class="no-decoration" href="#">
+						<img src="/assets/media/images/logo_footer.png" height="35px" loading="lazy" alt="BRAND-store-img">
+					</a>
+				</li>
+				<li class="each-navigator pointer ">
+					<a class="no-decoration" href="#">TRANG CHỦ</a>
+				</li>
+				<li class="each-navigator pointer">
+					<a class="no-decoration" href="#">TẬP LUYỆN</a>
+				</li>
+				<li class="each-navigator pointer each-navigator-on-active " type="button" data-bs-toggle="collapse"
+					data-bs-target="#moreV" aria-expanded="false" aria-controls="moreV">
+					<a class="no-decoration d-flex align-items-center justify-content-between" href="#">TƯ VẤN
+						<img src="./assets/media/images/chevron-down.svg" loading="lazy" alt="BRAND-store-img">
+					</a>
+				</li>
+				<div class="collapse" id="moreV">
+					<li class="each-navigator pointer navigator-child">
+						<a class="no-decoration" href="#">Thiết bị thông minh</a>
+					</li>
+					<li class="each-navigator pointer navigator-child">
+						<a class="no-decoration" href="#">Dinh dưỡng</a>
+					</li>
+					<li class="each-navigator pointer navigator-child">
+						<a class="no-decoration" href="#">Phụ kiện</a>
+					</li>
+				</div>
+				<li class="each-navigator pointer ">
+					<a class="no-decoration" href="#">ĐĂNG NHẬP</a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+	<!--  -->
+	<div id="productSticky" class="on-sticky">
+		<div class="container d-flex align-items-center justify-content-between px-0">
+			<div class="left-side">
+				<img src="./assets/media/images/smartband-prod-img.svg" class="ls-img hide-on-mobile" loading="lazy"
+					alt="BRAND-store-img">
+				<div class="prd-inf hide-on-mobile">
+					<h4 class="prd-name">
+						Vòng đeo sức khỏe thông minh BRAND</h4>
+					<div class="prd-price">
+						<span class="prd-sale-price">399.000đ</span>
+						<span class="prd-original-price">699.000đ</span>
+						<span class="prd-sale-percentage">
+							-43%
+						</span>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="prd-act-btn">
+				<div class="prd-btn btn-add-to-cart  pointer hide-on-mobile"> <img src="./assets/media/images/bag-icon.svg"
+						alt="cart-img" class="pe-1">Thêm vào giỏ hàng</div>
+				<div class="prd-btn btn-add-to-cart  pointer show-on-mobile"> <img src="./assets/media/images/bag-icon.svg"
+						alt="cart-img" class="pe-1"></div>
+				<div class="prd-btn btn-buy-now  pointer">Mua ngay</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="./assets/js/main.js"></script>
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const currentWidth = window.outerWidth
+
+		if (currentWidth <= 560) {
+			var swiper = new Swiper(".sbPropertySwiper", {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				keyboard: {
+					enabled: true,
+				},
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+
+			});
+
+		} else {
+			var swiper = new Swiper(".sbPropertySwiper", {
+				slidesPerView: 3,
+				spaceBetween: 0,
+				keyboard: {
+					enabled: true,
+				},
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+
+			});
+		}
+
+
+		const editorContent = document.querySelector('#editorContent');
+
+
+		// window.addEventListener('scroll', () => {
+		// 	const currentCs = window.pageYOffset;
+		// 	const target = document.querySelector('#productSticky');
+		// 	if (!target) {
+		// 		return;
+		// 	}
+		// 	currentCs > 250
+		// 		? (() => {
+		// 			target.classList.add('on-sticky');
+		// 		})()
+		// 		: (() => {
+		// 			target.classList.remove('on-sticky');
+		// 		})();
+		// });
+	})
+
+
+</script>
+
+</html>
