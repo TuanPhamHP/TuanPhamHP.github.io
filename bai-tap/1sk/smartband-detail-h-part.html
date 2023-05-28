@@ -66,14 +66,29 @@
 			width: 20px;
 			height: 20px;
 		}
+
+		@media print {
+			.pagebreak {
+				page-break-before: always;
+			}
+
+			/* page-break-after works, as well */
+		}
+
+		.divider {
+			height: 2px;
+			background-image: -webkit-gradient(linear, left top, right top, from(#013e3d), to(#bcf3f2));
+			background-image: linear-gradient(to right, #013e3d, #bcf3f2);
+		}
 	</style>
 </head>
 
 <body id="mainPageBody">
+	<!-- <h1 class="text-center my-4">Đề Bài</h1> -->
 	<!-- MAIN HEADER -->
 	<header id="header" class="header-wr header">
-		<div class="on-sticky-top" id="headerTopWr">
-			<div class="bg-white">
+		<div class="on-sticky-top" id="headerTopWr position-relative" style="position:relative!important">
+			<div class="bg-white py-1">
 				<div class="header__bottom-block container px-0">
 					<nav class="header__navigator navbar navbar-expand-lg navbar-light bg-transparent p-0">
 						<div id="btnToggleHeaderNavigator" class="pointer">
@@ -99,19 +114,19 @@
 							<span class="navbar-toggler-icon"></span>
 						</button>
 						<div class="collapse navbar-collapse h-100 w-100" id="headerMasterNavigator">
-							<div class="navbar-nav w-100">
-								<a class="nav-item nav-link h-100 header-logo-v2 ps-0" href="#">
-									<img src="./assets/media/images/header-logo-v2.svg" alt="BRAND logo">
+							<div class="navbar-nav w-100 ">
+								<a class="nav-item nav-link h-100 header-logo-v2 ps-0 " href="#">
+									<img src="./assets/media/images/Vue-Blog-Cover.png" alt="BRAND logo" style="height: 100%;">
 								</a>
-								<a class="nav-item nav-link h-100 text-white ps-0" href="#">TRANG CHỦ</a>
-								<a class="nav-item nav-link h-100 text-white" href="#">TẬP LUYỆN</a>
+								<a class="nav-item nav-link h-100 text-white ps-0  ms-auto" href="#">TRANG CHỦ</a>
 								<a class="nav-item nav-link h-100 text-white" href="#">TƯ VẤN</a>
 								<a class="nav-item nav-link h-100 text-white on-active" href="#">CỬA HÀNG</a>
-								<a class="nav-item nav-link h-100 text-white tel-tag ms-auto brt-a pointer pe-0">
-									<img src="./assets/media/images/user-active.svg" class="me-2" loading="lazy" alt="">
-									Đăng nhập
+								<a class="nav-item nav-link h-100 text-white  tel-tag brt-a pointer pe-0">
+									<div class=" btn-prim  text-white btn-download  pointer"
+										style="background-color: #00c2c51a ; color:#00c2c5!important; border: 1px solid;">Đăng nhập
+									</div>
 								</a>
-								<div class="nav-item nav-link h-100">
+								<div class="nav-item nav-link h-100 pe-0">
 
 									<div class=" btn-prim  text-white btn-download  pointer">Tải ứng dụng
 
@@ -135,7 +150,7 @@
 					</nav>
 				</div>
 			</div>
-			<div class="bg-color-primary" id="navigatorSearchBar">
+			<div class="bg-color-primary py-1" id="navigatorSearchBar">
 				<div class="container px-0">
 					<div class="row mx-0 align-items-start align-items-center my-0 py-1 main-top-block">
 
@@ -144,36 +159,26 @@
 								<li class="each-tab-navigator">
 									<a href="#" class="link-target">
 										<img src="./assets/media/images/header-bottom-icon-1.svg" alt="header-bottom-icon-1">
-										Thiết bị chăm sóc sức khỏe</a>
+										Thiết bị điện tử</a>
 								</li>
-								<li class="each-tab-navigator">
+								<li class="each-tab-navigator d-flex align-center">
+									<span class="link-target pl-0 pe-3 text-white">></span>
 									<a href="#" class="link-target">
-										<img src="./assets/media/images/header-bottom-icon-2.svg" alt="header-bottom-icon-1">
-										Thiết bị tập luyện</a>
+										Laptop</a>
 								</li>
-								<li class="each-tab-navigator">
+								<li class="each-tab-navigator d-flex align-center">
+									<span class="link-target pl-0 pe-3 text-white">></span>
 									<a href="#" class="link-target">
-										<img src="./assets/media/images/header-bottom-icon-3.svg" alt="header-bottom-icon-1">
-										Thực phẩm chức năng</a>
+										Mackbook</a>
 								</li>
-								<li class="each-tab-navigator">
-									<a href="#" class="link-target">
-										<img src="./assets/media/images/header-bottom-icon-4.svg" alt="header-bottom-icon-1">
-										Phụ kiện - trang phục</a>
-								</li>
+
 								<li class="each-tab-navigator ms-auto">
 									<div class="libpage-tabs__search search-block">
 										<input type="text" placeholder="Tìm kiếm sản phẩm..." id="libPageSearchInput" />
 										<img src="./assets/media/images/look-up-icon.svg" loading="lazy" alt="look-up-icon" />
 									</div>
 								</li>
-								<li class="each-tab-navigator " style="min-width: 150px;">
 
-									<a href="#" class="text-white cart-btn">
-										<img src="./assets/media/images/bag-white.svg" loading="lazy" alt="cart-img" class="pe-2">
-										<span class="cart-counter">3</span>
-										Giỏ hàng</a>
-								</li>
 							</ul>
 						</div>
 					</div>
@@ -183,21 +188,27 @@
 	</header>
 	<!-- PAGE CONTENT -->
 	<main id="libPageMain">
-		<section id="libPageTabs" class="libpage-section detail-device-tabs__wr container-fluid  main-top-product">
+		<section id="libPageTabs" class="libpage-section detail-device-tabs__wr container-fluid  main-top-product" style="
+		background-position: bottom;
+		background-size: cover;
+		background-image: url('https://haycafe.vn/wp-content/uploads/2022/03/Background-Tet-nguyen-dan.jpg');
+		">
 
 			<div class="libpage-tabs__container container px-0 h-100 prod-style-2">
 				<div class="row h-100">
 					<div class="col-xl-6 col-lg-6 col-12 prod-group-img">
-						<img src="./assets/media/images/smartband-prod-img.svg" loading="lazy" alt="scale-prod-img">
+						<!-- <img src="./assets/media/images/smartband-prod-img.svg" loading="lazy" alt="scale-prod-img"> -->
+						<img src="./assets/media/images/G03.png" loading="lazy" alt="scale-prod-img">
 					</div>
-					<div class="col-xl-6 col-lg-6 col-12 prod-group-text">
+					<div class="col-xl-6 col-lg-6 col-12 prod-group-text bg-transparent">
 						<h3 class="prod-group-name">
-							Vòng đeo sức khỏe thông minh BRAND
+							Macbook Pro 16Inch
 						</h3>
-						<p class="prod-desc">
-							Vòng đeo sức khỏe thông minh BRAND là sản phẩm bán chạy số 1 trên nền tảng chăm sóc sức khỏe kỹ thuật số
-							thông minh BRAND. Vòng đeo có kiểu dáng thời trang, gọn nhẹ, đo các chỉ số vận động & sức khỏe, và đồng bộ
-							với điện thoại thông minh qua App BRAND.Connect.
+						<p class="prod-desc text-dark">
+							Thời gian Sử Dụng MacBook Pro 16 inch được cải tiến đến mức giới hạn với viên pin với dung lượng 100Wh,
+							lớn
+							nhất từ trước đến nay trên một chiếc MacBook Pro. Đây là dung lượng pin tối đa 1 chiếc laptop có thể mang
+							lên Máy Bay . Tổng Thời gian sử dụng Macbook Pro 16 inch có thể đạt được khi sử dụng là 11 giờ ..
 						</p>
 						<div class="prod-rating-n-review">
 							<span class="star-rating">
@@ -211,16 +222,12 @@
 							<span class="review-counter">
 								985 đánh giá
 							</span>
-							<a href="#" class="view-all-review-btn">
-								Xem tất cả
-							</a>
+
 						</div>
 						<div class="prod-price">
-							<span class="prod-sale-price">399.000đ</span>
-							<span class="prod-original-price">699.000đ</span>
-							<span class="prod-sale-percentage">
-								-43%
-							</span>
+							<span class="prod-sale-price">30.900.000đ</span>
+							<span class="prod-original-price">36.900.000đ</span>
+
 						</div>
 						<div class="prod-act-btn hide-on-mobile-flex">
 							<div class="prod-btn btn-add-to-cart  pointer"> <img src="./assets/media/images/bag-icon.svg"
@@ -232,12 +239,16 @@
 			</div>
 		</section>
 
-		<section class="container-fluid">
+		<section class="container-fluid pagebreak">
+
 			<div class="container py-5">
 
-				<h4>Tài nguyên:</h4>
-				<p class="mb-0">Mã màu:
-				</p>
+				<div class="divider"></div>
+
+				<h2>Tài nguyên:</h2>
+				<br>
+				<h3>Mã màu:
+				</h3>
 				<div class="pt-1 pb-3">
 					<div class="d-flex align-start" style="gap: 12px">
 						<div class="demo-color" style="background-color: #00c2c5;"></div>
@@ -253,7 +264,7 @@
 					</div>
 					<div class="d-flex align-start" style="gap: 12px">
 						<div class="demo-color" style="background-color: #f7f7f7 ;"></div>
-						<span>#f7f7f7 - Màu nền của banner</span>
+						<span>#f7f7f7 - Màu nền của khối banner</span>
 					</div>
 					<div class="d-flex align-start" style="gap: 12px">
 						<div class="demo-color" style="background-color: #fd382a ;"></div>
@@ -264,127 +275,49 @@
 						<span>#bdbdbd - Màu giá cũ</span>
 					</div>
 				</div>
-				<p class="mb-0">Ảnh (click chuột phải, copy image address):
-				</p>
-				<div class="pt-1 pb-3">
-					<div class="" style="gap: 12px">
-						<div>
-							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/yellow-star-icon.svg" height="40px"
-								alt="">
-						</div>
-						<div>
-							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/look-up-icon.svg" height="40px"
-								alt="">
-						</div>
-						<div>
-							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/smartband-prod-img.svg"
-								height="100px" alt="">
-						</div>
-						<div>
-							<img src="https://tuanphamhp.github.io/bai-tap/1sk/assets/media/images/header-logo-v2.svg" height="100px"
-								alt="">
-						</div>
 
-					</div>
-				</div>
-				<p>Font: 'Be Vietnam Pro', sans-serif | 16px, normal | bold <br>
-					Link fonts: <a href=" https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+v" target="_blank"> Click</a>
+				<h3>Fonts:</h3>
+				<p class="my-1 fw-500 text-decoration-underline">Links:</p>
+				<p id="fontLink"></p>
+				<p class="my-1 fw-500 text-decoration-underline">CSS:</p>
+				<p id="fontStyle"></p>
 
-				</p>
-				<p>Dim: cho phép sử dụng inspect để lấy dim</p>
+				<h3>Thông số kích thước cơ bản:</h3>
+				<p class="my-1">Container-full: 100%</p>
+				<p class="my-1">Container: 1240px</p>
+				<p class="my-1">Khối header-top: height - 80px, font-size - 16px</p>
+				<p class="my-1">Khối header-bottom: height 52px, font-size - 14px</p>
+				<p class="my-1">Khối banner: height 620px, font-size - 32px(Tên sản phẩm), 14px(chi tiết)</p>
+				<p class="my-1">Nút Mua/Thêm: padding - 11px 8px</p>
+				<h3>Ảnh:</h3>
+				<p class="my-1 ">Nguồn ảnh bài 1: giải nén từ file <b>"bt1.rar"</b></p>
+
+
+				<div class="pagebreak"></div>
+
+				<div class="divider"></div>
 				<h4>Yêu cầu:</h4>
 				<p>
-					Cơ bản: Clone lại được đủ giao diện trên sử dụng row, col, container. <br>
-					Bao gồm: màu, nền, font, độ đậm nhạt, tự động resize lại ảnh.
+					Tách riêng file css, image để import <b>(1đ)</b>
 				</p>
 				<p>
-					Nâng cao: ---<br>
+					Chia layout bằng flexbox(row, col ...) <b>(2đ)</b>
 				</p>
-				<p><b>*DOC đọc thêm:</b> <a href="https://www.w3schools.com/cssref/func_linear-gradient.asp" target="_blank">Về
-						gradient</a>,
-					<a href="https://viblo.asia/p/form-validation-part-1-validation-in-html-xac-thuc-form-voi-ma-html-1VgZvo6mlAw"
-						target="_blank">
-						Built-in validation method (dùng để tạo điều kiện gửi form vd: trường bắt buộc, số lượng ký tự etc...)</a>
+				<p>
+					Clone lại phần header đầy đủ ảnh, màu, kích thước cơ bản <b>(6đ)</b>
 				</p>
-				<div class="divider"></div>
-
+				<p>
+					Clone lại phần banner đầy đủ ảnh, màu, kích thước cơ bản <b>(5đ)</b>
+				</p>
+				<h3>Tổng: 14đ</h3>
 			</div>
 		</section>
 	</main>
 	<!-- FOOTER -->
 
 
-	<!-- BTN SCROLL UP -->
-	<div id="btnScrollToTop" class="btn-scroll-to-top pointer" id="top-link"><i class="fas fa-arrow-up"></i></i></div>
-	<!-- MENU SIDEBAR -->
-	<div id="menuSidebar" class="menu-sidebar-wr">
-		<div class="menu-sidebar__content" id="menuSidebarContent">
-			<ul class="navigator-list-content">
+	<h1 class="text-center my-4">Kết Thúc</h1>
 
-				<li class="each-navigator pointer border-btm">
-					<a class="no-decoration" href="#">
-						<img src="/assets/media/images/logo_footer.png" height="35px" loading="lazy" alt="BRAND-store-img">
-					</a>
-				</li>
-				<li class="each-navigator pointer ">
-					<a class="no-decoration" href="#">TRANG CHỦ</a>
-				</li>
-				<li class="each-navigator pointer">
-					<a class="no-decoration" href="#">TẬP LUYỆN</a>
-				</li>
-				<li class="each-navigator pointer each-navigator-on-active " type="button" data-bs-toggle="collapse"
-					data-bs-target="#moreV" aria-expanded="false" aria-controls="moreV">
-					<a class="no-decoration d-flex align-items-center justify-content-between" href="#">TƯ VẤN
-						<img src="./assets/media/images/chevron-down.svg" loading="lazy" alt="BRAND-store-img">
-					</a>
-				</li>
-				<div class="collapse" id="moreV">
-					<li class="each-navigator pointer navigator-child">
-						<a class="no-decoration" href="#">Thiết bị thông minh</a>
-					</li>
-					<li class="each-navigator pointer navigator-child">
-						<a class="no-decoration" href="#">Dinh dưỡng</a>
-					</li>
-					<li class="each-navigator pointer navigator-child">
-						<a class="no-decoration" href="#">Phụ kiện</a>
-					</li>
-				</div>
-				<li class="each-navigator pointer ">
-					<a class="no-decoration" href="#">ĐĂNG NHẬP</a>
-				</li>
-
-			</ul>
-		</div>
-	</div>
-	<!--  -->
-	<div id="productSticky" class="on-sticky">
-		<div class="container d-flex align-items-center justify-content-between px-0">
-			<div class="left-side">
-				<img src="./assets/media/images/smartband-prod-img.svg" class="ls-img hide-on-mobile" loading="lazy"
-					alt="BRAND-store-img">
-				<div class="prd-inf hide-on-mobile">
-					<h4 class="prd-name">
-						Vòng đeo sức khỏe thông minh BRAND</h4>
-					<div class="prd-price">
-						<span class="prd-sale-price">399.000đ</span>
-						<span class="prd-original-price">699.000đ</span>
-						<span class="prd-sale-percentage">
-							-43%
-						</span>
-					</div>
-
-				</div>
-
-			</div>
-			<div class="prd-act-btn">
-				<div class="prd-btn btn-add-to-cart  pointer hide-on-mobile"> <img src="./assets/media/images/bag-icon.svg"
-						alt="cart-img" class="pe-1">Thêm vào giỏ hàng</div>
-				<div class="prd-btn btn-add-to-cart  pointer show-on-mobile"> <img src="./assets/media/images/bag-icon.svg"
-						alt="cart-img" class="pe-1"></div>
-				<div class="prd-btn btn-buy-now  pointer">Mua ngay</div>
-			</div>
-		</div>
-	</div>
 </body>
 <script src="./assets/js/main.js"></script>
 <script>
@@ -446,8 +379,12 @@
 		// 			target.classList.remove('on-sticky');
 		// 		})();
 		// });
-	})
 
+		const fontStyle = document.querySelector('#fontStyle');
+		const fontLink = document.querySelector('#fontLink');
+		fontLink.textContent = `Các bạn copy link font thông tại file: bai01-link.txt`
+		fontStyle.textContent = `Các bạn copy syntax font-family tại file: bai01-fontcss.txt`
+	})
 
 </script>
 
