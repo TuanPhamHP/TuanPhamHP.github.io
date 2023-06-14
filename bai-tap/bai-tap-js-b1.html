@@ -54,9 +54,9 @@
             1 tuần du
             lịch.
             Mẹ An muốn từ danh sách đó biết được: <br>
-            <b>Tổng số tiền tiêu hết của tất cả các hóa đơn</b> <br>
-            <b>Có bao nhiêu hóa đơn lớn hơn $50, tổng của các hóa đơn này.</b> <br>
-            <b>Có bao nhiêu hóa đơn nhỏ hơn $30, tổng của các hóa đơn này.</b> <br>
+            <b>a) Tổng số tiền tiêu hết của tất cả các hóa đơn(không tính tiền tip)</b> <br>
+            <b>b) Có bao nhiêu hóa đơn lớn hơn $50, tổng của các hóa đơn này.</b> <br>
+            <b>c) Có bao nhiêu hóa đơn nhỏ hơn $30, tổng của các hóa đơn này.</b> <br>
 
           </p>
         </div>
@@ -64,6 +64,26 @@
       <section class="py-5">
         <div class="divider"></div>
 
+
+        <h4> Mảng hóa đơn như sau:</h4>
+        <pre class="py-3">
+        const listBills = [
+                            {name:'Hóa đơn ăn sáng', price: 500},
+                            {name:'Hóa đơn ăn trưa', price: 1000},
+                            {name:'Hóa đơn ăn nhẹ', price: 20},
+                            {name:'Hóa đơn mua đồ lưu niệm', price: 120},
+                            {name:'Hóa đơn gửi xe', price: 10},
+                            {name:'Hóa đơn thuê đồ', price: 25}
+                          ]
+          </pre>
+        <h4> Kết quả trả ra - in ra bằng console.log():</h4>
+        <pre class="py-3">
+          a) -Tổng số tiền tiêu hết của các hóa đơn là: 1675
+          b) -Tổng số hóa đơn lớn hơn 50 là: 3
+             -Tổng số tiền là: 1620
+          c) -Tổng số hóa đơn nhỏ hơn 30 là: 3
+             -Tổng số tiền là: 55
+        </pre>
         <h4>Yêu cầu:</h4>
         <p>
           Sử dụng Array, Function để thực hiện yêu cầu<br>
@@ -102,24 +122,30 @@
                 <td>>= $30</td>
                 <td>12% (giá trị hóa đơn)</td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td>>= $50</td>
                 <td>10% (giá trị hóa đơn)</td>
-              </tr>
+              </tr> -->
 
             </tbody>
           </table>
           Mẹ An muốn từ danh sách đó biết được: <br>
-          <b>Tổng số tiền tips</b> <br>
-          <b>Hóa đơn loại nào tiêu tốn nhiều tip nhất(tổng số tip của loại hóa đơn nào là lớn nhất)</b> <br>
-          <b>Hóa đơn có tổng số tiền (tiền tip + tiền hóa đơn) lớn nhất?</b> <br>
+          <b>a) Tổng số tiền tips</b> <br>
+          <b>b) Hóa đơn loại nào tiêu tốn nhiều tip nhất(tổng số tip của loại hóa đơn nào là lớn nhất)</b> <br>
+          <b>c) Hóa đơn có tổng số tiền (tiền tip + tiền hóa đơn) lớn nhất?</b> <br>
 
           </p>
         </div>
       </div>
       <section class="py-5">
         <div class="divider"></div>
+        <h4> Kết quả trả ra - in ra bằng console.log():</h4>
+        <pre class="py-3">
+          a) -Tổng số tiền tip là: 200.4
+          b) -Loại hóa đơn có tổng số tip nhiều nhất là: hóa đơn >= $30;
+          c) -Hóa đơn có số tip nhiều nhất là: 'Hóa đơn ăn trưa';
 
+        </pre>
         <h4>Yêu cầu:</h4>
         <p>
           Sử dụng Array, Function để thực hiện yêu cầu<br>
