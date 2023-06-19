@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập convert</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/brand.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/style/flex-style.css" />
+  <link rel="stylesheet" href="./assets/style/bai-tap-tong-hop-c.css">
+  <link rel="stylesheet" href="./assets/style/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+  <main class=" main container-fluid px-0">
+    <div class="d-flex mx-0">
+      <div id="mainSideBar" class="col-auto px-0">
+        <aside class="sidebar">
+          <ul class="list-nav">
+            <li class="brand-logo mb-3">
+              <div class="d-flex flex-column align-items-center">
+                <img src="./assets/images/coffee-logo-design-creative-idea-logo-elements-2.png" height="66px" alt="">
+                <span class="brand-intense">Coffee Lovers</span>
+              </div>
+
+            </li>
+            <li class="item-title">
+              <span>Admin</span>
+            </li>
+            <li class="item-vac d-flex align-items-center active" title="Trang chủ" onclick="activeSidebar(event)"><i
+                class="fa-solid fa-store"></i><span>Trang chủ</span></li>
+            <!-- event là 1 biến đầu vào đặc biệt, nó đại diện cho object chứa thông tin sự kiện -->
+            <li class="item-vac d-flex align-items-center" title="Đơn hàng" onclick="activeSidebar(event)">
+              <i class="fa-solid fa-receipt"></i>
+              <span>Đơn hàng</span>
+            </li>
+            <li class="item-vac d-flex align-items-center" title="Thống kê" onclick="activeSidebar(event)">
+              <i class="fa-solid fa-chart-column"></i>
+              <span>Thống kê</span>
+            </li>
+            <li class="item-title">
+              <span>Support</span>
+            </li>
+            <li class="item-vac d-flex align-items-center" title="Thông báo" onclick="activeSidebar(event)">
+              <i class="fa-solid fa-bell"></i>
+              <span>Thông báo</span>
+            </li>
+            <li class="item-vac d-flex align-items-center" title="Khiếu lại" onclick="activeSidebar(event)">
+              <i class="fa-solid fa-comment-sms"></i>
+              <span>Khiếu nại</span>
+            </li>
+            <li class="item-vac d-flex align-items-center" title="Liên hệ" onclick="activeSidebar(event)">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <span>Liên hệ</span>
+
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col-auto px-0 flex-grow-1">
+        <div class="main-page-content px-0">
+          <div class="apps-nav-headers d-flex py-1 align-items-center bg-white"
+            style="box-shadow: rgba(73, 73, 73, 0.16) 3px 1px 4px; position: sticky;top: 0; z-index: 4;">
+            <div class="app-btn d-flex align-items-center justify-content-center btn-toggle-sidebar"
+              id="btnToggleSidebar">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+          <section class="py-3 px-2">
+            <div class="">
+              <div class="row mx-0">
+                <div class="col-12">
+                  <h4>Danh sách sản phẩm</h4>
+
+                </div>
+                <div class="col-3 col-md-4 col-lg-3 col-xl-3 mb-3">
+                  <div id="product-01" class="card coffee-product">
+                    <img
+                      src="https://cdn.tgdd.vn/2021/11/CookDishThumb/macchiato-la-gi-nguon-goc-cach-lam-cach-uong-macchiato-chuan-thumb-620x620.jpg"
+                      class="card-img-top product-img" alt="">
+
+                    <div class="list-actions">
+                      <div class="btn-action btn-preview-all" data-product="#product-01">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+                    </div>
+                    <h5 class="card-title product-title mb-0 limit-line-1">Machiato</h5>
+                    <div class="card-body pt-1">
+                      <p class="card-text limit-line-3">Có vị béo thơm đặc trưng của sữa quyện lẫn với vị ngọt nhẹ
+                        hoặc
+                        đôi chút hơi
+                        mặn tùy theo công thức của người pha chế thức uống.</p>
+                      <p class="card-price text-success">
+                        36.000đ
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+          <section class="py-5 px-2">
+            <div class="divider"></div>
+
+            <h4>Yêu cầu: <b> tham khảo hướng dẫn làm ở cuối trang</b></h4>
+            <p>Clone lại toàn bộ giao diện bao gồm cả code JS</p>
+            <p>Font: "Be Vietnam Pro"</p>
+            <p>Đảm bảo được 3 yêu cầu: <br>
+              <b>1) UI giống với thiết kế.</b> <br>
+              <b>2) Thu/phóng sidebar thông qua nút <i class="fa-solid fa-bars"></i> ở trên </b><br>
+              <b>3) Khi click vào item ở sidebar thì bỏ active item cũ đồng thời active item vừa được click</b>
+            </p>
+            <div class="divider"></div>
+            <h4>Hướng dẫn:</h4>
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Yêu cầu 2
+              </button>
+            </p>
+            <div class="collapse mb-2" id="collapseExample">
+              <div class="card card-body">
+                <p>
+                  Viết css cho trạng thái mặc định (trạng thái phóng to) của sidebar - tạm gọi là class <b>'sidebar'</b>
+                  <br>
+                  Viết css cho trạng thái thu nhỏ của sidebar - tạm gọi là class <b>'mini-sized'</b>. Đảm bảo được việc
+                  css của class <b>'mini-sized'</b> sẽ ghi đè được css của class <b>'sidebar'</b> <br>
+                  => sidebar sẽ luôn mặc định có class <b>'sidebar'</b>, khi muốn thu nhỏ ta thêm class
+                  <b>'mini-sized'</b>, làm tương tự khu muốn phóng to ra <br>
+                  Tạo function để thực hiện việc thêm/xóa class bằng các methods của <b>classList</b> (nên sử dụng
+                  toggle). Gán function này vào nút <i class="fa-solid fa-bars"></i> trên header
+                </p>
+              </div>
+            </div>
+
+            <p>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample2"
+                aria-expanded="false" aria-controls="collapseExample2">
+                Yêu cầu 3
+              </button>
+            </p>
+            <div class="collapse mb-2" id="collapseExample2">
+              <div class="card card-body">
+                <p>
+                  Viết css cho 2 trạng thái thường và active. <br>
+                  Thêm class <b>'active'</b> vào phần tử cần được active<br>
+                  logic là khi click vào 1 item ở sidebar ta làm 2 việc: <br>
+                  B1: xóa toàn bộ class active hiện đang có - mục đích để tránh việc có nhiều hơn 1 phần tử được active
+                  <br>
+                  => cần lấy danh sách CÁC phần tử con của sidebar VÀ đang được active. Tiến hành lặp qua từng phần tử
+                  và xóa class <b>active</b>.
+                  <br>
+                  B2: Thêm class 'active' vào phần tử được click, do sau bước 1 ta đã xóa hết phần tử active nên giờ ta
+                  chỉ cần thêm mới phần tử được tác động là được <br>
+                  => xác định phần tử được click là phần tử nào. Thêm mới class <b>active</b> vào phần tử.
+                </p>
+              </div>
+            </div>
+            <div class="divider"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+  integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/bai-tap-tong-hop-c.js"></script>
+
+</html>
