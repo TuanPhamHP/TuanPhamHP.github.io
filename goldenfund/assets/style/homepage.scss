@@ -1,0 +1,27 @@
+.home-banner {
+	background-image: url('../images/home-page-banner.png'), url('../images/home-page-banner-overlay.png');
+	background-size: cover;
+	background-color: #000;
+	background-position: top right;
+	padding: 60px;
+	min-height: 600px;
+	.banner-title {
+		line-height: 72px;
+	}
+}
+
+.section-title {
+	line-height: 60px;
+}
+@media screen and (max-width: 520px) {
+	.home-banner {
+		padding-left: 20px;
+		padding-right: 20px;
+		.banner-title {
+			line-height: 28px;
+		}
+	}
+	.section-title {
+		line-height: 110%;
+	}
+}

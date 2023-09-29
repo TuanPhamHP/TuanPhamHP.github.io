@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*:not(i) {
+	font-family: 'Lexend', sans-serif;
+}
+
+.font-500 {
+	font-weight: 500 !important;
+}
+@media (min-width: 1280px) {
+	.container {
+		max-width: 1125px !important;
+		margin: auto;
+	}
+}
+@media screen and (max-width: 520px) {
+	.container {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+// REUSE
+.header-logo {
+	height: 53px;
+}
+.header-container {
+	box-shadow: rgba(0, 0, 0, 0.17) 0px 1px 1px, rgba(0, 0, 0, 0.17) 0px 2px 2px, rgba(0, 0, 0, 0.17) 0px 4px 4px,
+		rgba(0, 0, 0, 0.1) 0px 6px 4px;
+}

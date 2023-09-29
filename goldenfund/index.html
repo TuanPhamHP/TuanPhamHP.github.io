@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Fund: Ứng dụng đầu tư thế hệ mới</title>
+  <meta name="description" content="Ứng dụng đầu tư thế hệ mới. Chính xác - Nhanh chóng - Tin cậy">
+  <!-- TAILWIND -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FONTS - LEXEND -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/style/main.css">
+  <link rel="stylesheet" href="./assets/style/homepage.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            goldenPrimary: {
+              '400': '#FFC600',
+              '500': '#FFE443',
+            },
+            goldenGreen: {
+              '500': '#00BB1C'
+            },
+            goldenBlack: {
+              '400': '#222222'
+            },
+            goldenRed: {
+              '400': '#FD5353'
+            },
+            goldenGray: {
+              '100': '#F9F9FF',
+              '300': '#585D63'
+            }
+
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class=" text-black">
+  <header class="w-full header-container">
+    <nav class="container flex items-center gap-4 justify-between py-6 mx-auto">
+      <img src="./assets/images/header-logo.svg" alt="goldenfund logo" class="header-logo">
+      <ul class=" gap-4 items-center hidden md:flex">
+
+        <li class="each-nav-item">
+          <div class="group inline-block relative text-black hover:text-goldenPrimary-400">
+            <button class=" font-semibold py-2 px-4 rounded inline-flex items-center">
+              <span class="mr-1">Sản phẩm</span>
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </button>
+            <ul class="absolute hidden text-gray-700 py-2 shadow group-hover:block bg-white rounded-lg">
+              <li class="">
+                <a class="font-semibold rounded-t hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap"
+                  href="#">Vàng tích
+                  lũy</a>
+              </li>
+              <li class="">
+                <a class="font-semibold hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap" href="#">Vàng
+                  đầu tư</a>
+              </li>
+              <li class="">
+                <a class="font-semibold rounded-b hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap whitespace-nowrap"
+                  href="#">Chuyển
+                  tiền quốc tế
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="each-nav-item">
+          <div class="group inline-block relative text-black  hover:text-goldenPrimary-400">
+            <button class=" font-semibold py-2 px-4 rounded inline-flex items-center">
+              <span class="mr-1">Tin tức</span>
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+              </svg>
+            </button>
+            <ul class="absolute hidden text-gray-700 py-2 shadow group-hover:block bg-white rounded-lg">
+              <li class="">
+                <a class="font-semibold rounded-t hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap"
+                  href="#">Bản tin giá vàng
+                </a>
+              </li>
+              <li class="">
+                <a class="font-semibold hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap" href="#">Kiến
+                  thức đầu tư</a>
+              </li>
+              <li class="">
+                <a class="font-semibold hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap" href="#">Tin
+                  tức cập nhật</a>
+              </li>
+              <li class="">
+                <a class="font-semibold rounded-b hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap whitespace-nowrap"
+                  href="#">Góc nhìn chuyên gia
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="each-nav-item">
+          <a class="text-black font-semibold rounded-t hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap"
+            href="#">Về
+            chúng tôi
+          </a>
+        </li>
+        <li class="each-nav-item">
+          <a class="text-black font-semibold rounded-t hover:text-goldenPrimary-400 py-2 px-4 block whitespace-no-wrap"
+            href="#">Liên hệ
+          </a>
+        </li>
+
+      </ul>
+
+      <button
+        class="text-black font-semibold block whitespace-no-wrap bg-goldenPrimary-400 py-3 px-5 rounded-3xl hover:shadow-lg transition">
+
+        Giao dịch ngay
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="home-banner">
+      <div class="container">
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+          <div class="col-span-1">
+            <img src="./assets/images/homepage-mobile-demo.svg" alt="golddenfund mobile app">
+          </div>
+
+          <div class="col-span-1">
+            <h2 class="text-white text-2xl md:text-6xl banner-title mb-3 ">
+              Ứng dụng đầu tư <br class="hidden md:block">
+              thế hệ mới
+            </h2>
+            <p class="text-white mb-5">
+              Chính xác - Nhanh chóng - Tin cậy, mang cả thế giới đầu tư vàng vào
+              trong thiết bị di động thông mình của bạn
+            </p>
+            <div class="flex flex-col md:flex-row items-center gap-3 md:gap-6 mb-6 md:mb-7">
+              <button
+                class="w-full md:w-fit text-black font-semibold block whitespace-no-wrap bg-goldenPrimary-500 py-3 px-5 rounded-3xl hover:shadow-lg transition">
+                Giao dịch ngay
+              </button>
+              <button class="w-full md:w-fit text-white font-semibold block 
+                whitespace-no-wrap border border-goldenPrimary-500 
+                py-3 px-5 rounded-3xl hover:bg-goldenPrimary-500 hover:text-black transition">
+                Hướng dẫn giao dịch
+              </button>
+            </div>
+            <div class="grid grid-cols-2 md:flex items-center gap-3 md:gap-4">
+              <img src="./assets/images/ch-play.svg" alt="goldendfund app ch-play">
+              <img src="./assets/images/app-store.svg" alt="goldendfund app appstore">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gold-price">
+      <div class="container py-7">
+        <div class="flex flex-col md:flex-row justify-between font-500 items-baseline mb-4">
+          <h3 class="text-[18px] md:text-[28px]">TÓM TẮT GIÁ VÀNG TRONG NƯỚC</h3>
+          <p class="text-[14px] md:text-[18px]">Cập nhật lúc 07;45 ngày 29/07/2023</p>
+        </div>
+
+        <div class="bg-goldenBlack-400 low-root rounded-xl overflow-x-scroll md:overflow-x-hidden mb-5">
+          <table class="min-w-full divide-y divide-gray-400">
+            <thead>
+              <tr>
+                <th scope="col"
+                  class="px-3 py-2 md:py-5 text-left text-sm font-semibold text-white font-medium md:text-[22px]">
+                  Giá vàng</th>
+                <th scope="col"
+                  class="px-3 py-2 md:py-5 text-left text-sm font-semibold text-white font-medium md:text-[22px]">Mua
+                  vào</th>
+                <th scope="col"
+                  class="px-3 py-2 md:py-5 text-left text-sm font-semibold text-white font-medium md:text-[22px]">Bán ra
+                </th>
+                <th scope="col"
+                  class="px-3 py-2 md:py-5 text-left text-sm font-semibold text-white font-medium md:text-[22px] text-center whitespace-nowrap ">
+                  Link
+                  tham khảo
+                </th>
+
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-400">
+              <tr>
+                <td
+                  class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-goldenPrimary-500 font-medium md:text-[22px]">
+                  GOLDEN FUND
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-up.svg" alt="price up-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenGreen-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-up.svg" alt="price up-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenGreen-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-center">
+                  <a href="#" class="text-center"><img class="block mx-auto"
+                      src="./assets/images/icons/raphael_link.svg" alt="link to gold source"></a>
+                </td>
+
+              </tr>
+
+              <tr>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-white font-medium md:text-[22px]">
+                  SGOLD
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-up.svg" alt="price up-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenGreen-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-up.svg" alt="price up-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenGreen-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-center">
+                  <a href="#" class="text-center"><img class="block mx-auto"
+                      src="./assets/images/icons/raphael_link.svg" alt="link to gold source"></a>
+                </td>
+
+              </tr>
+
+              <tr>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-white font-medium md:text-[22px]">
+                  SJC HCM
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-down.svg" alt="price down-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenRed-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-down.svg" alt="price down-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenRed-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-center">
+                  <a href="#" class="text-center"><img class="block mx-auto"
+                      src="./assets/images/icons/raphael_link.svg" alt="link to gold source"></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-white font-medium md:text-[22px]">
+                  SJC HN
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-down.svg" alt="price down-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenRed-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-down.svg" alt="price down-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenRed-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-center">
+                  <a href="#" class="text-center"><img class="block mx-auto"
+                      src="./assets/images/icons/raphael_link.svg" alt="link to gold source"></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-white font-medium md:text-[22px]">
+                  SJC EXIMBANK
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-up.svg" alt="price up-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenRed-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6">
+                  <div class="text-sm text-white font-medium md:text-[22px] flex items-start gap-1">
+                    <span>56,100,000</span>
+                    <img src="./assets/images/icons/codicon_triangle-up.svg" alt="price up-trend">
+                    <small class="text-[8px] md:text-[10px] text-goldenRed-500">100,000</small>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-1 md:py-6 text-sm text-center">
+                  <a href="#" class="text-center"><img class="block mx-auto"
+                      src="./assets/images/icons/raphael_link.svg" alt="link to gold source"></a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button class="w-full md:w-fit text-black font-semibold block mx-auto
+        whitespace-no-wrap bg-goldenPrimary-500 py-3 px-5 rounded-3xl hover:shadow-lg transition">
+          Xem chi tiết giá vàng tại ĐÂY
+        </button>
+      </div>
+    </section>
+
+
+
+    <section class="our-statistical">
+      <div class="container py-7 md:py-12">
+        <h1 class="text-[24px] md:text-[54px] text-center text-black section-title font-bold mb-5 md:mb-4">Nền tảng mua
+          bán & giao
+          dịch <br> Vàng vật chất <span class="text-goldenPrimary-500">
+            Hàng đầu
+          </span> tại <br>Việt Nam</h1>
+        <div class="grid grid-cols-1 md:grid-cols-4">
+          <div class="col-span-1 flex flex-col items-center ">
+            <div class="p-3.5 rounded-xl w-[54px] h-[54px] bg-goldenGray-100 flex items-center justify-center">
+              <img src="./assets/images/icons/user-icon.svg" width="26px" alt="user icon">
+            </div>
+            <div class="flex items-center gap-1 text-goldenPrimary-500 font-bold text-[32px]">
+              <p class="value" count-to="8000" speed="200">0</p>
+              <span class="text-goldenGray-300">+</span>
+            </div>
+            <p class="text-black font-bold text-center text-[18px]">Khách hàng sử dụng</p>
+          </div>
+          <div class="col-span-1 flex flex-col items-center ">
+            <div class="p-3.5 rounded-xl w-[54px] h-[54px] bg-goldenGray-100 flex items-center justify-center">
+              <img src="./assets/images/icons/roll-ref-icon.svg" width="26px" alt="roll-ref-icon">
+            </div>
+            <div class="flex items-center gap-1 text-goldenPrimary-500 font-bold text-[32px]">
+              <p class="value" count-to="20000" speed="200">0</p>
+              <span class="text-goldenGray-300">+</span>
+            </div>
+            <p class="text-black font-bold text-center text-[18px]">Giao dịch mỗi tháng</p>
+          </div>
+          <div class="col-span-1 flex flex-col items-center ">
+            <div class="p-3.5 rounded-xl w-[54px] h-[54px] bg-goldenGray-100 flex items-center justify-center">
+              <img src="./assets/images/icons/database-icon.svg" width="26px" alt="database icon">
+            </div>
+            <div class="flex items-center gap-1 text-goldenPrimary-500 font-bold text-[32px]">
+              <p class="value" count-to="30000" speed="200">0</p>
+              <span class="text-goldenGray-300">+</span>
+            </div>
+            <p class="text-black font-bold text-center text-[18px]">Lượng bán mỗi tháng</p>
+          </div>
+          <div class="col-span-1 flex flex-col items-center ">
+            <div class="p-3.5 rounded-xl w-[54px] h-[54px] bg-goldenGray-100 flex items-center justify-center">
+              <img src="./assets/images/icons/checked-circle-icon.svg" width="26px" alt="checked circle icon">
+            </div>
+            <div class="flex items-center gap-1 text-goldenPrimary-500 font-bold text-[32px]">
+              <p class="value" count-to="99" speed="1">0</p>
+              <span class="text-goldenGray-300">%</span>
+            </div>
+            <p class="text-black font-bold text-center text-[18px]">Khách hàng hài lòng</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+<script>
+  const formatNumber = (number) => {
+    return Intl.NumberFormat('en-US', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(number);
+  };
+  const formatCurrency = (number, prefix = true) => {
+    const str = formatNumber(number);
+    const rs = number < 0 ? `${str.replaceAll('-', '')}` : `${str}`;
+    return prefix ? rs.split('.')[0] : (rs.split('.').pop());
+  };
+  const counters = document.querySelectorAll('.value');
+
+  const animate = (counter) => {
+    if (!counter) {
+      return
+    }
+    const value = +counter.getAttribute('count-to');
+    const data = +counter.innerText.replaceAll(',', '');
+    const speed = +counter.getAttribute('speed') || 200;
+    console.log(value);
+    const time = value / speed;
+    if (data < value) {
+      counter.innerText = formatCurrency(Math.ceil(data + time));
+      setTimeout(() => {
+        animate(counter)
+      }, 1);
+    } else {
+      counter.innerText = formatCurrency(value).replaceAll(',', '.');
+    }
+  }
+  counters.forEach(counter => {
+    onVisible(counter, () => {
+      console.log(counter);
+      if (counter) {
+        animate(counter)
+      }
+    })
+    // animate(counter);
+  });
+
+
+  function onVisible(element, callback) {
+    new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+          callback(element);
+          observer.disconnect();
+        }
+      });
+    }).observe(element);
+    if (!callback) return new Promise(r => callback = r);
+  }
+
+</script>
+
+</html>
