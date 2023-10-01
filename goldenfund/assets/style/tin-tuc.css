@@ -1,0 +1,61 @@
+.tin-tuc-banner {
+  background-image: url("../images/tin-tuc-banner.png"), url("../images/home-page-banner-overlay.png");
+  background-size: cover;
+  background-color: #000;
+  background-position: center center;
+  padding: 60px;
+  min-height: 600px;
+}
+.tin-tuc-banner .banner-title {
+  font-size: 60px;
+  line-height: 72px;
+}
+
+.section-title {
+  line-height: 60px;
+}
+
+.search-banner {
+  width: 670px;
+}
+.search-banner input::-moz-placeholder {
+  color: #8796ac !important;
+  font-weight: 500;
+  font-size: 20px;
+}
+.search-banner input::placeholder {
+  color: #8796ac !important;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 520px) {
+  .tin-tuc-banner {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 400px;
+  }
+  .tin-tuc-banner .banner-title {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .search-banner {
+    width: 100%;
+  }
+  .search-banner input::-moz-placeholder {
+    color: #8796ac !important;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .search-banner input::placeholder {
+    color: #8796ac !important;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .section-title {
+    line-height: 110%;
+  }
+  .step-to-use {
+    padding-top: 20px;
+  }
+}/*# sourceMappingURL=tin-tuc.css.map */

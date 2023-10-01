@@ -1,0 +1,90 @@
+.tin-tuc-chi-tiet-main {
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  line-height: 60px;
+}
+
+.search-banner {
+  width: 670px;
+}
+.search-banner input::-moz-placeholder {
+  color: #8796ac !important;
+  font-weight: 500;
+  font-size: 20px;
+}
+.search-banner input::placeholder {
+  color: #8796ac !important;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.sidebar-search-block .search-icon {
+  width: 34px;
+  min-width: 34px;
+}
+.sidebar-search-block input {
+  padding: 6px 14px;
+  background-color: #f1f5f8;
+  font-size: 13px;
+}
+.sidebar-search-block input::-moz-placeholder {
+  color: #585d63 !important;
+  font-weight: 500;
+  font-size: 13px;
+}
+.sidebar-search-block input::placeholder {
+  color: #585d63 !important;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.author-avatar {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.category-01 {
+  background-image: url("../images/category-mask.png"), url("../images/vang-tich-luy-small-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-02 {
+  background-image: url("../images/category-mask.png"), url("../images/vang-dau-tu-small-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-03 {
+  background-image: url("../images/category-mask.png"), url("../images/chuyen-tien-small-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 520px) {
+  .search-banner {
+    width: 100%;
+  }
+  .search-banner input::-moz-placeholder {
+    color: #8796ac !important;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .search-banner input::placeholder {
+    color: #8796ac !important;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .section-title {
+    line-height: 110%;
+  }
+  .step-to-use {
+    padding-top: 20px;
+  }
+}/*# sourceMappingURL=tin-tuc-chi-tiet.css.map */

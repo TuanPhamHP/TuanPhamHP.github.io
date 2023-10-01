@@ -1,0 +1,31 @@
+.section-title {
+	line-height: 60px;
+}
+
+.step-to-use {
+	padding-top: 50px;
+}
+.input-gr {
+	.input-block {
+		display: block;
+		width: 100%;
+		font-size: 14px;
+		background-color: #f6faff;
+		border-radius: 12px;
+		&::placeholder {
+			font-size: 14px;
+			color: #8796ac;
+		}
+	}
+	textarea {
+		resize: none;
+	}
+}
+.detail-address {
+	line-height: 28px;
+}
+@media screen and (max-width: 520px) {
+	.section-title {
+		line-height: 110%;
+	}
+}

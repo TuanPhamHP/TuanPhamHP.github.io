@@ -1,0 +1,200 @@
+.chuyen-tien-quoc-te-banner {
+	background-image: url('../images/chuyen-tien-quoc-te-banner.png'), url('../images/home-page-banner-overlay.png');
+	background-size: cover;
+	background-color: #000;
+	background-position: center center;
+	padding: 60px;
+	min-height: 600px;
+	.banner-title {
+		font-size: 60px;
+		line-height: 72px;
+	}
+}
+.chart-img {
+	box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+}
+.section-title {
+	line-height: 60px;
+}
+
+.contact-us {
+	.input-phone {
+		border: 1px solid #fff;
+		width: 320px;
+		input {
+			&::placeholder {
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+.news-swiper {
+	width: 100%;
+	position: relative;
+	.custom-swiper-button-prev {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	.custom-swiper-button-next {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+	.news-image {
+		width: 100%;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 16px;
+	}
+	.avatar-admin {
+		width: 32px;
+		height: 32px;
+		border-radius: 100%;
+		background-color: #1a1a1a;
+	}
+	.each-news {
+		box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+	}
+}
+
+.cases-swiper {
+	width: 100%;
+	position: relative;
+	.custom-swiper-button-prev {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	.custom-swiper-button-next {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+	}
+}
+.v95-product-card {
+	box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+	padding: 50px 30px;
+}
+.v95-step-guide {
+	.step-toggle {
+		.fa-chevron-down {
+			transition: 0.2s ease;
+		}
+	}
+	.step-toggle[aria-expanded='true'] {
+		.fa-chevron-down {
+			transform: rotateZ(180deg);
+		}
+	}
+}
+.suggest-pick-table {
+	thead {
+		th {
+			// padding: 8px 12px 16px 12px;
+			// border-radius: 8px;
+		}
+	}
+	td,
+	th {
+		border: 5px solid #fff;
+	}
+}
+.each-advantage {
+	box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+	height: 100%;
+	img {
+		max-width: 100%;
+		display: block;
+		margin: auto;
+		min-width: 195px;
+		margin-bottom: 16px;
+	}
+	p {
+		height: 100px;
+	}
+}
+.each-case {
+	position: relative;
+
+	overflow: hidden;
+	height: 350px;
+	.bg-f {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 1;
+	}
+	.bg-f2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: bottom;
+		z-index: 2;
+	}
+	.case-desc {
+		z-index: 3;
+	}
+}
+@media screen and (max-width: 520px) {
+	.chuyen-tien-quoc-te-banner {
+		padding-left: 20px;
+		padding-right: 20px;
+		.banner-title {
+			font-size: 28px;
+			line-height: 28px;
+		}
+	}
+	.section-title {
+		line-height: 110%;
+	}
+
+	.step-to-use {
+		padding-top: 20px;
+	}
+
+	.contact-us {
+		h3 {
+			text-align: center;
+			margin-bottom: 16px;
+		}
+		.input-phone {
+			width: 100%;
+			margin-bottom: 16px;
+		}
+	}
+	.v95-product-card {
+		box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+		padding: 30px 20px;
+	}
+	.our-advantage {
+		.list-advantage {
+			flex-direction: row !important;
+			flex-wrap: wrap;
+			.card-ea {
+				width: calc(50% - 16px);
+				img {
+					min-width: unset;
+				}
+				p {
+					height: 80px;
+				}
+			}
+		}
+	}
+}

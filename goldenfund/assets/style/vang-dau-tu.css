@@ -1,0 +1,112 @@
+.vang-dau-tu-banner {
+  background-image: url("../images/vang-dau-tu-banner.png"), url("../images/home-page-banner-overlay.png");
+  background-size: cover;
+  background-color: #000;
+  background-position: center center;
+  padding: 60px;
+  min-height: 600px;
+}
+.vang-dau-tu-banner .banner-title {
+  font-size: 60px;
+  line-height: 72px;
+}
+
+.chart-img {
+  box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+}
+
+.section-title {
+  line-height: 60px;
+}
+
+.contact-us .input-phone {
+  border: 1px solid #fff;
+  width: 320px;
+}
+.contact-us .input-phone input::-moz-placeholder {
+  color: #fff !important;
+}
+.contact-us .input-phone input::placeholder {
+  color: #fff !important;
+}
+
+.news-swiper {
+  width: 100%;
+  position: relative;
+}
+.news-swiper .custom-swiper-button-prev {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.news-swiper .custom-swiper-button-next {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.news-swiper .news-image {
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+.news-swiper .avatar-admin {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  background-color: #1a1a1a;
+}
+.news-swiper .each-news {
+  box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+}
+
+.v95-product-card {
+  box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+  padding: 50px 30px;
+}
+
+.v95-step-guide .step-toggle .fa-chevron-down {
+  transition: 0.2s ease;
+}
+.v95-step-guide .step-toggle[aria-expanded=true] .fa-chevron-down {
+  transform: rotateZ(180deg);
+}
+
+.suggest-pick-table td,
+.suggest-pick-table th {
+  border: 5px solid #fff;
+}
+
+@media screen and (max-width: 520px) {
+  .vang-dau-tu-banner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .vang-dau-tu-banner .banner-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .section-title {
+    line-height: 110%;
+  }
+  .step-to-use {
+    padding-top: 20px;
+  }
+  .contact-us h3 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .contact-us .input-phone {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .v95-product-card {
+    box-shadow: rgba(0, 0, 0, 0.626) 1.95px 1.95px 3px 2px;
+    padding: 30px 20px;
+  }
+}/*# sourceMappingURL=vang-dau-tu.css.map */
