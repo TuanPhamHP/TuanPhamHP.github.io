@@ -18,7 +18,7 @@ const animate = counter => {
 	const value = +counter.getAttribute('count-to');
 	const data = +counter.innerText.replaceAll(',', '');
 	const speed = +counter.getAttribute('speed') || 200;
-	console.log(value);
+
 	const time = value / speed;
 	if (data < value) {
 		counter.innerText = formatCurrency(Math.ceil(data + time));
