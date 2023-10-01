@@ -86,6 +86,12 @@ $colors: (
 	'goldenGray-900': #1a1a1a,
 	'goldenWhite-900': #ffffff,
 );
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	box-shadow: none;
+}
 @each $name, $color in $colors {
 	.bg-#{$name} {
 		background-color: $color !important;
@@ -477,4 +483,22 @@ p {
 .btn-pagination-mod {
 	min-height: 38px;
 	min-width: 38px;
+}
+.dropdown-item {
+	&:active {
+		background-color: transparent !important;
+	}
+}
+.header-container {
+	button,
+	.dropdown {
+		&:active {
+			border-color: transparent !important;
+		}
+	}
+}
+.dropdown-toggle {
+	&:focus-visible {
+		outline: none !important;
+	}
 }

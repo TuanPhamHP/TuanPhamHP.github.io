@@ -1,3 +1,10 @@
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .bg-neutral-100 {
   background-color: #f5f5f5 !important;
 }
@@ -4833,4 +4840,17 @@ p {
 .btn-pagination-mod {
   min-height: 38px;
   min-width: 38px;
+}
+
+.dropdown-item:active {
+  background-color: transparent !important;
+}
+
+.header-container button:active,
+.header-container .dropdown:active {
+  border-color: transparent !important;
+}
+
+.dropdown-toggle:focus-visible {
+  outline: none !important;
 }/*# sourceMappingURL=main.css.map */
