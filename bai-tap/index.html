@@ -11,120 +11,151 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="./assets/style/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet">
+
+	<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 	<script src="./assets/js/main.js"></script>
+	<style>
+		.card {
+			transition: 0.3s ease;
+		}
+
+		.card:hover {
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		}
+
+		.card-description {
+			height: 36px;
+			line-height: 18px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-clamp: 2;
+			-webkit-line-clamp: 2;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			white-space: break-word;
+		}
+
+		.card-purpose {
+			height: 56px;
+			line-height: 18px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			line-clamp: 3;
+			-webkit-line-clamp: 3;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			white-space: break-word;
+		}
+	</style>
 </head>
 
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="#">
-					<img src="./assets/images/brand.png" alt="brand">
+
+	<main id="app" class="d-flex">
+		<nav class="sidebar">
+			<div>
+				<a href="./index.html" class="d-flex align-items-center text-decoration-none">
+					<img src="./assets/images/eco-items/logo.svg" alt="" class="d-block">
+					<span class="logo-text">Course</span>
 				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-					aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="./index.html">Bài tập - DOC</a>
-						</li>
-
-					</ul>
-				</div>
 			</div>
+			<ul class="mt-5">
+
+			</ul>
 		</nav>
-	</header>
-	<main>
-		<section class="container-fluid">
-			<div class="container">
-				<div class="row py-4">
-					<div class="col-12">
-						<p>
-							<a class="btn btn-success w-100" data-bs-toggle="collapse" href="#collapseExample" role="button"
-								aria-expanded="false" aria-controls="collapseExample">
-								Bài tập về nhà các buổi ở đây nha
-							</a>
-						</p>
-						<div class="collapse" id="collapseExample">
-							<div class="card card-body my-2">
-								<a href="./bai-tap-b1.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 1
-								</a>
+		<section class="w-100">
 
-								<a href="./bai-tap-b2.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 2
-								</a>
-								<a href="./bai-tap-b2-2.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 2 - 2
-								</a>
+			<div class="w-100 py-5">
+
+				<div class="row py-4 mx-0">
+					<div class="col-12 ">
+						<div class="row mx-0 ">
+							<div class="col-6 col-lg-3 mb-3" v-for="item in listHomework" :key="item.name">
+								<div class="card rounded">
+									<img class="card-img-top w-100 d-block mx-auto" :src="item.previewImage" alt="">
+
+									<div class="card-body">
+										<h5 class="card-title">{{item.name}}</h5>
+										<p class="card-text card-description">{{item.description || 'Không có mô tả'}}</p>
+										<p class="card-text card-purpose">
+											<b>Bạn sẽ học được:</b>
+											{{item.purpose || 'Không có mô tả'}}
+										</p>
+
+										<a :href="item.link" target="_blank" class="btn btn-success w-100 rounded-pill">
+											Làm bài
+										</a>
+									</div>
+								</div>
 
 
-								<a href="./bai-tap-b3-table.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 3 - table
-								</a>
-								<a href="./bai-tap-b3-easy-form.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 3 - form
-								</a>
-								<a href="./bai-tap-flex.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 4 - flex
-								</a>
-								<a href="./bai-tap-flex.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 6 - Layouts + Transform
-								</a>
-								<a href="./bai-tap-b3-form.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 4 - form
-								</a>
-								<a href="./bai-tap-b4-n.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 4 - form 2
-								</a>
-								<a href="./1sk/smartband-detail-h-part.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 6 - Ôn tập
-								</a> <a href="./bai-tap-tong-hop-b5.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 5 - form + table
-								</a>
-
-								<a href="./bai-tap-convert-b.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 7 - Tổng hợp
-								</a>
-								<a href="./bai-tap-convert-b2.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 8 - Tổng hợp
-								</a>
-								<a href="./bai-tap-convert-b3.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 9 - Tổng hợp
-								</a>
-								<a href="./bai-tap-convert-b4.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 10 - Tổng hợp
-								</a>
-								<a href="./bai-tap-convert-b4.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 11 - Tổng hợp
-								</a>
-								<a href="https://tuanphamhp.github.io/GGon/" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 12 - Tổng hợp
-								</a>
-								<a href="./bai-tap-convert-b5.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 14 - Tổng hợp
-								</a>
-								<a href="./bai-tap-tong-hop-c.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 15 - Tổng hợp
-								</a>
-								<a href="./bai-tap-tong-hop-d.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập buổi 16 - Tổng hợp
-								</a>
-								<a href="./bai-tap-convert-b1.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập Convert
-								</a>
-								<a href="./bai-tap-js-b1.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập JS
-								</a>
-								<a href="./bai-tap-js-b2.html" target="_blank" class="btn btn-outline-success my-2">
-									Bài tập JS
-								</a> <!---->
 							</div>
+
+
+							<!-- 
+								<a href="./bai-tap-flex.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 4 - flex
+							</a>
+							<a href="./bai-tap-flex.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 6 - Layouts + Transform
+							</a>
+							<a href="./bai-tap-b3-form.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 4 - form
+							</a>
+							<a href="./bai-tap-b4-n.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 4 - form 2
+							</a>
+							<a href="./1sk/smartband-detail-h-part.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 6 - Ôn tập
+							</a> <a href="./bai-tap-tong-hop-b5.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 5 - form + table
+							</a>
+
+							<a href="./bai-tap-convert-b.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 7 - Tổng hợp
+							</a>
+							<a href="./bai-tap-convert-b2.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 8 - Tổng hợp
+							</a>
+							<a href="./bai-tap-convert-b3.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 9 - Tổng hợp
+							</a>
+							<a href="./bai-tap-convert-b4.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 10 - Tổng hợp
+							</a>
+							<a href="./bai-tap-convert-b4.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 11 - Tổng hợp
+							</a>
+							<a href="https://tuanphamhp.github.io/GGon/" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 12 - Tổng hợp
+							</a>
+							<a href="./bai-tap-convert-b5.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 14 - Tổng hợp
+							</a>
+							<a href="./bai-tap-tong-hop-c.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 15 - Tổng hợp
+							</a>
+							<a href="./bai-tap-tong-hop-d.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập buổi 16 - Tổng hợp
+							</a>
+							<a href="./bai-tap-convert-b1.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập Convert
+							</a>
+							<a href="./bai-tap-js-b1.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập JS
+							</a>
+							<a href="./bai-tap-js-b2.html" target="_blank" class="btn btn-outline-success my-2">
+								Bài tập JS
+							</a>
+							-->
 						</div>
 					</div>
-					<div class="col-12">
+					<div class="col-12 col-lg-6 d-none">
 						<p>
 							<a class="btn btn-primary  w-100" data-bs-toggle="collapse" href="#collapseDoc" role="button"
 								aria-expanded="false" aria-controls="collapseDoc">
@@ -173,5 +204,59 @@
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <script src="./assets/js/main.js"></script>
+<script>
+	const {createApp, ref, reactive} = Vue
+
+	createApp({
+		setup() {
+			const listHomework = reactive([
+				{
+					link: './bai-tap-b1.html',
+					name: 'Bài tập buổi 1',
+					type: ['html', 'css'],
+					previewImage: './assets/images/eco-items/eco-bg.png',
+					description: 'Bài tập cơ bản về phần HTML.',
+					purpose: 'Cấu trúc cơ bản HTML, các thẻ chứa text cơ bản.'
+				},
+				{
+					link: './bai-tap-b2.html',
+					name: 'Bài tập buổi 2',
+					type: ['html', 'css'],
+					previewImage: './assets/images/eco-items/eco-bg.png',
+					description: 'Bài tập cơ bản về phần HTML.',
+					purpose: 'Box-sizing, resize image, spacing-box.'
+				},
+				{
+					link: './bai-tap-b2-2.html',
+					name: 'Bài tập buổi 2-2',
+					type: ['html', 'css'],
+					previewImage: './assets/images/eco-items/eco-bg.png',
+					description: 'Tạo 1 sidebar đơn giản.',
+					purpose: 'Cách tạo sidebar với thẻ list UL.'
+				},
+				{
+					link: './bai-tap-b3-table.html',
+					name: 'Bài tập buổi 3 - table',
+					type: ['html', 'css'],
+					previewImage: './assets/images/eco-items/eco-bg.png',
+					description: 'Dựng bảng dữ liệu',
+					purpose: 'Các thẻ trong table, border-spacing, border-colappse'
+				},
+				// {
+				// 	link: './bai-tap-b3-easy-form.html',
+				// 	name: 'Bài tập buổi 3 - form',
+				// 	type: ['html', 'css'],
+				// 	previewImage: './assets/images/eco-items/eco-bg.png',
+				// 	description: '',
+				// 	purpose: ''
+				// },
+			])
+
+			return {
+				listHomework
+			}
+		}
+	}).mount('#app')
+</script>
 
 </html>

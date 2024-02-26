@@ -1,21 +1,45 @@
-body {
-  background-color: #f7f7f7;
+:root {
+	--primary-400: #89b7fc;
 }
-
-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 4;
+body {
+	background-color: #f5f6fb;
+}
+*:not(i) {
+	font-family: 'Be Vietnam Pro', sans-serif;
+}
+#app {
+	height: 100vh;
+	width: 100vw;
+	max-height: 100vh;
+	max-width: 100vw;
+	overflow: hidden;
+	background-color: #f5f6fb;
+}
+.logo-text {
+	font-size: 28px;
+	font-weight: 700;
+	color: var(--primary-400, #89b7fc);
+}
+.sidebar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 4;
+	width: 250px;
+	min-width: 250px;
+	height: 100vh;
+	max-height: 100vh;
+	background-color: #fff;
+	padding: 24px 8px;
 }
 
 .divider {
-  height: 2px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#013e3d), to(#bcf3f2));
-  background-image: linear-gradient(to right, #013e3d, #bcf3f2);
+	height: 2px;
+	background-image: -webkit-gradient(linear, left top, right top, from(#013e3d), to(#bcf3f2));
+	background-image: linear-gradient(to right, #013e3d, #bcf3f2);
 }
 
 .pointer {
-  cursor: pointer !important;
+	cursor: pointer !important;
 }
 /*# sourceMappingURL=main.css.map */
