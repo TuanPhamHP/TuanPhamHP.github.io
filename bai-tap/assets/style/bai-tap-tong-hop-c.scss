@@ -74,6 +74,7 @@
 	&.mini-sized {
 		width: 72px;
 		.sidebar {
+			min-width: 72px !important;
 			padding: 12px 8px;
 			.item-vac span,
 			.item-title {
